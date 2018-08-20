@@ -1,0 +1,82 @@
+{
+  "name": "vuetify-dialog",
+  "version": "0.0.1",
+  "description": "Dialog helper for vuetify.js",
+  "scripts": {
+    "build2": "npm run build:module && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/",
+    "build": "npm run lint && npm run build:module && npm run build:browser",
+    "build:module": "bili --name vuetify-dialog --format cjs,es --plugin vue --js buble",
+    "build:browser": "bili --name vuetify-dialog --format umd,umd-min --external vue --global.vue \"Vue\" --plugin vue --js buble",
+    "lint": "eslint --ext js --ext vue src",
+    "lint:fix": "npm run lint -- --fix",
+    "prepublish": "npm run build",
+    "test": "jest --env=jsdom"
+  },
+  "main": "dist/vuetify-dialog.cjs.js",
+  "module": "dist/vuetify-dialog.esm.js",
+  "browser": "dist/vuetify-dialog.js",
+  "cdn": "dist/vuetify-dialog.min.js",
+  "unpkg": "dist/vuetify-dialog.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yariksav/vuetify-dialog.git"
+  },
+  "keywords": [
+    "vuetify",
+    "dialog",
+    "confirm",
+    "prompt",
+    "modal"
+  ],
+  "author": "Yaroslav Savaryn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yariksav/vuetify-dialog/issues"
+  },
+  "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
+  "dependencies": {
+    "vuedl": "latest"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "bili": "^3.1.2",
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.21.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "jest": "^23.5.0",
+    "lodash": "^4.17.10",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.4.4",
+    "vue-jest": "^2.6.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    }
+  },
+  "peerDependencies": {
+    "vue": "*",
+    "vuedl": "*"
+  },
+  "eslintIgnore": [
+    "dist/"
+  ]
+}
