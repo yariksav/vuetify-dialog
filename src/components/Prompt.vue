@@ -1,19 +1,23 @@
 <template>
   <div>
-    <v-toolbar v-if="!!type" dark :color="getColor" dense>
-      <v-icon v-if="!!getIcon">{{ getIcon }}</v-icon>
-      <v-toolbar-title class="white--text" v-text="title"/>
-    </v-toolbar>
     <v-card tile>
-      <v-card-title v-if="!type">
+      <v-card-title v-if="title">
         <h3 class="headline mb-0" v-text="title" />
       </v-card-title>
-      <v-card-text v-html="text"/>
+      <v-container>
+        <v-text-field
+          autofocus
+          @keypress.enter="$emit('close', editedValue)"
+          v-model="editedValue"
+          :label="text"
+          required
+        />
+      </v-container>
       <v-card-actions>
         <v-spacer/>
         <v-btn v-for="button in parsedButtons" :key="button.key"
           :color="button.color || 'green'"
-          @click="onButtonClick(button)"
+          @click="onSubmit(button)"
           v-html="translate(button.text)"
           flat/>
       </v-card-actions>
@@ -32,7 +36,13 @@ export default {
   mixins: [ConfirmMixin, ColorsMixin, ButtonsMixin],
   props: {
     icon: String,
-    persistent: Boolean
+    persistent: Boolean,
+    value: String
+  },
+  data () {
+    return {
+      editedValue: this.value
+    }
   },
   computed: {
     getIcon () {
@@ -40,6 +50,13 @@ export default {
     }
   },
   methods: {
+    onSubmit (button) {
+      if (button.key) {
+        this.$emit('close', this.editedValue)
+      } else {
+        this.$emit('close', false)
+      }
+    },
     translate (text) {
       return (typeof this.$t === 'function') ? this.$t(text) : text
     }
