@@ -40,13 +40,12 @@ const Plugin = {
       buttons: ['Close']
     })
 
-    manager.template('showError', Toast, {
-      type: 'error'
-    })
-
-    manager.template('showSuccess', Toast, {
-      type: 'success'
-    })
+    manager.message = {
+      info: (message, options) => manager.toast({ text: message, type: 'info', ...options }),
+      error: (message, options) => manager.toast({ text: message, type: 'error', ...options }),
+      success: (message, options) => manager.toast({ text: message, type: 'success', ...options }),
+      warning: (message, options) => manager.toast({ text: message, type: 'warning', ...options })
+    }
 
     manager.template('prompt', Prompt, {
       waitForResult: true,
@@ -55,7 +54,6 @@ const Plugin = {
         'true': 'OK'
       }
     })
-
   }
 }
 
