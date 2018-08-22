@@ -28,7 +28,7 @@ import ConfirmMixin from 'vuedl/src/mixins/confirm'
 import ColorsMixin from '../mixins/colorable'
 
 export default {
-  layout: 'default',
+  layout: ['default', { width: 450 }],
   mixins: [ConfirmMixin, ColorsMixin, ButtonsMixin],
   props: {
     icon: String,

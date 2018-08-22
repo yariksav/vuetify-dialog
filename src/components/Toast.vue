@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-snackbar
-      :timeout="timeout || 6000"
+      :timeout="timeout || 5000"
       :color="getColor"
       v-model="isActive"
       class="application"
@@ -14,6 +14,9 @@
         @click="onButtonClick(button)"
         v-text="button.text"
       />
+      <v-btn @click="close" class="ml-3" icon>
+        <v-icon>clear</v-icon>
+      </v-btn>
     </v-snackbar>
   </div>
 </template>
@@ -26,17 +29,9 @@ import ColorsMixin from '../mixins/colorable'
 import ConfirmMixin from 'vuedl/src/mixins/confirm'
 
 export default {
-  mixins: [ConfirmMixin, WrapperMixin, ButtonsMixin, ColorsMixin],
+  mixins: [ ConfirmMixin, WrapperMixin, ButtonsMixin, ColorsMixin ],
   props: {
-    timeout: Number,
-    persistent: Boolean
-  },
-  methods: {
-    dismiss () {
-      if (!this.persistent) {
-        this.isActive = false
-      }
-    }
+    timeout: Number
   }
 }
 </script>

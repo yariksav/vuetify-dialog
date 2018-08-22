@@ -22,7 +22,6 @@ const Plugin = {
     manager.template('warning', Confirm, {
       type: 'warning',
       waitForResult: true,
-      persistent: true,
       buttons: {
         'false': 'Cancel',
         'true': 'OK'
@@ -36,8 +35,7 @@ const Plugin = {
     })
 
     manager.template('toast', Toast, {
-      waitForResult: true,
-      buttons: ['Close']
+      waitForResult: true
     })
 
     manager.message = {

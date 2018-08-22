@@ -1,9 +1,9 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
-    "build2": "npm run build:module && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/",
+    "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/",
     "build": "npm run lint && npm run build:module && npm run build:browser",
     "build:module": "bili --name vuetify-dialog --format cjs,es --plugin vue --js buble",
     "build:browser": "bili --name vuetify-dialog --format umd,umd-min --external vue --global.vue \"Vue\" --plugin vue --js buble",

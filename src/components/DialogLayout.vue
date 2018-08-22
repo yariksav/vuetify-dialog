@@ -1,18 +1,15 @@
 <template>
-  <v-dialog v-model="isActive" :max-width="width" :persistent="persistent" :fullscreen="fullscreen">
-    <dialog-child v-bind="$options.propsData" ref="dialog"/>
+  <v-dialog @keydown.esc="dismiss"
+    v-model="isActive" :max-width="width"
+    :persistent="persistent" :fullscreen="fullscreen">
+    <slot/>
   </v-dialog>
 </template>
 
 <script>
 export default {
   props: {
-    persistent: Boolean,
-    fullscreen: Boolean,
-    width: {
-      type: Number,
-      default: 500
-    }
+    fullscreen: Boolean
   }
 }
 </script>
