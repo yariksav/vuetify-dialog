@@ -11,11 +11,7 @@
       <v-card-text v-html="text"/>
       <v-card-actions>
         <v-spacer/>
-        <v-btn v-for="button in parsedButtons" :key="button.key"
-          :color="button.color || 'green'"
-          @click="onButtonClick(button)"
-          v-html="translate(button.text)"
-          flat/>
+        <DialogActions :actions="actions"/>
       </v-card-actions>
     </v-card>
   </div>
@@ -23,13 +19,16 @@
 
 <script>
 
-import ButtonsMixin from 'vuedl/src/mixins/buttons'
-import ConfirmMixin from 'vuedl/src/mixins/confirm'
-import ColorsMixin from '../mixins/colorable'
+import Confirmable from 'vuedl/src/mixins/confirmable'
+import Colorable from '../mixins/colorable'
+import DialogActions from './DialogActions.vue'
 
 export default {
+  components: {
+    DialogActions
+  },
   layout: ['default', { width: 450 }],
-  mixins: [ConfirmMixin, ColorsMixin, ButtonsMixin],
+  mixins: [ Confirmable, Colorable ],
   props: {
     icon: String,
     persistent: Boolean
