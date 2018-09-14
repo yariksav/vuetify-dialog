@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "0.0.4"
+    "vuedl": "0.0.5"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.24",
@@ -69,11 +69,12 @@
       "vue"
     ],
     "moduleNameMapper": {
+      "^vuedl$": "vuedl",
       "^vue$": "vue/dist/vue.common.js"
     },
     "transform": {
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
-      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     }
   },
   "peerDependencies": {

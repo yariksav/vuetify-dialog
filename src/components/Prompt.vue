@@ -1,42 +1,29 @@
 <template>
   <div>
-    <v-card tile>
-      <v-card-title v-if="title">
-        <h3 class="headline mb-0" v-text="title" />
-      </v-card-title>
-      <v-container>
-        <v-text-field
+    <DialogCard :title="title" :actions="actions">
+      <v-text-field
           autofocus
-          @keypress.enter="$emit('close', editedValue)"
+          @keypress.enter="$emit('submit', editedValue)"
           v-model="editedValue"
           :label="text"
           required
         />
-      </v-container>
-      <v-card-actions>
-        <v-spacer/>
-        <v-btn v-for="button in parsedButtons" :key="button.key"
-          :color="button.color || 'green'"
-          @click="onSubmit(button)"
-          v-html="translate(button.text)"
-          flat/>
-      </v-card-actions>
-    </v-card>
+    </DialogCard>
   </div>
 </template>
 
 <script>
 
-import ButtonsMixin from 'vuedl/src/mixins/buttons'
-import ConfirmMixin from 'vuedl/src/mixins/confirm'
-import ColorsMixin from '../mixins/colorable'
+import Confirmable from 'vuedl/src/mixins/confirmable'
+import DialogCard from './DialogCard.vue'
 
 export default {
+  components: {
+    DialogCard
+  },
   layout: 'default',
-  mixins: [ConfirmMixin, ColorsMixin, ButtonsMixin],
+  mixins: [ Confirmable ],
   props: {
-    icon: String,
-    persistent: Boolean,
     value: String
   },
   data () {
@@ -47,18 +34,6 @@ export default {
   computed: {
     getIcon () {
       return this.icon || this.type
-    }
-  },
-  methods: {
-    onSubmit (button) {
-      if (button.key) {
-        this.$emit('close', this.editedValue)
-      } else {
-        this.$emit('close', false)
-      }
-    },
-    translate (text) {
-      return (typeof this.$t === 'function') ? this.$t(text) : text
     }
   }
 }

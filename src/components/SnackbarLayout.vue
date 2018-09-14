@@ -21,8 +21,8 @@ export default {
     timeout: Number
   },
   methods: {
-    remove () {
-      this.destroyTimeout = setTimeout(() => {
+    _destroy () {
+      setTimeout(() => {
         this.$destroy()
       }, 300)
     }
