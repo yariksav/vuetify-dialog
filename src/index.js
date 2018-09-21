@@ -2,6 +2,7 @@ import Vuedl from 'vuedl'
 import DialogLayout from './components/DialogLayout.vue'
 import Confirm from './components/Confirm.vue'
 import Toast from './components/Toast.vue'
+import Alert from './components/Alert.vue'
 import SnackbarLayout from './components/SnackbarLayout.vue'
 import Prompt from './components/Prompt.vue'
 import DialogActions from './components/DialogActions.vue'
@@ -50,6 +51,17 @@ const Plugin = {
       error: (message, options) => manager.toast({ text: message, type: 'error', ...options }),
       success: (message, options) => manager.toast({ text: message, type: 'success', ...options }),
       warning: (message, options) => manager.toast({ text: message, type: 'warning', ...options })
+    }
+
+    manager.component('alert', Alert, {
+      waitForResult: true
+    })
+
+    manager.notify = {
+      info: (message, options) => manager.alert({ text: message, type: 'info', ...options }),
+      error: (message, options) => manager.alert({ text: message, type: 'error', ...options }),
+      success: (message, options) => manager.alert({ text: message, type: 'success', ...options }),
+      warning: (message, options) => manager.alert({ text: message, type: 'warning', ...options })
     }
 
     messageProperty && (Vue.prototype[messageProperty] = manager.message)

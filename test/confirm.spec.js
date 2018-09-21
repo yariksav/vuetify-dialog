@@ -1,7 +1,7 @@
 // import Dialog from 'vuedl/src/dialog'
-import DialogManager from 'vuedl'
+import Vuedl from 'vuedl'
 import Confirm from '../src/components/Confirm'
-// import { wrap } from 'vuedl/test/utils'
+import { wrap } from 'vuedl/test/utils'
 // import Returnable from 'vuedl/src/mixins/returnable'
 import Vue from 'vue'
 
@@ -9,9 +9,11 @@ describe('manager', () => {
   let manager
 
   test('Create manager instance', () => {
-    manager = new DialogManager({ context: { store: {} } })
-    expect(manager).toBeInstanceOf(DialogManager)
-    manager.component('confirm', Confirm)
+    Vue.use(Vuedl)
+    console.dir('ddd', typeof DialogManager)
+    // manager = new DialogManager({ context: { store: {} } })
+    // expect(manager).toBeInstanceOf(DialogManager)
+    // manager.component('confirm', Confirm)
   })
 
   // test('returnable', async () => {
@@ -30,18 +32,18 @@ describe('manager', () => {
   //   expect(document.body.innerHTML).toBe('')
   // })
 
-  test('Check confirm', async () => {
-    let dlg = await manager.confirm({ text: 'test', actions: ['ok', 'cancel'] })
-    const wrapper = wrap(dlg.vm)
-    expect(dlg.vm.$el).toMatchSnapshot()
-    setTimeout(() => {
-      wrapper.find('[action-key=ok]').trigger('click')
-    }, 5)
-    let res = await dlg.wait()
-    expect(res).toBe('ok')
-    await Vue.nextTick()
-    expect(document.body.innerHTML).toBe('')
-  })
+  // test('Check confirm', async () => {
+  //   let dlg = await manager.confirm({ text: 'test', actions: ['ok', 'cancel'] })
+  //   const wrapper = wrap(dlg.vm)
+  //   expect(dlg.vm.$el).toMatchSnapshot()
+  //   setTimeout(() => {
+  //     wrapper.find('[action-key=ok]').trigger('click')
+  //   }, 5)
+  //   let res = await dlg.wait()
+  //   expect(res).toBe('ok')
+  //   await Vue.nextTick()
+  //   expect(document.body.innerHTML).toBe('')
+  // })
 
   // test('Check confirm with btns true|false', async () => {
   //   let dlg = await manager.confirm({ text: 'test', actions: {'true': 'Yes', 'false': 'No'} })

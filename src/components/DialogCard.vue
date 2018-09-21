@@ -4,13 +4,16 @@
       <slot name=title>
         <span :class="titleClass" v-text="title"/>
       </slot>
+      <!-- <div
+        class="vuedl-notification__closeBtn"
+        @click.stop="close">×</div> -->
     </v-card-title>
     <v-card-text>
       <slot/>
     </v-card-text>
     <v-card-actions>
       <v-spacer/>
-      <DialogActions :actions="actions"/>
+      <DialogActions :actions="actions" ref="actions"/>
     </v-card-actions>
   </v-card>
 </template>
@@ -30,6 +33,11 @@ export default {
       default: 'headline'
     },
     actions: [Array, Object]
+  },
+  methods: {
+    trigger (name) {
+      this.$refs.actions && this.$refs.actions.trigger(name)
+    }
   }
 }
 </script>
