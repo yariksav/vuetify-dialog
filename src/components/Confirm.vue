@@ -35,7 +35,7 @@
       <v-card-text v-html="text"/>
       <v-card-actions>
         <v-spacer/>
-        <DialogActions :actions="actions"/>
+        <DialogActions :actions="actions" flat/>
       </v-card-actions>
     </v-card>
   </div>

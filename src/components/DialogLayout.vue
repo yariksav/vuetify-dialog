@@ -1,6 +1,6 @@
 <template>
   <v-dialog @keydown.esc="dismiss"
-    v-model="isActive" :max-width="width"
+    v-model="isActive" :max-width="getWidth"
     :persistent="persistent || loading" :fullscreen="fullscreen" ref="vdialog">
     <slot/>
   </v-dialog>

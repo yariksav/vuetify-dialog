@@ -13,7 +13,7 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer/>
-      <DialogActions :actions="actions" ref="actions"/>
+      <DialogActions :actions="actions" ref="actions" outline/>
     </v-card-actions>
   </v-card>
 </template>
