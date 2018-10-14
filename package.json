@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
@@ -11,7 +11,9 @@
     "lint": "eslint --ext js --ext vue src",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "main": "dist/vuetify-dialog.cjs.js",
   "module": "dist/vuetify-dialog.esm.js",
@@ -36,7 +38,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "0.0.9"
+    "vuedl": "0.0.10"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.24",
@@ -59,7 +61,8 @@
     "rollup-plugin-vue": "^4.3.2",
     "vue": "^2.4.4",
     "vue-jest": "^2.6.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "vuetify": "^1.2.7"
   },
   "jest": {
     "testEnvironment": "node",

@@ -7,18 +7,18 @@ import SnackbarLayout from './components/SnackbarLayout.vue'
 import Prompt from './components/Prompt.vue'
 import DialogActions from './components/DialogActions.vue'
 import DialogCard from './components/DialogCard.vue'
+import NotificationLayout from 'vuedl/src/components/NotificationLayout.vue'
 
 const Plugin = {
   install (Vue, options = {}) {
     const property = options.property || '$dialog'
-    const messageProperty = options.messageProperty
     Vue.use(Vuedl, options)
     const manager = Vue.prototype[property]
     manager.layout('default', DialogLayout)
     manager.layout('snackbar', SnackbarLayout)
+    manager.layout('notification', NotificationLayout)
     Vue.component('DialogActions', DialogActions)
     Vue.component('DialogCard', DialogCard)
-
     manager.component('confirm', Confirm, {
       waitForResult: true,
       actions: {
@@ -64,8 +64,6 @@ const Plugin = {
       warning: (message, options) => manager.alert({ text: message, type: 'warning', ...options })
     }
 
-    messageProperty && (Vue.prototype[messageProperty] = manager.message)
-
     manager.component('prompt', Prompt, {
       waitForResult: true,
       actions: {
@@ -74,6 +72,10 @@ const Plugin = {
       }
     })
   }
+}
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(Plugin)
 }
 
 export default Plugin
