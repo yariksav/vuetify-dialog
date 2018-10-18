@@ -6,21 +6,9 @@ This module will help you to work with modal dialogs in your project
 
 > NOTE: Module is in initial development. Anything may change at any time.
 
-[![NPM Version][npm-image]][npm-url]
 
 <p align="center">
-  <!-- <a href="https://travis-ci.org/yariksav/vuetify-dialog">
-    <img src="https://travis-ci.org/yariksav/vuetify-dialog.svg?branch=master">
-  </a>
-  <a href="https://coveralls.io/github/yariksav/vuetify-dialog?branch=master">
-    <img src="https://coveralls.io/repos/github/yariksav/vuetify-dialog/badge.svg?branch=master">
-  </a> -->
-  <a href="https://cdnjs.com/libraries/vuetify-dialog">
-    <img src="https://img.shields.io/cdnjs/v/vuetify-dialogi.svg">
-  </a>
-  <a href="https://www.npmjs.org/package/vuetify-dialog">
-    <img src="https://img.shields.io/npm/v/vuetify-dialog">
-  </a>
+  [![NPM Version][npm-image]][npm-url]
   <a href="https://npmcharts.com/compare/vuetify-dialog?minimal=true">
     <img src="http://img.shields.io/npm/dm/vuetify-dialog.svg">
   </a>
@@ -28,12 +16,6 @@ This module will help you to work with modal dialogs in your project
   <a href="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.js?compression=gzip&label=gzip%20size:%20JS">
     <img src="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.cjs.js?compression=gzip&label=gzip%20size:%20JS">
   </a>
-  <!-- <a href="#backers">
-    <img src="https://opencollective.com/element/backers/badge.svg">
-  </a>
-  <a href="#sponsors">
-    <img src="https://opencollective.com/element/sponsors/badge.svg">
-  </a> -->
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>
@@ -63,31 +45,46 @@ Vue.use(VuetifyDialog, {
 
 ### Simple confirm dialog
 ```js
-const res = await this.$dialog.confirm({ text: 'Do you really want to exit?'})
+const res = await this.$dialog.confirm({
+  text: 'Do you really want to exit?'
+  title: 'Warning'
+})
 ```
 
 ### Warning dialog
 ```js
-const res = await this.$dialog.warning({ text: 'Do you really want to exit?', title: 'Warning'})
+const res = await this.$dialog.warning({
+  text: 'Do you really want to exit?',
+  title: 'Warning'
+})
 ```
 
 ### Error dialog
 ```js
-this.$dialog.error({ text: 'Cannot delete this item', title: 'Error'})
+this.$dialog.error({
+  text: 'Cannot delete this item',
+  title: 'Error'
+})
 ```
 
-### Propt dialog
+### Prompt dialog
 ```js
-let res = await this.$dialog.prompt({ text: 'Your name', title: 'Please input your name' })
+let res = await this.$dialog.prompt({
+  text: 'Your name',
+  title: 'Please input your name'
+})
 ```
 
-### Toasts
+### Messages
 ```js
-const res = await this.$dialog.toast({ text: 'Do you really want to exit?'})
+this.$dialog.message.warning('Warning message')
+this.$dialog.message.error('Error message')
+this.$dialog.message.info('Info message')
+this.$dialog.message.success('Success message')
 ```
 
 ### Actions
-To all this simple dialogs you can config your actions, just send
+To all this simple dialogs you can config your actions, just put to options
 ```js
 {
   ...
