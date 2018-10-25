@@ -26,7 +26,7 @@ export default {
     position: String
   },
   data () {
-    const position = this.position || this.$options.propsData.position
+    const position = this.position || this.$options.propsData.position || ''
     return {
       top: position.indexOf('top') !== -1,
       left: position.indexOf('left') !== -1,

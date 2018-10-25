@@ -1,19 +1,19 @@
 <template>
   <v-card>
-    <v-card-title>
+    <v-card-title v-if="title">
       <slot name=title>
         <span :class="titleClass" v-text="title"/>
       </slot>
-      <!-- <div
+      <!-- <div v-if="$parent && typeof $parent.close === 'function'"
         class="vuedl-notification__closeBtn"
-        @click.stop="close">×</div> -->
+        @click.stop="$parent.close">×</div> -->
     </v-card-title>
     <v-card-text>
       <slot/>
     </v-card-text>
     <v-card-actions>
       <v-spacer/>
-      <DialogActions :actions="actions" ref="actions" outline/>
+      <DialogActions :actions="actions" ref="actions" outline color="blue-grey"/>
     </v-card-actions>
   </v-card>
 </template>

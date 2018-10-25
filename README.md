@@ -24,6 +24,9 @@ This module will help you to work with modal dialogs in your project
 ## Documentation
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
+## Demo
+[See demo in CodeSandbox](https://k2910xo07r.codesandbox.io/)
+
 ## Setup
 
 Install the package from npm
