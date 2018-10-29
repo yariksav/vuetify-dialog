@@ -1,6 +1,6 @@
 <template>
   <span>
-    <v-btn v-for="action in actionlist" :key="action.key" v-bind="action.attrs"
+    <component :is="tag" v-for="action in actionlist" :key="action.key" v-bind="action.attrs"
       v-if="isActionVisible(action)"
       :flat="action.flat !== undefined ? action.flat : flat"
       :outline="action.outline !== undefined ? action.outline : outline"
@@ -13,7 +13,7 @@
       <v-icon v-if="action.icon && !action.icon.right" v-bind="action.icon" v-text="action.icon.text"/>
       {{ action.text }}
       <v-icon v-if="action.icon && action.icon.right" v-bind="action.icon" v-text="action.icon.text"/>
-    </v-btn>
+    </component>
   </span>
 </template>
 <script>
@@ -23,6 +23,10 @@ import Actionable from 'vuedl/src/mixins/actionable'
 export default {
   mixins: [ Actionable ],
   props: {
+    tag: {
+      type: String,
+      default: () => 'v-btn'
+    },
     color: String,
     flat: Boolean,
     round: Boolean,

@@ -22,8 +22,8 @@ const Plugin = {
     manager.component('confirm', Confirm, {
       waitForResult: true,
       actions: {
-        'false': 'Cancel',
-        'true': 'OK'
+        false: 'Cancel',
+        true: 'OK'
       }
     })
 
@@ -31,8 +31,8 @@ const Plugin = {
       type: 'warning',
       waitForResult: true,
       actions: {
-        'false': 'Cancel',
-        'true': 'OK'
+        false: 'Cancel',
+        true: 'OK'
       }
     })
 
@@ -67,8 +67,8 @@ const Plugin = {
     manager.component('prompt', Prompt, {
       waitForResult: true,
       actions: {
-        'false': 'Cancel',
-        'true': 'OK'
+        false: 'Cancel',
+        true: 'OK'
       }
     })
   }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DialogCard :title="title" :actions="actions">
+    <DialogCard :title="title" :actions="actions" :handle="handleClick">
       <v-text-field
           autofocus
           @keypress.enter="$emit('submit', editedValue)"
@@ -34,6 +34,12 @@ export default {
   computed: {
     getIcon () {
       return this.icon || this.type
+    }
+  },
+  methods: {
+    handleClick (res) {
+      this.$emit('submit', this.editedValue)
+      return false
     }
   }
 }
