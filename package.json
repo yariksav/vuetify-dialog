@@ -5,8 +5,8 @@
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
     "build": "npm run lint && npm run build:module && npm run build:browser",
-    "build:module": "bili ./src/index.js --name vuetify-dialog --format cjs,es --plugin vue --js buble",
-    "build:browser": "bili ./src/index.js --name vuetify-dialog --format umd,umd-min --external vue --global.vue \"Vue\" --plugin vue --js buble",
+    "build:module": "bili ./src/index.js --format cjs,es --no-js",
+    "build:browser": "bili ./src/index.js --format umd,umd-min --js buble",
     "release": "bash build/release.sh",
     "lint": "eslint --ext js --ext vue src",
     "lint:fix": "npm run lint -- --fix",
