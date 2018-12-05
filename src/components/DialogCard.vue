@@ -1,19 +1,16 @@
 <template>
   <v-card>
     <v-card-title v-if="title">
-      <slot name=title>
-        <span :class="titleClass" v-text="title"/>
+      <slot name="title">
+        <span :class="titleClass" v-text="title" />
       </slot>
-      <!-- <div v-if="$parent && typeof $parent.close === 'function'"
-        class="vuedl-notification__closeBtn"
-        @click.stop="$parent.close">×</div> -->
     </v-card-title>
     <v-card-text>
-      <slot/>
+      <slot />
     </v-card-text>
     <v-card-actions>
-      <v-spacer/>
-      <DialogActions :actions="actions" ref="actions" outline color="blue-grey" :handle="handle"/>
+      <v-spacer />
+      <DialogActions :actions="actions" ref="actions" outline color="blue-grey" :handle="handle" />
     </v-card-actions>
   </v-card>
 </template>
@@ -42,3 +39,9 @@ export default {
   }
 }
 </script>
+<style>
+  .vuedl-layout.v-dialog--scrollable > .v-card > .v-card__text {
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+  }
+</style>

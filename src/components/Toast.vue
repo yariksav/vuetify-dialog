@@ -1,7 +1,7 @@
 <template>
   <div>
     <span v-html="text" />
-    <DialogActions :actions="actions"/>
+    <DialogActions :actions="actions" />
   </div>
 </template>
 

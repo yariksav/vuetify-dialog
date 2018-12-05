@@ -7,7 +7,7 @@
     :type="type"
   >
     {{ text }}
-    <DialogActions :actions="actions"/>
+    <DialogActions :actions="actions" />
   </v-alert>
 </template>
 <script>
