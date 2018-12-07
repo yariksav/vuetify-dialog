@@ -14,7 +14,6 @@ export default (obj, inject) => {
   }))
   context.route = obj.route
 
-  console.log(context, 'context')
   Vue.use(VuetifyDialog, { context, ...pluginOptions })
   const instance = Vue.prototype[property]
   if (instance) {

@@ -21,11 +21,11 @@ This module will help you to work with modal dialogs in your project
   </a>
 </p>
 
-## Documentation
+## Vuedl module documentation
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
 ## Demo
-[See demo in CodeSandbox](https://k2910xo07r.codesandbox.io/)
+[See demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/)
 
 ## Setup
 
@@ -45,6 +45,30 @@ Vue.use(VuetifyDialog, {
 
 + `context` - the context of your application, such as store, axios, router etc.
 + `property` - the property, which will integrate to Vue. Default is `$dialog`
+
+## ♻️ Usage with Nuxt.js
+
+Add `vuetify-dialog/nuxt` to modules section of `nuxt.config.js`
+
+Module automatically add to dialog nuxt context data, such as router, route, i18n, $axios, etc
+
+```js
+{
+  modules: [
+    // Simple usage
+    'vuetify-dialog/nuxt'
+
+    // Optionally passing options in module configuration
+    ['vuetify-dialog/nuxt', { property: '$dialog' }]
+  ],
+
+  // Optionally passing options in module top level configuration
+  vuetifyDialog: {
+    property: '$dialog'
+  }
+}
+```
+
 
 ### Simple confirm dialog
 ```js
@@ -78,16 +102,59 @@ let res = await this.$dialog.prompt({
 })
 ```
 
-### Messages
+
+### Notifications
+The notification component is used to convey important information to the user. 
+Notification support positioning, removal delay and callbacks. It comes in 4 variations, **success**, **info**, **warning** and **error**. These have default icons assigned which can be changed and represent different actions
+
+Notification uses [v-alert](https://vuetifyjs.com/en/components/alerts) component
+
+Props:
+* **text** - _the text fo your message_
+  - type: String
+* options:
+  - type: Object
+  - properties:
+    - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
+    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically
+    - actions
 ```js
-this.$dialog.message.warning('Warning message')
-this.$dialog.message.error('Error message')
-this.$dialog.message.info('Info message')
-this.$dialog.message.success('Success message')
+this.$dialog.notify.info('Test notification', {
+  position: 'top-right',
+  timeout: 5000
+})
 ```
 
+### Toasts 
+The toast component is used to display a quick message to a user. Toasts support positioning, removal delay and callbacks. It comes in 4 variations, **success**, **info**, **warning** and **error**. These have default icons assigned which can be changed and represent different actions
+
+Toast uses [v-snackbar](https://vuetifyjs.com/en/components/snackbars) component
+
+Props:
+* **text** - _the text fo your message_
+  - type: String
+* options:
+  - type: Object
+  - properties:
+    - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
+    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
+    - actions: - see below
+``` javascript
+this.$dialog.message.{{type}}('{{text}}, {
+  position: '{{position}}'
+})
+```
 ### Actions
-To all this simple dialogs you can config your actions, just put to options
+To all dialogs you can put your own buttons
+Props:
+* **key** - _the text fo your message_
+  - type: String
+* options:
+  - type: Object
+  - properties:
+    - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
+    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
+    - actions: - see below
 ```js
 {
   ...
