@@ -140,8 +140,8 @@ Props:
     - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
     - actions: - see below
 ``` javascript
-this.$dialog.message.{{type}}('{{text}}, {
-  position: '{{position}}'
+this.$dialog.message.info('Test', {
+  position: 'top-left'
 })
 ```
 ### Actions
