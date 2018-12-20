@@ -1,9 +1,15 @@
 <template>
-  <v-dialog @keydown.esc="dismiss" :scrollable="scrollable"
+  <v-dialog
     content-class="vuedl-layout"
-    v-model="isActive" :max-width="getWidth"
-    :persistent="persistent || loading" :fullscreen="fullscreen" ref="vdialog" >
-    <div v-if="closeBtn && !persistent && !loading"
+    v-model="isActive"
+    :fullscreen="fullscreen" ref="vdialog"
+    :max-width="getWidth"
+    :persistent="persistent || loading"
+    :scrollable="scrollable"
+    @keydown.esc="dismiss"
+  >
+    <div
+      v-if="closeBtn && !persistent && !loading"
       class="vuedl-layout__closeBtn"
       @click.stop="close">×</div>
     <slot />

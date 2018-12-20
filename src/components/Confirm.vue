@@ -11,7 +11,11 @@
       <v-card-text v-html="text" />
       <v-card-actions>
         <v-spacer />
-        <DialogActions :actions="actions" flat color="primary" />
+        <DialogActions
+          :actions="actions"
+          flat
+          color="primary"
+        />
       </v-card-actions>
     </v-card>
   </div>

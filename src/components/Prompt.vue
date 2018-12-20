@@ -1,13 +1,17 @@
 <template>
   <div>
-    <DialogCard :title="title" :actions="actions" :handle="handleClick">
+    <DialogCard
+      :title="title"
+      :actions="actions"
+      :handle="handleClick"
+    >
       <v-text-field
-          autofocus
-          @keypress.enter="$emit('submit', editedValue)"
-          v-model="editedValue"
-          :label="text"
-          required
-        />
+        autofocus
+        required
+        v-model="editedValue"
+        :label="text"
+        @keypress.enter="$emit('submit', editedValue)"
+      />
     </DialogCard>
   </div>
 </template>

@@ -1,4 +1,6 @@
-# vuetify-dialog - vuetify dialog helper
+# vuetify-dialog
+
+### This module will help you work with `vuetify` dialogs without annoyed templates
 
 Implementation of [vuedl](https://github.com/yariksav/vuedl) dialog helper with Vuetify.js framework
 

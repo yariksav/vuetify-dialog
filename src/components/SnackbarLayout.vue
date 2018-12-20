@@ -10,7 +10,8 @@
       :left="left"
       :right="right"
       :bottom="bottom"
-      @click="dismiss">
+      @click="dismiss"
+    >
       <slot />
     </v-snackbar>
   </div>
