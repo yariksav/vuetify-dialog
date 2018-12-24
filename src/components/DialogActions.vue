@@ -1,7 +1,7 @@
 <template>
   <span>
     <component
-      :is="component"
+      :is="action.component || component"
       v-for="action in actionlist"
       :key="action.key"
       v-bind="action.attrs"
@@ -13,6 +13,7 @@
       :loading="!passive && isActionInLoading(action)"
       :disabled="isActionDisabled(action) || (!passive && Boolean(loadingAction))"
       @click="onActionClick(action)"
+      v-on="action.on"
     >
       <v-icon v-if="action.icon && !action.icon.right" v-bind="action.icon" v-text="action.icon.text" />
       {{ action.text }}

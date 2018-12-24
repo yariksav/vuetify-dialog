@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
@@ -20,6 +20,7 @@
   "browser": "dist/vuetify-dialog.js",
   "cdn": "dist/vuetify-dialog.min.js",
   "unpkg": "dist/vuetify-dialog.min.js",
+  "types": "types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yariksav/vuetify-dialog.git"
@@ -48,7 +49,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "bili": "^3.4.2",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^22.1.2",
