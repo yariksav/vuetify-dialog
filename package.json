@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "^0.1.0"
+    "vuedl": "^0.1.1"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.24",

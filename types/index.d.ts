@@ -1,11 +1,56 @@
-import Vue from 'vue'
+import Vue, { VueConstructor } from 'vue'
+
+export interface DialogObject {
+  show (): DialogObject | undefined
+  wait (): Promise<any>
+  close (): void
+  vm: object
+  vmd: object
+}
+
+export interface DialogMessageOptions {
+  actions?: object
+  waitForResult?: boolean
+}
+export interface DialogConfirmOptions {
+  text?: string,
+  title?: string,
+  type?: string,
+  actions?: object | array<string> | array<DialogAction>,
+  waitForResult?: boolean,
+  icon?: string,
+  persistent?: boolean
+}
+
+export interface DialogAction {
+  text: string,
+  key: string,
+  component?: string
+  flat? : boolean,
+  outline? : boolean,
+  icon? : string,
+  color? : string,
+  round? : boolean,
+  disabled?: boolean
+}
 
 export interface VuetifyDialog {
-  confirm(config: Object): Promise<any>;
+  component (name: string, config: object | VueConstructor): void
+  show (component: object | VueConstructor): DialogObject
+  // implemented dialogs
+  confirm (options: DialogConfirmOptions): Promise<any>
+  prompt (options: DialogConfirmOptions): Promise<any>
+  warning (options: DialogConfirmOptions): Promise<any>
+  error (options: DialogConfirmOptions): Promise<any>
   notify: {
-    error(text: string): Promise<any>;
-    warning(text: string): Promise<any>;
-    info(text: string): Promise<any>;
+    error (text: string, options?: DialogMessageOptions): Promise<any>
+    warning (text: string, options?: DialogMessageOptions): Promise<any>
+    info (text: string, options?: DialogMessageOptions): Promise<any>
+  }
+  toast: {
+    error (text: string, options?: DialogMessageOptions): Promise<any>
+    warning (text: string, options?: DialogMessageOptions): Promise<any>
+    info (text: string, options?: DialogMessageOptions): Promise<any>
   }
 }
 
@@ -17,6 +62,7 @@ declare module 'vue/types/vue' {
 
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
-    $dialog?: any
+    asyncData? (context: object): Promise<any> 
+    primaryKey?: string
   }
 }

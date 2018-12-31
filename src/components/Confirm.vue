@@ -34,8 +34,7 @@ export default {
   layout: ['default', { width: 450 }],
   mixins: [ Confirmable, Colorable ],
   props: {
-    icon: String,
-    persistent: Boolean
+    icon: String
   },
   computed: {
     getIcon () {

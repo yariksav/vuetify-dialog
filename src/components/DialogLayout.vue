@@ -28,14 +28,18 @@ export default {
   },
   methods: {
     _destroy () {
-      this.$refs.vdialog.$refs.dialog.addEventListener('transitionend', this.onTransitionEnd)
-    },
-    onTransitionEnd (event) {
-      if (['opacity', 'z-index'].indexOf(event.propertyName) >= 0) {
-        this.$refs.vdialog.$refs.dialog.removeEventListener('transitionend', this.onTransitionEnd)
+      // Allow to draw transition, cause vuetify doesn't have onClose method
+      setTimeout(() => {
         this.$destroy()
-      }
+      }, 1000)
+      // this.$refs.vdialog.$refs.dialog.addEventListener('transitionend', this.onTransitionEnd)
     }
+    // onTransitionEnd (event) {
+    //   if (['opacity', 'z-index'].indexOf(event.propertyName) >= 0) {
+    //     this.$refs.vdialog.$refs.dialog.removeEventListener('transitionend', this.onTransitionEnd)
+    //     this.$destroy()
+    //   }
+    // }
   }
 }
 </script>
