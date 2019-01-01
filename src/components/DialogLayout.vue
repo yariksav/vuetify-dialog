@@ -9,7 +9,7 @@
     @keydown.esc="dismiss"
   >
     <div
-      v-if="closeBtn && !persistent && !loading"
+      v-if="showClose && !persistent && !loading"
       class="vuedl-layout__closeBtn"
       @click.stop="close">×</div>
     <slot />
@@ -21,7 +21,7 @@ export default {
   props: {
     fullscreen: Boolean,
     scrollable: Boolean,
-    closeBtn: {
+    showClose: {
       type: Boolean,
       default: () => true
     }

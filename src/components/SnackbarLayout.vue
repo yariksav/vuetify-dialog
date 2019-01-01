@@ -39,7 +39,7 @@ export default {
     _destroy () {
       setTimeout(() => {
         this.$destroy()
-      }, 300)
+      }, 500)
     }
   }
 }

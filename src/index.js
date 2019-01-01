@@ -53,15 +53,15 @@ const Plugin = {
       warning: (message, options) => manager.toast({ text: message, type: 'warning', ...options })
     }
 
-    manager.component('alert', Alert, {
+    manager.component('notification', Alert, {
       waitForResult: true
     })
 
     manager.notify = {
-      info: (message, options) => manager.alert({ text: message, type: 'info', ...options }),
-      error: (message, options) => manager.alert({ text: message, type: 'error', ...options }),
-      success: (message, options) => manager.alert({ text: message, type: 'success', ...options }),
-      warning: (message, options) => manager.alert({ text: message, type: 'warning', ...options })
+      info: (message, options) => manager.notification({ text: message, type: 'info', ...options }),
+      error: (message, options) => manager.notification({ text: message, type: 'error', ...options }),
+      success: (message, options) => manager.notification({ text: message, type: 'success', ...options }),
+      warning: (message, options) => manager.notification({ text: message, type: 'warning', ...options })
     }
 
     manager.component('prompt', Prompt, {
