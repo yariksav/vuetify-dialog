@@ -11,26 +11,27 @@ export interface DialogObject {
 export interface DialogMessageOptions {
   actions?: object
   waitForResult?: boolean
+  persistent?: boolean
 }
 export interface DialogConfirmOptions {
-  text?: string,
-  title?: string,
-  type?: string,
-  actions?: object | array<string> | array<DialogAction>,
-  waitForResult?: boolean,
-  icon?: string,
+  text?: string
+  title?: string
+  type?: string
+  actions?: object | Array<string> | Array<DialogAction>
+  waitForResult?: boolean
+  icon?: string
   persistent?: boolean
 }
 
 export interface DialogAction {
-  text: string,
-  key: string,
+  text: string
+  key: string
   component?: string
-  flat? : boolean,
-  outline? : boolean,
-  icon? : string,
-  color? : string,
-  round? : boolean,
+  flat? : boolean
+  outline? : boolean
+  icon? : string
+  color? : string
+  round? : boolean
   disabled?: boolean
 }
 
@@ -47,7 +48,7 @@ export interface VuetifyDialog {
     warning (text: string, options?: DialogMessageOptions): Promise<any>
     info (text: string, options?: DialogMessageOptions): Promise<any>
   }
-  toast: {
+  message: {
     error (text: string, options?: DialogMessageOptions): Promise<any>
     warning (text: string, options?: DialogMessageOptions): Promise<any>
     info (text: string, options?: DialogMessageOptions): Promise<any>

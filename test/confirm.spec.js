@@ -1,16 +1,16 @@
 // import Dialog from 'vuedl/src/dialog'
-import Vuedl from 'vuedl'
-import Confirm from '../src/components/Confirm'
-import { wrap } from 'vuedl/test/utils'
+// import Vuedl from 'vuedl'
+// import Confirm from '../src/components/Confirm'
+// import { wrap } from 'vuedl/test/utils'
 // import Returnable from 'vuedl/src/mixins/returnable'
-import Vue from 'vue'
+// import Vue from 'vue'
 
 describe('manager', () => {
-  let manager
+  // let manager
 
   test('Create manager instance', () => {
-    Vue.use(Vuedl)
-    console.dir('ddd', typeof DialogManager)
+    // Vue.use(Vuedl)
+    // console.dir('ddd', typeof DialogManager)
     // manager = new DialogManager({ context: { store: {} } })
     // expect(manager).toBeInstanceOf(DialogManager)
     // manager.component('confirm', Confirm)
