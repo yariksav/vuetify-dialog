@@ -1,42 +1,48 @@
 <template>
   <span>
-    <component
-      :is="action.component || component"
+    <DialogAction
       v-for="action in actionlist"
       :key="action.key"
-      v-bind="action.attrs"
-      :flat="action.flat !== undefined ? action.flat : flat"
-      :outline="action.outline !== undefined ? action.outline : outline"
-      :icon="!action.text && !!action.icon"
-      :color="action.color || color"
-      :round="action.round || round"
+      v-bind="getActionProps(action)"
+      :action-key="''+action.key"
       :loading="!passive && isActionInLoading(action)"
+      :class="{'loading': loadingAction === action.key}"
       :disabled="isActionDisabled(action) || (!passive && Boolean(loadingAction))"
       @click="onActionClick(action)"
-      v-on="action.on"
-    >
-      <v-icon v-if="action.icon && !action.icon.right" v-bind="action.icon" v-text="action.icon.text" />
-      {{ action.text }}
-      <v-icon v-if="action.icon && action.icon.right" v-bind="action.icon" v-text="action.icon.text" />
-    </component>
+    />
   </span>
 </template>
 <script>
 
 import Actionable from 'vuedl/src/mixins/actionable'
+import DialogAction from './DialogAction.vue'
 
 export default {
+  components: {
+    DialogAction
+  },
   mixins: [ Actionable ],
   props: {
-    component: {
-      type: [String, Object],
-      default: () => 'v-btn'
-    },
+    component: [String, Object],
     color: String,
     flat: Boolean,
     round: Boolean,
     outline: Boolean,
     passive: Boolean
+  },
+  methods: {
+    getActionProps (action) {
+      const res = {
+        component: action.component || this.component,
+        text: action.text
+      }
+      ;[ 'color', 'flat', 'icon', 'outline', 'round' ].forEach(key => {
+        if (action[key] || this[key]) {
+          res[key] = action[key] === undefined ? this[key] : action[key]
+        }
+      })
+      return res
+    }
   }
 }
 </script>
