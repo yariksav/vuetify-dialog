@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manager Test error notification with top-left position 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--left v-snack--top"
+    position="top-left"
+    text="Test message"
+    type="error"
+  >
+    <div
+      class="v-snack__wrapper error"
+    >
+      <div
+        class="v-snack__content"
+      >
+        <div>
+          <span>
+            Test message
+          </span>
+           
+          <span />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Test success notification 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom"
+    text="Test message"
+    type="success"
+  >
+    <div
+      class="v-snack__wrapper success"
+    >
+      <div
+        class="v-snack__content"
+      >
+        <div>
+          <span>
+            Test message
+          </span>
+           
+          <span />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Test warning notification with bottom-right position 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom v-snack--right"
+    position="bottom-right"
+    text="Test message"
+    type="warning"
+  >
+    <div
+      class="v-snack__wrapper warning"
+    >
+      <div
+        class="v-snack__content"
+      >
+        <div>
+          <span>
+            Test message
+          </span>
+           
+          <span />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

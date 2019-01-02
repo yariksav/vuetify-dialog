@@ -18,7 +18,7 @@ exports[`manager Test error notification with top-left position 1`] = `
     </i>
     <div>
       
-  Test confirmation
+  Test notification
   
       <span />
     </div>
@@ -56,7 +56,7 @@ exports[`manager Test success notification 1`] = `
     </i>
     <div>
       
-  Test confirmation
+  Test notification
   
       <span />
     </div>
@@ -94,7 +94,7 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
     </i>
     <div>
       
-  Test confirmation
+  Test notification
   
       <span />
     </div>
