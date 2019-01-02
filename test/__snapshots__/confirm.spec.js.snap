@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manager Check confirm 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div>
+    <div
+      class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    >
+      <!---->
+       
+      <div
+        class="v-card__title"
+      >
+        <h3
+          class="headline mb-0"
+        />
+      </div>
+       
+      <div
+        class="v-card__text"
+      >
+        test
+      </div>
+       
+      <div
+        class="v-card__actions"
+      >
+        <div
+          class="spacer"
+        />
+         
+        <span>
+          <button
+            action-key="ok"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  ok
+  
+              <!---->
+            </div>
+          </button>
+          <button
+            action-key="cancel"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  cancel
+  
+              <!---->
+            </div>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Check confirm with action icons 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div>
+    <div
+      class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    >
+      <!---->
+       
+      <div
+        class="v-card__title"
+      >
+        <h3
+          class="headline mb-0"
+        />
+      </div>
+       
+      <div
+        class="v-card__text"
+      >
+        test
+      </div>
+       
+      <div
+        class="v-card__actions"
+      >
+        <div
+          class="spacer"
+        />
+         
+        <span>
+          <button
+            action-key="false"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <i
+                aria-hidden="true"
+                class="v-icon material-icons theme--light"
+                text="cancel"
+              >
+                cancel
+              </i>
+              
+  No
+  
+              <!---->
+            </div>
+          </button>
+          <button
+            action-key="true"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  Yes
+  
+              <i
+                aria-hidden="true"
+                class="v-icon v-icon--right material-icons theme--light"
+                text="success"
+              >
+                success
+              </i>
+            </div>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Check confirm with btns true|false 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div>
+    <div
+      class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    >
+      <!---->
+       
+      <div
+        class="v-card__title"
+      >
+        <h3
+          class="headline mb-0"
+        />
+      </div>
+       
+      <div
+        class="v-card__text"
+      >
+        test
+      </div>
+       
+      <div
+        class="v-card__actions"
+      >
+        <div
+          class="spacer"
+        />
+         
+        <span>
+          <button
+            action-key="true"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  Yes
+  
+              <!---->
+            </div>
+          </button>
+          <button
+            action-key="false"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  No
+  
+              <!---->
+            </div>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Check confirm with handle functions 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div>
+    <div
+      class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    >
+      <!---->
+       
+      <div
+        class="v-card__title"
+      >
+        <h3
+          class="headline mb-0"
+        />
+      </div>
+       
+      <div
+        class="v-card__text"
+      >
+        test
+      </div>
+       
+      <div
+        class="v-card__actions"
+      >
+        <div
+          class="spacer"
+        />
+         
+        <span>
+          <button
+            action-key="false"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  No
+  
+              <!---->
+            </div>
+          </button>
+          <button
+            action-key="true"
+            class="v-btn v-btn--flat theme--light primary--text"
+            type="button"
+          >
+            <div
+              class="v-btn__content"
+            >
+              <!---->
+              
+  Yes
+  
+              <!---->
+            </div>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Returnable 1`] = `
+<div
+  class="dialog-layout"
+>
+  <p />
+</div>
+`;
+
+exports[`manager Test default confirm 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div>
+    <div
+      class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    >
+      <!---->
+       
+      <div
+        class="v-card__title"
+      >
+        <h3
+          class="headline mb-0"
+        />
+      </div>
+       
+      <div
+        class="v-card__text"
+      >
+        Test confirmation
+      </div>
+       
+      <div
+        class="v-card__actions"
+      >
+        <div
+          class="spacer"
+        />
+         
+        <span />
+      </div>
+    </div>
+  </div>
+</div>
+`;
