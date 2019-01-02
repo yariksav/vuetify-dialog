@@ -22,12 +22,12 @@ export interface DialogAction {
   color? : string
   round? : boolean
   disabled?: boolean
-  handle? (action: all): Promise<all>
+  handle? (action: any): Promise<any>
 }
 
 interface DialogActionable {
   actions?: object | Array<string|DialogAction> | Array<DialogAction>
-  handle? (action: all): Promise<all>
+  handle? (action: any): Promise<any>
 }
 
 export interface DialogObject {
@@ -38,14 +38,14 @@ export interface DialogObject {
   vmd: object
 }
 
-export interface DialogMessageOptions extends DialogActionable, DialogPositionable {
+export interface DialogMessageOptions extends DialogActionable {
   color?: string
   position?: string
   timeout?: number
   type?: string
 }
 
-export interface DialogNotifyOptions extends DialogActionable, DialogPositionable {
+export interface DialogNotifyOptions extends DialogActionable {
   dismissible?: boolean
   position?: string
   showClose?: boolean
@@ -97,7 +97,7 @@ declare module 'vue/types/vue' {
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
     asyncData? (context: object): Promise<any>
-    layout?: string | Array<string,object> 
+    layout?: string | Array<any> 
     primaryKey?: string
   }
 }
