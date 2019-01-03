@@ -104,6 +104,8 @@ let res = await this.$dialog.prompt({
 })
 ```
 
+![notification demo](https://media.giphy.com/media/w783JDQ6zdQmZl9hy5/giphy.gif)
+
 ### Programmatically close dialog
 
 If property `waitForResult` set to false, then functions will return dialog instance
@@ -133,6 +135,8 @@ Therefore to perfom programmatically close dialog you have to set waitForResult 
 ### Notifications
 The notification component is used to convey important information to the user. 
 Notification support positioning, removal delay and callbacks. It comes in 4 variations, **success**, **info**, **warning** and **error**. These have default icons assigned which can be changed and represent different actions
+
+![notification demo](https://media.giphy.com/media/25DEAsF1eMtqTB1Js7/giphy.gif)
 
 Notification uses [v-alert](https://vuetifyjs.com/en/components/alerts) component
 
