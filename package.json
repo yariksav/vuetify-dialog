@@ -3,10 +3,10 @@
   "version": "0.1.9",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
-    "build2": "npm run build && cp -r dist/ ../../cmpact/billing-front/node_modules/vuetify-dialog/dist/  && cp -r src/ ../../cmpact/billing-front/node_modules/vuetify-dialog/src/",
     "build": "npm run lint && npm run build:module && npm run build:browser",
     "build:module": "bili ./src/index.js --format cjs,es --no-js",
     "build:browser": "bili ./src/index.js --format umd,umd-min --js buble",
+    "build:copy": "npm run build && bash build/copy.sh",
     "release": "bash build/release.sh",
     "lint": "eslint --ext js --ext vue src",
     "lint:fix": "npm run lint -- --fix",
