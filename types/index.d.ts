@@ -70,7 +70,7 @@ export interface DialogConfirmOptions extends DialogActionable {
 
 export interface VuetifyDialog {
   component (name: string, options: object | VueConstructor): void
-  show (component: object | VueConstructor, options: object): DialogObject
+  show (component: object | VueConstructor, options?: object): DialogObject
   // implemented dialogs
   confirm (options: DialogConfirmOptions): Promise<any>
   prompt (options: DialogConfirmOptions): Promise<any>
