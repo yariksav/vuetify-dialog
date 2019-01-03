@@ -104,6 +104,31 @@ let res = await this.$dialog.prompt({
 })
 ```
 
+### Programmatically close dialog
+
+If property `waitForResult` set to false, then functions will return dialog instance
+
+Actually waitForResult = true make two steps
+1) dialogInstance = $dialog.show(component) // Show dialog
+2) return dialogInstance.wait() // Return promise
+
+Therefore to perfom programmatically close dialog you have to set waitForResult to false and work with dialogInstance directly
+
+```js
+  const dialogInstance = await this.$dialog.warning({
+    title: this.title,
+    text: this.text,
+    waitForResult: false
+  });
+  setTimeout(() => {
+    dialogInstance.close()
+  } , 3000)
+
+  // then you can wait for user reaction
+  const userChoice = await dialogInstance.wait()
+  // after idle 3000 sec - userChoice will be undefigned
+  this.$dialog.notify.info(userChoice)
+```
 
 ### Notifications
 The notification component is used to convey important information to the user. 
