@@ -19,10 +19,7 @@
 </template>
 <script>
 
-import Actionable from 'vuedl/src/mixins/actionable'
-
 export default {
-  mixins: [ Actionable ],
   props: {
     attrs: Object,
     component: {

@@ -4,6 +4,7 @@
       :title="title"
       :actions="actions"
       :handle="handleClick"
+      ref="card"
     >
       <v-text-field
         autofocus
@@ -33,11 +34,6 @@ export default {
   data () {
     return {
       editedValue: this.value
-    }
-  },
-  computed: {
-    getIcon () {
-      return this.icon || this.type
     }
   },
   methods: {

@@ -103,7 +103,7 @@ exports[`manager Check confirm with action icons 1`] = `
         <span>
           <button
             action-key="false"
-            class="v-btn v-btn--flat theme--light primary--text"
+            class="v-btn v-btn--flat v-btn--round theme--light info--text"
             type="button"
           >
             <div

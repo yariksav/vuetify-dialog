@@ -15,13 +15,15 @@
 <script>
 
 import Actionable from 'vuedl/src/mixins/actionable'
+// import DialogActions from 'vuedl/src/components/DialogActions.vue'
 import DialogAction from './DialogAction.vue'
 
 export default {
   components: {
     DialogAction
   },
-  mixins: [ Actionable ],
+  mixins: [Actionable],
+  // extends: DialogActions,
   props: {
     component: [String, Object],
     color: String,
@@ -29,6 +31,11 @@ export default {
     round: Boolean,
     outline: Boolean,
     passive: Boolean
+  },
+  computed: {
+    nestedProps () {
+      return [ 'color', 'flat', 'icon', 'outline', 'round' ]
+    }
   },
   methods: {
     getActionProps (action) {

@@ -67,6 +67,8 @@ describe('manager', () => {
           icon: {
             text: 'cancel'
           },
+          color: 'info',
+          round: true,
           text: 'No'
         },
         true: {
