@@ -11,7 +11,7 @@
     "lint": "eslint --ext js --ext vue src",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
-    "test": "jest --env=jsdom",
+    "test": "jest --env=jsdom && coveralls",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "coveralls": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",

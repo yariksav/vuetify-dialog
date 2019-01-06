@@ -21,6 +21,8 @@ This module will help you to work with modal dialogs in your project
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>
+  <a href='https://coveralls.io/github/yariksav/vuetify-dialog'><img src='https://coveralls.io/repos/github/yariksav/vuetify-dialog/badge.svg' alt='Coverage Status' /></a>
+  <a href='https://travis-ci.org/yariksav/vuetify-dialog'><img src='https://travis-ci.org/yariksav/vuetify-dialog.svg?branch=master' /></a>
 </p>
 
 ## Vuedl module documentation
