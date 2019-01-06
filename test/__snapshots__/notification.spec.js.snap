@@ -2,7 +2,7 @@
 
 exports[`manager Test error notification with top-left position 1`] = `
 <div
-  class="vuedl-notification left"
+  class="vuedl-notification left vuedl-notification-fade-enter vuedl-notification-fade-enter-active"
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >
@@ -40,7 +40,7 @@ exports[`manager Test error notification with top-left position 1`] = `
 
 exports[`manager Test success notification 1`] = `
 <div
-  class="vuedl-notification right"
+  class="vuedl-notification right vuedl-notification-fade-enter vuedl-notification-fade-enter-active"
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >

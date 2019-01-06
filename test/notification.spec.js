@@ -17,9 +17,9 @@ describe('manager', () => {
       timeout: 100,
       waitForResult: false
     })
-    await sleep(50)
+    await sleep(1)
     expect(dlg.vm.$el).toMatchSnapshot()
-    await sleep(100)
+    await sleep(200)
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')
   })
@@ -30,7 +30,7 @@ describe('manager', () => {
       position: 'top-left',
       waitForResult: false
     })
-    await sleep(50)
+    await sleep(1)
     expect(dlg.vm.$el).toMatchSnapshot()
     await sleep(500)
     await Vue.nextTick()

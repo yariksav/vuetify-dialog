@@ -33,7 +33,7 @@ describe('manager', () => {
     })
     expect(dialog.element).toMatchSnapshot()
     dialog.close()
-    await sleep(1000)
+    await sleep(1200)
     expect(document.body.innerHTML).toBe('<div data-app=\"true\"></div>')
   })
 
