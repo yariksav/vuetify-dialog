@@ -46,6 +46,7 @@ describe('manager', () => {
   test('Check confirm', async () => {
     let dlg = await manager.confirm({
       text: 'test',
+      type: 'warning',
       actions: ['ok', 'cancel']
     })
     const wrapper = wrap(dlg.vm)
@@ -62,6 +63,7 @@ describe('manager', () => {
   test('Check confirm with action icons', async () => {
     let dlg = await manager.confirm({
       text: 'test',
+      icon: 'warning',
       actions: {
         false: {
           icon: {
@@ -80,7 +82,6 @@ describe('manager', () => {
         }
       }
     })
-    // const wrapper = wrap(dlg.vm)
     expect(dlg.vm.$el).toMatchSnapshot()
     await dlg.close()
     await Vue.nextTick()

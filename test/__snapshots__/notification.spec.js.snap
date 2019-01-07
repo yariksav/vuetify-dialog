@@ -38,6 +38,82 @@ exports[`manager Test error notification with top-left position 1`] = `
 </div>
 `;
 
+exports[`manager Test info notification 1`] = `
+<div
+  class="vuedl-notification right vuedl-notification-fade-leave vuedl-notification-fade-leave-active"
+  role="alert"
+  style="max-width: 330px; z-index: 2000; top: 10px;"
+>
+  <div
+    class="v-alert info"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <i
+      aria-hidden="true"
+      class="v-icon material-icons theme--light v-alert__icon"
+    >
+      info
+    </i>
+    <div>
+      
+  Test notification
+  
+      <span />
+    </div>
+    <a
+      class="v-alert__dismissible"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon v-icon--right material-icons theme--light"
+      >
+        cancel
+      </i>
+    </a>
+  </div>
+   
+  <!---->
+</div>
+`;
+
+exports[`manager Test notification component 1`] = `
+<div
+  class="vuedl-notification right vuedl-notification-fade-enter vuedl-notification-fade-enter-active"
+  role="alert"
+  style="max-width: 330px; z-index: 2000; top: 10px;"
+>
+  <div
+    class="v-alert info"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <i
+      aria-hidden="true"
+      class="v-icon material-icons theme--light v-alert__icon"
+    >
+      info
+    </i>
+    <div>
+      
+  Test notification
+  
+      <span />
+    </div>
+    <a
+      class="v-alert__dismissible"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon v-icon--right material-icons theme--light"
+      >
+        cancel
+      </i>
+    </a>
+  </div>
+   
+  <!---->
+</div>
+`;
+
 exports[`manager Test success notification 1`] = `
 <div
   class="vuedl-notification right vuedl-notification-fade-enter vuedl-notification-fade-enter-active"

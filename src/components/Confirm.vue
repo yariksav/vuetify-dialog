@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-card tile>
-      <v-toolbar v-if="!!type" dark :color="getColor" dense flat>
-        <v-icon v-if="!!getIcon">{{ getIcon }}</v-icon>
+      <v-toolbar v-if="Boolean(type)" dark :color="getColor" dense flat>
+        <v-icon v-if="Boolean(getIcon)">{{ getIcon }}</v-icon>
         <v-toolbar-title>{{ title }}</v-toolbar-title>
       </v-toolbar>
       <v-card-title v-if="!type">

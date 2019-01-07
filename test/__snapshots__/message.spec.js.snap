@@ -27,6 +27,32 @@ exports[`manager Test error notification with top-left position 1`] = `
 </div>
 `;
 
+exports[`manager Test info notification 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom"
+    text="Test message"
+    type="info"
+  >
+    <div
+      class="v-snack__wrapper info"
+    >
+      <div
+        class="v-snack__content"
+      >
+        <div>
+          <span>
+            Test message
+          </span>
+           
+          <span />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`manager Test success notification 1`] = `
 <div>
   <div

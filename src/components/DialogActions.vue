@@ -15,7 +15,6 @@
 <script>
 
 import Actionable from 'vuedl/src/mixins/actionable'
-// import DialogActions from 'vuedl/src/components/DialogActions.vue'
 import DialogAction from './DialogAction.vue'
 
 export default {
@@ -23,7 +22,6 @@ export default {
     DialogAction
   },
   mixins: [Actionable],
-  // extends: DialogActions,
   props: {
     component: [String, Object],
     color: String,
@@ -43,7 +41,7 @@ export default {
         component: action.component || this.component,
         text: action.text
       }
-      ;[ 'color', 'flat', 'icon', 'outline', 'round' ].forEach(key => {
+      this.nestedProps.forEach(key => {
         if (action[key] || this[key]) {
           res[key] = action[key] === undefined ? this[key] : action[key]
         }

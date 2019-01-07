@@ -74,6 +74,7 @@ const Plugin = {
   }
 }
 
+/* istanbul ignore next */
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(Plugin)
 }

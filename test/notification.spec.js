@@ -12,9 +12,34 @@ describe('manager', () => {
     manager = Vue.prototype.$dialog
   })
 
+  test('Test notification component', async () => {
+    const dlg = await manager.notification({
+      text: 'Test notification',
+      timeout: 100,
+      waitForResult: false
+    })
+    await sleep(1)
+    expect(dlg.vm.$el).toMatchSnapshot()
+    await sleep(200)
+    await Vue.nextTick()
+    expect(document.body.innerHTML).toBe('')
+  })
+
   test('Test success notification', async () => {
     const dlg = await manager.notify.success('Test notification', {
       timeout: 100,
+      waitForResult: false
+    })
+    await sleep(1)
+    expect(dlg.vm.$el).toMatchSnapshot()
+    await sleep(200)
+    await Vue.nextTick()
+    expect(document.body.innerHTML).toBe('')
+  })
+
+  test('Test info notification', async () => {
+    const dlg = await manager.notify.info('Test notification', {
+      timeout: 1,
       waitForResult: false
     })
     await sleep(1)

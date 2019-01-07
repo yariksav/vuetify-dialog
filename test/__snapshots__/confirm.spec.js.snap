@@ -8,15 +8,30 @@ exports[`manager Check confirm 1`] = `
     <div
       class="v-card v-sheet v-sheet--tile theme--light elevation-2"
     >
-      <!---->
-       
-      <div
-        class="v-card__title"
+      <nav
+        class="v-toolbar elevation-0 v-toolbar--dense theme--dark warning"
+        style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"
       >
-        <h3
-          class="headline mb-0"
-        />
-      </div>
+        <div
+          class="v-toolbar__content"
+          style="height: 48px;"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon material-icons theme--dark"
+          >
+            warning
+          </i>
+           
+          <div
+            class="v-toolbar__title"
+          >
+            
+          </div>
+        </div>
+      </nav>
+       
+      <!---->
        
       <div
         class="v-card__text"

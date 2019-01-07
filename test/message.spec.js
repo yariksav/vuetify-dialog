@@ -24,6 +24,18 @@ describe('manager', () => {
     expect(document.body.innerHTML).toBe('')
   })
 
+  test('Test info notification', async () => {
+    const dlg = await manager.message.info('Test message', {
+      timeout: 100,
+      waitForResult: false
+    })
+    await sleep(50)
+    expect(dlg.vm.$el).toMatchSnapshot()
+    await sleep(600)
+    await Vue.nextTick()
+    expect(document.body.innerHTML).toBe('')
+  })
+
   test('Test error notification with top-left position', async () => {
     const dlg = await manager.message.error('Test message', {
       timeout: 100,
