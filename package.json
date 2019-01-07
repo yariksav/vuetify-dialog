@@ -12,9 +12,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
     "test": "jest --env=jsdom",
+    "posttest": "npm run coverage",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "coveralls": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
+    "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
     "test1": "node_modules/.bin/jest --env=jsdom --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "main": "dist/vuetify-dialog.cjs.js",
