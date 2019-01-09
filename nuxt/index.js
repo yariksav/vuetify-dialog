@@ -1,32 +1,36 @@
 /*
 Nuxt.js module for vuetify-dialog
 Usage:
-    - Install vuetify-dialog package
-    - Add this into your nuxt.config.js file:
-    {
-        modules: [
-            // Simple usage
-            'vuetify-dialog/nuxt'
-            // Optionally passing options in module configuration
-            ['vuetify-dialog/nuxt', { property: '$dialog' }]
-        ],
-        // Optionally passing options in module top level configuration
-        wait: { property: '$dialog' }
-    }
+  - Install vuetify-dialog package
+  - Add this into your nuxt.config.js file:
+  {
+    modules: [
+      // Simple usage
+      'vuetify-dialog/nuxt'
+      // Optionally passing options in module configuration
+      ['vuetify-dialog/nuxt', { property: '$dialog' }]
+    ],
+    // Optionally passing options in module top level configuration
+    vuetifyDialog: { property: '$dialog' }
+  }
 */
 
-const {resolve} = require('path');
+const { resolve } = require('path')
 
-module.exports = function nuxtVueWaitModule(moduleOptions) {
-    const options = Object.assign({}, this.options.vuetifyDialog, moduleOptions);
+module.exports = function nuxtVueWaitModule (moduleOptions) {
+  const options = Object.assign({}, this.options.vuetifyDialog, moduleOptions)
 
-    // Register plugin
-    this.addPlugin({
-        src: resolve(__dirname, 'plugin.template.js'),
-        fileName: 'vuetify-dialog.js',
-        options: options
-    })
-};
+  if (this.options.build.ssr) {
+    this.options.build.transpile.push(/^vuetify-dialog/)
+    this.options.build.transpile.push(/^vuedl/)
+  }
+  // Register plugin
+  this.addPlugin({
+    src: resolve(__dirname, 'plugin.template.js'),
+    fileName: 'vuetify-dialog.js',
+    options: options
+  })
+}
 
 // required by nuxt
-module.exports.meta = require('../package.json');
+module.exports.meta = require('../package.json')
