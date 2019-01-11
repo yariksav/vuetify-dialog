@@ -12,6 +12,11 @@ describe('manager', () => {
     manager = Vue.prototype.$dialog
   })
 
+  it('Should not raise exception when use vuetify-dialog several times', () => {
+    Vue.use(VuetifyDialogPlugin)
+    VuetifyDialogPlugin.install(Vue, {})
+  })
+
   test('Test success notification', async () => {
     const dlg = await manager.message.success('Test message', {
       timeout: 100,
