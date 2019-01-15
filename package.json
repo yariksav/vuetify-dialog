@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run lint && npm run build:module && npm run build:browser",
@@ -12,7 +12,6 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
     "test": "jest --env=jsdom",
-    "posttest": "npm run coverage",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
@@ -42,7 +41,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "^0.1.4"
+    "vuedl": "^0.1.6"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",

@@ -2,7 +2,11 @@ import Vue from 'vue'
 import VuetifyDialog from 'vuetify-dialog'
 
 export default (obj, inject) => {
-    // inject options from module
+  // aviable only in client side
+  if (!process.client) {
+    return
+  }
+  // inject options from module
   const pluginOptions = [<%= serialize(options) %>][0] || {}
   const property = pluginOptions.property || '$dialog'
 
