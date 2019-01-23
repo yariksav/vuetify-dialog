@@ -12,7 +12,7 @@
       :bottom="bottom"
       @click="dismiss"
     >
-      <slot />
+      <slot/>
     </v-snackbar>
   </div>
 </template>

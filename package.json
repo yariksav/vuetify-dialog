@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "^0.1.6"
+    "vuedl": "^0.2.0-alpha.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",

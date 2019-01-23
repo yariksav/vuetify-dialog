@@ -34,11 +34,18 @@ export default {
   layout: ['default', { width: 450 }],
   mixins: [ Confirmable, Colorable ],
   props: {
-    icon: String
+    icon: String,
+    text: {
+      type: [String, Function],
+      reqiured: true
+    }
   },
   computed: {
     getIcon () {
       return this.icon || this.type
+    },
+    getText () {
+      return typeof this.text === 'function' ? this.text() : this.text
     }
   }
 }

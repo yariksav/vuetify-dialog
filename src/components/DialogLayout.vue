@@ -12,7 +12,7 @@
       v-if="showClose && !persistent && !loading"
       class="vuedl-layout__closeBtn"
       @click.stop="close">×</div>
-    <slot />
+    <div ref="dialog-instance" />
   </v-dialog>
 </template>
 

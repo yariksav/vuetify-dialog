@@ -6,32 +6,34 @@ exports[`manager Test error notification with top-left position 1`] = `
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >
-  <div
-    class="v-alert error"
-    style="margin: 0px; min-width: 300px;"
-  >
-    <i
-      aria-hidden="true"
-      class="v-icon material-icons theme--light v-alert__icon"
-    >
-      warning
-    </i>
-    <div>
-      
-  Test notification
-  
-      <span />
-    </div>
-    <a
-      class="v-alert__dismissible"
+  <div>
+    <div
+      class="v-alert error"
+      style="margin: 0px; min-width: 300px;"
     >
       <i
         aria-hidden="true"
-        class="v-icon v-icon--right material-icons theme--light"
+        class="v-icon material-icons theme--light v-alert__icon"
       >
-        cancel
+        warning
       </i>
-    </a>
+      <div>
+        
+  Test notification
+  
+        <span />
+      </div>
+      <a
+        class="v-alert__dismissible"
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon v-icon--right material-icons theme--light"
+        >
+          cancel
+        </i>
+      </a>
+    </div>
   </div>
    
   <!---->
@@ -44,32 +46,34 @@ exports[`manager Test info notification 1`] = `
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >
-  <div
-    class="v-alert info"
-    style="margin: 0px; min-width: 300px;"
-  >
-    <i
-      aria-hidden="true"
-      class="v-icon material-icons theme--light v-alert__icon"
-    >
-      info
-    </i>
-    <div>
-      
-  Test notification
-  
-      <span />
-    </div>
-    <a
-      class="v-alert__dismissible"
+  <div>
+    <div
+      class="v-alert info"
+      style="margin: 0px; min-width: 300px;"
     >
       <i
         aria-hidden="true"
-        class="v-icon v-icon--right material-icons theme--light"
+        class="v-icon material-icons theme--light v-alert__icon"
       >
-        cancel
+        info
       </i>
-    </a>
+      <div>
+        
+  Test notification
+  
+        <span />
+      </div>
+      <a
+        class="v-alert__dismissible"
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon v-icon--right material-icons theme--light"
+        >
+          cancel
+        </i>
+      </a>
+    </div>
   </div>
    
   <!---->
@@ -82,32 +86,34 @@ exports[`manager Test notification component 1`] = `
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >
-  <div
-    class="v-alert info"
-    style="margin: 0px; min-width: 300px;"
-  >
-    <i
-      aria-hidden="true"
-      class="v-icon material-icons theme--light v-alert__icon"
-    >
-      info
-    </i>
-    <div>
-      
-  Test notification
-  
-      <span />
-    </div>
-    <a
-      class="v-alert__dismissible"
+  <div>
+    <div
+      class="v-alert info"
+      style="margin: 0px; min-width: 300px;"
     >
       <i
         aria-hidden="true"
-        class="v-icon v-icon--right material-icons theme--light"
+        class="v-icon material-icons theme--light v-alert__icon"
       >
-        cancel
+        info
       </i>
-    </a>
+      <div>
+        
+  Test notification
+  
+        <span />
+      </div>
+      <a
+        class="v-alert__dismissible"
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon v-icon--right material-icons theme--light"
+        >
+          cancel
+        </i>
+      </a>
+    </div>
   </div>
    
   <!---->
@@ -120,32 +126,34 @@ exports[`manager Test success notification 1`] = `
   role="alert"
   style="max-width: 330px; z-index: 2000; top: 10px;"
 >
-  <div
-    class="v-alert success"
-    style="margin: 0px; min-width: 300px;"
-  >
-    <i
-      aria-hidden="true"
-      class="v-icon material-icons theme--light v-alert__icon"
-    >
-      check_circle
-    </i>
-    <div>
-      
-  Test notification
-  
-      <span />
-    </div>
-    <a
-      class="v-alert__dismissible"
+  <div>
+    <div
+      class="v-alert success"
+      style="margin: 0px; min-width: 300px;"
     >
       <i
         aria-hidden="true"
-        class="v-icon v-icon--right material-icons theme--light"
+        class="v-icon material-icons theme--light v-alert__icon"
       >
-        cancel
+        check_circle
       </i>
-    </a>
+      <div>
+        
+  Test notification
+  
+        <span />
+      </div>
+      <a
+        class="v-alert__dismissible"
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon v-icon--right material-icons theme--light"
+        >
+          cancel
+        </i>
+      </a>
+    </div>
   </div>
    
   <!---->
@@ -158,32 +166,34 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
   role="alert"
   style="max-width: 330px; z-index: 2000; bottom: 10px;"
 >
-  <div
-    class="v-alert warning"
-    style="margin: 0px; min-width: 300px;"
-  >
-    <i
-      aria-hidden="true"
-      class="v-icon material-icons theme--light v-alert__icon"
-    >
-      priority_high
-    </i>
-    <div>
-      
-  Test notification
-  
-      <span />
-    </div>
-    <a
-      class="v-alert__dismissible"
+  <div>
+    <div
+      class="v-alert warning"
+      style="margin: 0px; min-width: 300px;"
     >
       <i
         aria-hidden="true"
-        class="v-icon v-icon--right material-icons theme--light"
+        class="v-icon material-icons theme--light v-alert__icon"
       >
-        cancel
+        priority_high
       </i>
-    </a>
+      <div>
+        
+  Test notification
+  
+        <span />
+      </div>
+      <a
+        class="v-alert__dismissible"
+      >
+        <i
+          aria-hidden="true"
+          class="v-icon v-icon--right material-icons theme--light"
+        >
+          cancel
+        </i>
+      </a>
+    </div>
   </div>
    
   <!---->
