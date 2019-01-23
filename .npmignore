@@ -2,3 +2,4 @@ test
 .vscode
 coverage
 .travis.yml
+*.tgz

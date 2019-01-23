@@ -3,3 +3,4 @@ coverage
 dist
 docs/.vuepress/dist
 build/related
+*.tgz
