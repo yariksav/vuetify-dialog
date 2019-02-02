@@ -77,7 +77,7 @@ Module automatically add to dialog nuxt context data, such as router, route, i18
 ### Simple confirm dialog
 ```js
 const res = await this.$dialog.confirm({
-  text: 'Do you really want to exit?'
+  text: 'Do you really want to exit?',
   title: 'Warning'
 })
 ```
