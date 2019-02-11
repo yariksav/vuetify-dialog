@@ -26,8 +26,8 @@ function install (Vue, options = {}) {
     actions: {
       false: 'Cancel',
       true: {
-        test: 'OK',
-        color: 'info'
+        text: 'OK',
+        color: 'primary'
       }
     }
   })
@@ -38,8 +38,8 @@ function install (Vue, options = {}) {
     actions: {
       false: 'Cancel',
       true: {
-        test: 'OK',
-        color: 'info'
+        text: 'OK',
+        color: 'primary'
       }
     }
   })
