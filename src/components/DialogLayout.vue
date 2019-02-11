@@ -12,13 +12,14 @@
       v-if="showClose && !persistent && !loading"
       class="vuedl-layout__closeBtn"
       @click.stop="close">×</div>
-    <div ref="dialog-instance" />
+    <dialog-child v-bind="$options.propsData" ref="dialog"/>
   </v-dialog>
 </template>
 
 <script>
 export default {
   props: {
+    // ref: String,
     fullscreen: Boolean,
     scrollable: Boolean,
     showClose: {

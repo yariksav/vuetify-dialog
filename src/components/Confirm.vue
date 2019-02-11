@@ -1,24 +1,21 @@
 <template>
-  <div>
-    <v-card tile>
-      <v-toolbar v-if="Boolean(type)" dark :color="getColor" dense flat>
-        <v-icon v-if="Boolean(getIcon)">{{ getIcon }}</v-icon>
-        <v-toolbar-title>{{ title }}</v-toolbar-title>
-      </v-toolbar>
-      <v-card-title v-if="!type">
-        <h3 class="headline mb-0" v-text="title" />
-      </v-card-title>
-      <v-card-text v-html="text" />
-      <v-card-actions>
-        <v-spacer />
-        <DialogActions
-          :actions="actions"
-          flat
-          color="primary"
-        />
-      </v-card-actions>
-    </v-card>
-  </div>
+  <v-card tile>
+    <v-toolbar v-if="Boolean(type)" dark :color="getColor" dense flat>
+      <v-icon v-if="Boolean(getIcon)">{{ getIcon }}</v-icon>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
+    </v-toolbar>
+    <v-card-title v-if="!type">
+      <h3 class="headline mb-0" v-text="title" />
+    </v-card-title>
+    <v-card-text v-html="text" />
+    <v-card-actions>
+      <v-spacer />
+      <DialogActions
+        :actions="actions"
+        flat
+      />
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>

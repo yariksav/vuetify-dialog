@@ -25,7 +25,10 @@ function install (Vue, options = {}) {
     waitForResult: true,
     actions: {
       false: 'Cancel',
-      true: 'OK'
+      true: {
+        test: 'OK',
+        color: 'info'
+      }
     }
   })
 
@@ -34,7 +37,10 @@ function install (Vue, options = {}) {
     waitForResult: true,
     actions: {
       false: 'Cancel',
-      true: 'OK'
+      true: {
+        test: 'OK',
+        color: 'info'
+      }
     }
   })
 

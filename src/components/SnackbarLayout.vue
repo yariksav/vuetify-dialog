@@ -12,7 +12,7 @@
       :bottom="bottom"
       @click="dismiss"
     >
-      <slot/>
+      <dialog-child v-bind="$options.propsData" ref="dialog"/>
     </v-snackbar>
   </div>
 </template>

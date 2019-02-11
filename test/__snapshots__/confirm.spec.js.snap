@@ -4,83 +4,79 @@ exports[`manager Check confirm 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <div>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <nav
+      class="v-toolbar elevation-0 v-toolbar--dense theme--dark warning"
+      style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"
+    >
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+        class="v-toolbar__content"
+        style="height: 48px;"
       >
-        <nav
-          class="v-toolbar elevation-0 v-toolbar--dense theme--dark warning"
-          style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"
+        <i
+          aria-hidden="true"
+          class="v-icon material-icons theme--dark"
         >
-          <div
-            class="v-toolbar__content"
-            style="height: 48px;"
-          >
-            <i
-              aria-hidden="true"
-              class="v-icon material-icons theme--dark"
-            >
-              warning
-            </i>
-             
-            <div
-              class="v-toolbar__title"
-            >
-              
-            </div>
-          </div>
-        </nav>
-         
-        <!---->
+          warning
+        </i>
          
         <div
-          class="v-card__text"
+          class="v-toolbar__title"
         >
-          test
-        </div>
-         
-        <div
-          class="v-card__actions"
-        >
-          <div
-            class="spacer"
-          />
-           
-          <span>
-            <button
-              action-key="ok"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
-  ok
-  
-                <!---->
-              </div>
-            </button>
-            <button
-              action-key="cancel"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
-  cancel
-  
-                <!---->
-              </div>
-            </button>
-          </span>
+          
         </div>
       </div>
+    </nav>
+     
+    <!---->
+     
+    <div
+      class="v-card__text"
+    >
+      test
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
+      <div
+        class="spacer"
+      />
+       
+      <span>
+        <button
+          action-key="ok"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
+        >
+          <div
+            class="v-btn__content"
+          >
+            <!---->
+            
+  ok
+  
+            <!---->
+          </div>
+        </button>
+        <button
+          action-key="cancel"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
+        >
+          <div
+            class="v-btn__content"
+          >
+            <!---->
+            
+  cancel
+  
+            <!---->
+          </div>
+        </button>
+      </span>
     </div>
   </div>
 </div>
@@ -90,80 +86,76 @@ exports[`manager Check confirm with action icons 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <div>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <!---->
+     
+    <div
+      class="v-card__title"
+    >
+      <h3
+        class="headline mb-0"
+      />
+    </div>
+     
+    <div
+      class="v-card__text"
+    >
+      test
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
-      >
-        <!---->
-         
-        <div
-          class="v-card__title"
-        >
-          <h3
-            class="headline mb-0"
-          />
-        </div>
-         
-        <div
-          class="v-card__text"
-        >
-          test
-        </div>
-         
-        <div
-          class="v-card__actions"
+        class="spacer"
+      />
+       
+      <span>
+        <button
+          action-key="false"
+          class="v-btn v-btn--flat v-btn--round theme--light info--text"
+          type="button"
         >
           <div
-            class="spacer"
-          />
-           
-          <span>
-            <button
-              action-key="false"
-              class="v-btn v-btn--flat v-btn--round theme--light info--text"
-              type="button"
+            class="v-btn__content"
+          >
+            <i
+              aria-hidden="true"
+              class="v-icon material-icons theme--light"
+              text="cancel"
             >
-              <div
-                class="v-btn__content"
-              >
-                <i
-                  aria-hidden="true"
-                  class="v-icon material-icons theme--light"
-                  text="cancel"
-                >
-                  cancel
-                </i>
-                
+              cancel
+            </i>
+            
   No
   
-                <!---->
-              </div>
-            </button>
-            <button
-              action-key="true"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
+            <!---->
+          </div>
+        </button>
+        <button
+          action-key="true"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
+        >
+          <div
+            class="v-btn__content"
+          >
+            <!---->
+            
   Yes
   
-                <i
-                  aria-hidden="true"
-                  class="v-icon v-icon--right material-icons theme--light"
-                  text="success"
-                >
-                  success
-                </i>
-              </div>
-            </button>
-          </span>
-        </div>
-      </div>
+            <i
+              aria-hidden="true"
+              class="v-icon v-icon--right material-icons theme--light"
+              text="success"
+            >
+              success
+            </i>
+          </div>
+        </button>
+      </span>
     </div>
   </div>
 </div>
@@ -173,68 +165,64 @@ exports[`manager Check confirm with btns true|false 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <div>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <!---->
+     
+    <div
+      class="v-card__title"
+    >
+      <h3
+        class="headline mb-0"
+      />
+    </div>
+     
+    <div
+      class="v-card__text"
+    >
+      test
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
-      >
-        <!---->
-         
-        <div
-          class="v-card__title"
-        >
-          <h3
-            class="headline mb-0"
-          />
-        </div>
-         
-        <div
-          class="v-card__text"
-        >
-          test
-        </div>
-         
-        <div
-          class="v-card__actions"
+        class="spacer"
+      />
+       
+      <span>
+        <button
+          action-key="true"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
         >
           <div
-            class="spacer"
-          />
-           
-          <span>
-            <button
-              action-key="true"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
+            class="v-btn__content"
+          >
+            <!---->
+            
   Yes
   
-                <!---->
-              </div>
-            </button>
-            <button
-              action-key="false"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
+            <!---->
+          </div>
+        </button>
+        <button
+          action-key="false"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
+        >
+          <div
+            class="v-btn__content"
+          >
+            <!---->
+            
   No
   
-                <!---->
-              </div>
-            </button>
-          </span>
-        </div>
-      </div>
+            <!---->
+          </div>
+        </button>
+      </span>
     </div>
   </div>
 </div>
@@ -244,68 +232,64 @@ exports[`manager Check confirm with handle functions 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <div>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <!---->
+     
+    <div
+      class="v-card__title"
+    >
+      <h3
+        class="headline mb-0"
+      />
+    </div>
+     
+    <div
+      class="v-card__text"
+    >
+      test
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
-      >
-        <!---->
-         
-        <div
-          class="v-card__title"
-        >
-          <h3
-            class="headline mb-0"
-          />
-        </div>
-         
-        <div
-          class="v-card__text"
-        >
-          test
-        </div>
-         
-        <div
-          class="v-card__actions"
+        class="spacer"
+      />
+       
+      <span>
+        <button
+          action-key="false"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
         >
           <div
-            class="spacer"
-          />
-           
-          <span>
-            <button
-              action-key="false"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
+            class="v-btn__content"
+          >
+            <!---->
+            
   No
   
-                <!---->
-              </div>
-            </button>
-            <button
-              action-key="true"
-              class="v-btn v-btn--flat theme--light primary--text"
-              type="button"
-            >
-              <div
-                class="v-btn__content"
-              >
-                <!---->
-                
+            <!---->
+          </div>
+        </button>
+        <button
+          action-key="true"
+          class="v-btn v-btn--flat theme--light"
+          type="button"
+        >
+          <div
+            class="v-btn__content"
+          >
+            <!---->
+            
   Yes
   
-                <!---->
-              </div>
-            </button>
-          </span>
-        </div>
-      </div>
+            <!---->
+          </div>
+        </button>
+      </span>
     </div>
   </div>
 </div>
@@ -315,9 +299,7 @@ exports[`manager Returnable 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <p />
-  </div>
+  <p />
 </div>
 `;
 
@@ -325,37 +307,33 @@ exports[`manager Test default confirm 1`] = `
 <div
   class="dialog-layout"
 >
-  <div>
-    <div>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <!---->
+     
+    <div
+      class="v-card__title"
+    >
+      <h3
+        class="headline mb-0"
+      />
+    </div>
+     
+    <div
+      class="v-card__text"
+    >
+      Test confirmation
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
-      >
-        <!---->
-         
-        <div
-          class="v-card__title"
-        >
-          <h3
-            class="headline mb-0"
-          />
-        </div>
-         
-        <div
-          class="v-card__text"
-        >
-          Test confirmation
-        </div>
-         
-        <div
-          class="v-card__actions"
-        >
-          <div
-            class="spacer"
-          />
-           
-          <span />
-        </div>
-      </div>
+        class="spacer"
+      />
+       
+      <span />
     </div>
   </div>
 </div>
