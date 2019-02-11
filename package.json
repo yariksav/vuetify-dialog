@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run lint && npm run build:module && npm run build:browser",
@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
-    "vuedl": "^0.2.0"
+    "vuedl": "^0.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",
@@ -66,7 +66,7 @@
     "rollup-plugin-vue": "^4.3.2",
     "vue": "^2.5.22",
     "vue-jest": "^3.0.2",
-    "vue-template-compiler": "^2.5.21",
+    "vue-template-compiler": "^2.5.22",
     "vuetify": "^1.4.0"
   },
   "jest": {
