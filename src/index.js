@@ -29,7 +29,8 @@ function install (Vue, options = {}) {
         text: 'OK',
         color: 'primary'
       }
-    }
+    },
+    ...options.confirm
   })
 
   manager.component('warning', Confirm, {
@@ -41,17 +42,20 @@ function install (Vue, options = {}) {
         text: 'OK',
         color: 'primary'
       }
-    }
+    },
+    ...options.warning
   })
 
   manager.component('error', Confirm, {
     type: 'error',
     waitForResult: true,
-    actions: ['Close']
+    actions: ['Close'],
+    ...options.error
   })
 
   manager.component('toast', Toast, {
-    waitForResult: true
+    waitForResult: true,
+    ...options.toast
   })
 
   manager.message = {
@@ -62,7 +66,8 @@ function install (Vue, options = {}) {
   }
 
   manager.component('notification', Alert, {
-    waitForResult: true
+    waitForResult: true,
+    ...options.notification
   })
 
   manager.notify = {
@@ -77,7 +82,8 @@ function install (Vue, options = {}) {
     actions: {
       false: 'Cancel',
       true: 'OK'
-    }
+    },
+    ...options.prompt
   })
 }
 

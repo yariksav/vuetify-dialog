@@ -19,7 +19,7 @@ exports[`manager Check confirm 1`] = `
           aria-hidden="true"
           class="v-icon material-icons theme--dark"
         >
-          warning
+          priority_high
         </i>
          
         <div
@@ -303,6 +303,44 @@ exports[`manager Returnable 1`] = `
 </div>
 `;
 
+exports[`manager Test confirm without icon 1`] = `
+<div
+  class="dialog-layout"
+>
+  <div
+    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+  >
+    <!---->
+     
+    <div
+      class="v-card__title"
+    >
+      <h3
+        class="headline mb-0"
+      >
+        Title
+      </h3>
+    </div>
+     
+    <div
+      class="v-card__text"
+    >
+      Test confirmation withot icon
+    </div>
+     
+    <div
+      class="v-card__actions"
+    >
+      <div
+        class="spacer"
+      />
+       
+      <span />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`manager Test default confirm 1`] = `
 <div
   class="dialog-layout"
@@ -317,7 +355,9 @@ exports[`manager Test default confirm 1`] = `
     >
       <h3
         class="headline mb-0"
-      />
+      >
+        Title
+      </h3>
     </div>
      
     <div

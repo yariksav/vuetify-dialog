@@ -31,7 +31,10 @@ export default {
   layout: ['default', { width: 450 }],
   mixins: [ Confirmable, Colorable ],
   props: {
-    icon: String,
+    icon: {
+      type: [String, Boolean],
+      default: undefined
+    },
     text: {
       type: [String, Function],
       reqiured: true
@@ -39,7 +42,10 @@ export default {
   },
   computed: {
     getIcon () {
-      return this.icon || this.type
+      if (this.icon === false) {
+        return
+      }
+      return this.icon || (this.$vuetify && this.$vuetify.icons && this.$vuetify.icons[this.type]) || this.type
     },
     getText () {
       return typeof this.text === 'function' ? this.text() : this.text

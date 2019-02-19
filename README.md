@@ -38,17 +38,45 @@ Install the package from npm
 ```npm
 npm install vuetify-dialog
 ```
+```javascript
+import VuetifyDialog from 'vuetify-dialog'
+Vue.use(VuetifyDialog)
+```
 
+or use with extra configuration 
 ```javascript
 import VuetifyDialog from 'vuetify-dialog'
 Vue.use(VuetifyDialog, {
   context,
-  property
+  property,
+  confirm: {
+    actions: {
+      false: 'No',
+      true: {
+        text: 'Yes',
+        color: 'primary'
+      }
+    },
+    icon: false, // to disable icon just put false
+    width: 500
+  },
+  warning: {},
+  error: {},
+  prompt: {}
 })
 ```
 
+
 + `context` - the context of your application, such as store, axios, router etc.
 + `property` - the property, which will integrate to Vue. Default is `$dialog`
++ `confirm` - confirm dialog params
++ `warning` - warning dialog params
++ `error` - error dialog params
++ `prompt` - prompt dialog params
+Where:
+    + `actions` - dialog buttons config
+    + `icon` - dialog icon in String, example 'warning'.  Note, if you want to hide icon, just set parameter to false
+    + `width` - dialog max width
 
 ## ♻️ Usage with Nuxt.js
 
@@ -69,6 +97,8 @@ Module automatically add to dialog nuxt context data, such as router, route, i18
   // Optionally passing options in module top level configuration
   vuetifyDialog: {
     property: '$dialog'
+    confirm: {}
+    // ...
   }
 }
 ```

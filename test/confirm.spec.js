@@ -18,7 +18,19 @@ describe('manager', () => {
   test('Test default confirm', async () => {
     const res = await manager.confirm({
       text: 'Test confirmation',
-      tytpe: 'Title'
+      title: 'Title'
+    })
+    expect(res.vm.$el).toMatchSnapshot()
+    await res.close()
+    await Vue.nextTick()
+    expect(document.body.innerHTML).toBe('')
+  })
+
+  test('Test confirm without icon', async () => {
+    const res = await manager.confirm({
+      icon: false,
+      text: 'Test confirmation withot icon',
+      title: 'Title'
     })
     expect(res.vm.$el).toMatchSnapshot()
     await res.close()
