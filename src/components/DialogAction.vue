@@ -13,7 +13,7 @@
     v-on="on"
   >
     <v-icon v-if="icon && !icon.right" v-bind="icon" v-text="icon.text" />
-    {{ text }}
+    {{ actionText }}
     <v-icon v-if="icon && icon.right" v-bind="icon" v-text="icon.text" />
   </component>
 </template>
@@ -26,7 +26,7 @@ export default {
       type: [String, Object],
       default: () => 'v-btn'
     },
-    text: String,
+    text: [String, Function],
     color: String,
     disabled: Boolean,
     flat: Boolean,
@@ -34,6 +34,11 @@ export default {
     loading: Boolean,
     outline: Boolean,
     round: Boolean
+  },
+  computed: {
+    actionText () {
+      return typeof this.text === 'function' ? this.text() : this.text
+    }
   }
 }
 </script>

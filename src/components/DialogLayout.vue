@@ -6,6 +6,7 @@
     :max-width="getWidth"
     :persistent="persistent || loading"
     :scrollable="scrollable"
+    :transition="transition"
     @keydown.esc="dismiss"
   >
     <div
@@ -19,9 +20,12 @@
 <script>
 export default {
   props: {
-    // ref: String,
     fullscreen: Boolean,
     scrollable: Boolean,
+    transition: {
+      type: [String, Boolean],
+      default: 'dialog-transition'
+    },
     showClose: {
       type: Boolean,
       default: () => true
