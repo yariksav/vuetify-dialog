@@ -97,7 +97,6 @@ declare module 'vue/types/vue' {
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
     asyncData? (context: object): Promise<any>
-    layout?: string | Array<any> 
     primaryKey?: string
   }
 }
