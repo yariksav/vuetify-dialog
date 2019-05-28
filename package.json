@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run lint && npm run build:module && npm run build:browser",
