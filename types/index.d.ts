@@ -80,11 +80,13 @@ export interface VuetifyDialog {
     error (text: string, options?: DialogNotifyOptions): Promise<any>
     warning (text: string, options?: DialogNotifyOptions): Promise<any>
     info (text: string, options?: DialogNotifyOptions): Promise<any>
+    success (text: string, options?: DialogNotifyOptions): Promise<any>
   }
   message: {
     error (text: string, options?: DialogMessageOptions): Promise<any>
     warning (text: string, options?: DialogMessageOptions): Promise<any>
     info (text: string, options?: DialogMessageOptions): Promise<any>
+    success (text: string, options?: DialogMessageOptions): Promise<any>
   }
 }
 
