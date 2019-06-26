@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     handleClick (res) {
-      this.$emit('submit', this.editedValue)
+      this.$emit('submit', res && this.editedValue)
       return false
     }
   }
