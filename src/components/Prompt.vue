@@ -7,7 +7,7 @@
       ref="card"
     >
       <v-text-field
-        autofocus
+        ref="input"
         required
         v-model="editedValue"
         :label="text"
@@ -36,9 +36,14 @@ export default {
       editedValue: this.value
     }
   },
+  mounted () {
+    setTimeout(() => {
+      this.$refs.input.focus()
+    }, 100)
+  },
   methods: {
-    handleClick (res) {
-      this.$emit('submit', this.editedValue)
+    handleClick (res, action) {
+      this.$emit('submit', action.key ? this.editedValue : action.key)
       return false
     }
   }
