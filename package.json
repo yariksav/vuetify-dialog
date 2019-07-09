@@ -1,11 +1,11 @@
 {
   "name": "vuetify-dialog",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
-    "build": "npm run lint && npm run build:module && npm run build:browser",
-    "build:module": "bili ./src/index.js --format cjs,es --no-js",
-    "build:browser": "bili ./src/index.js --format umd,umd-min --js buble",
+    "build": "npm run lint && bili",
+    "build:module": "bili --format cjs,es --no-js",
+    "build:browser": "bili --format umd,umd-min --js buble",
     "build:copy": "npm run build && bash build/copy.sh",
     "release": "bash build/release.sh",
     "lint": "eslint --ext js --ext vue src",
@@ -18,10 +18,12 @@
     "test1": "node_modules/.bin/jest --env=jsdom --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "main": "dist/vuetify-dialog.cjs.js",
-  "module": "dist/vuetify-dialog.esm.js",
+  "module": "dist/vuetify-dialog.es.js",
   "browser": "dist/vuetify-dialog.js",
   "cdn": "dist/vuetify-dialog.min.js",
   "unpkg": "dist/vuetify-dialog.min.js",
+  "jsdelivr": "dist/vuetify-dialog.min.js",
+  "umd:main": "dist/vuetify-dialog.js",
   "types": "types/index.d.ts",
   "repository": {
     "type": "git",
@@ -42,7 +44,7 @@
   "homepage": "https://github.com/yariksav/vuetify-dialog#readme",
   "dependencies": {
     "vue-asyncable": "^0.2.0",
-    "vuedl": "^0.3.1"
+    "vuedl": "^0.3.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",

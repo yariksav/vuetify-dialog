@@ -1,10 +1,12 @@
 module.exports = {
   name: 'vuetify-dialog',
+  input: './src/index.js',
+  format: ['es', 'cjs', 'umd', 'umd-min'],
   plugins: ['vue'],
   // vue: {
   //   someOption: "value'
   // },
-  global: {
+  globals: {
     vue: 'Vue'
   },
   external: ['vue'],
