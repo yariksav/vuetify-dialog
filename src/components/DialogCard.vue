@@ -10,7 +10,7 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer />
-      <DialogActions :actions="actions" ref="actions" outline color="blue-grey" :handle="handle" />
+      <DialogActions :actions="actions" flat ref="actions" :handle="handle" />
     </v-card-actions>
   </v-card>
 </template>
@@ -29,7 +29,7 @@ export default {
       type: String,
       default: 'headline'
     },
-    actions: [Array, Object],
+    actions: [ Array, Object, Function ],
     handle: Function
   },
   methods: {

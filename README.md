@@ -29,7 +29,8 @@ This module will help you to work with modal dialogs in your project
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
 ## Demo
-[See demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/)
+[Demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
+[Source of demo](https://codesandbox.io/s/ppx57r3nnj)
 
 ## Setup
 

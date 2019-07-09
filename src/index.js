@@ -1,4 +1,4 @@
-import Vuedl from 'vuedl'
+import Vuedl from 'vuedl/src/index'
 import DialogLayout from './components/DialogLayout.vue'
 import Confirm from './components/Confirm.vue'
 import Toast from './components/Toast.vue'
@@ -14,6 +14,15 @@ function install (Vue, options = {}) {
   install.installed = true
 
   const property = options.property || '$dialog'
+  const actionsFn = options.actions || (() => {
+    return {
+      false: 'Cancel',
+      true: {
+        text: 'OK',
+        color: 'primary'
+      }
+    }
+  })
   Vue.use(Vuedl, options)
   const manager = Vue.prototype[property]
   manager.layout('default', DialogLayout)
@@ -23,26 +32,14 @@ function install (Vue, options = {}) {
   Vue.component('DialogCard', DialogCard)
   manager.component('confirm', Confirm, {
     waitForResult: true,
-    actions: {
-      false: 'Cancel',
-      true: {
-        text: 'OK',
-        color: 'primary'
-      }
-    },
+    actions: actionsFn,
     ...options.confirm
   })
 
   manager.component('warning', Confirm, {
     type: 'warning',
     waitForResult: true,
-    actions: {
-      false: 'Cancel',
-      true: {
-        text: 'OK',
-        color: 'primary'
-      }
-    },
+    actions: actionsFn,
     ...options.warning
   })
 
@@ -79,10 +76,7 @@ function install (Vue, options = {}) {
 
   manager.component('prompt', Prompt, {
     waitForResult: true,
-    actions: {
-      false: 'Cancel',
-      true: 'OK'
-    },
+    actions: actionsFn,
     ...options.prompt
   })
 }
