@@ -10,7 +10,7 @@
     :loading="loading"
     :disabled="disabled"
     @click="$emit('click', this)"
-    v-on="on"
+    v-on="$listeners"
   >
     <v-icon v-if="icon && !icon.right" v-bind="icon" v-text="icon.text" />
     {{ actionText }}

@@ -6,8 +6,6 @@ Implementation of [vuedl](https://github.com/yariksav/vuedl) dialog helper with 
 
 This module will help you to work with modal dialogs in your project
 
-> NOTE: Module is in initial development. Anything may change at any time.
-
 <p align="center">
   <a href="https://npmcharts.com/compare/vuetify-dialog?minimal=true">
     <img src="http://img.shields.io/npm/dm/vuetify-dialog.svg">
@@ -36,17 +34,21 @@ This module will help you to work with modal dialogs in your project
 
 Install the package from npm
 
+> IMPORTANT: After version 0.4.0 css and js was splitted and therefore you have to import css manually
+
 ```npm
 npm install vuetify-dialog
 ```
 ```javascript
 import VuetifyDialog from 'vuetify-dialog'
+import 'vuetify-dialog/dist/vuetify-dialog.css'
 Vue.use(VuetifyDialog)
 ```
 
 or use with extra configuration 
 ```javascript
 import VuetifyDialog from 'vuetify-dialog'
+import 'vuetify-dialog/dist/vuetify-dialog.css'
 Vue.use(VuetifyDialog, {
   context,
   property,
