@@ -26,13 +26,13 @@ export default {
     component: [String, Object],
     color: String,
     flat: Boolean,
-    round: Boolean,
-    outline: Boolean,
+    rounded: Boolean,
+    outlined: Boolean,
     passive: Boolean
   },
   computed: {
     nestedProps () {
-      return [ 'color', 'flat', 'icon', 'outline', 'round' ]
+      return [ 'color', 'flat', 'icon', 'outlined', 'rounded' ]
     }
   },
   methods: {

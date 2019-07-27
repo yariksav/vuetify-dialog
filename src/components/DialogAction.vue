@@ -2,15 +2,15 @@
   <component
     :is="component"
     v-bind="attrs"
-    :flat="flat"
-    :outline="outline"
+    :text="flat"
+    :outlined="outlined"
     :icon="!text && Boolean(icon)"
     :color="color"
-    :round="round"
+    :rounded="rounded"
     :loading="loading"
     :disabled="disabled"
     @click="$emit('click', this)"
-    v-on="$listeners"
+    v-on="on"
   >
     <v-icon v-if="icon && !icon.right" v-bind="icon" v-text="icon.text" />
     {{ actionText }}
@@ -32,8 +32,12 @@ export default {
     flat: Boolean,
     icon: Object,
     loading: Boolean,
-    outline: Boolean,
-    round: Boolean
+    outlined: Boolean,
+    rounded: Boolean,
+    on: {
+      type: Object,
+      default: () => {}
+    }
   },
   computed: {
     actionText () {

@@ -52,26 +52,28 @@ function install (Vue, options = {}) {
 
   manager.component('toast', Toast, {
     waitForResult: true,
-    ...options.toast
+    ...options.toast,
+    container: '.v-application'
   })
 
   manager.message = {
-    info: (message, options) => manager.toast({ text: message, type: 'info', ...options }),
-    error: (message, options) => manager.toast({ text: message, type: 'error', ...options }),
-    success: (message, options) => manager.toast({ text: message, type: 'success', ...options }),
-    warning: (message, options) => manager.toast({ text: message, type: 'warning', ...options })
+    info: (message, options) => manager.toast({ text: message, color: 'info', ...options }),
+    error: (message, options) => manager.toast({ text: message, color: 'error', ...options }),
+    success: (message, options) => manager.toast({ text: message, color: 'success', ...options }),
+    warning: (message, options) => manager.toast({ text: message, color: 'warning', ...options })
   }
 
   manager.component('notification', Alert, {
     waitForResult: true,
-    ...options.notification
+    ...options.notification,
+    container: '.v-application'
   })
 
   manager.notify = {
-    info: (message, options) => manager.notification({ text: message, type: 'info', ...options }),
-    error: (message, options) => manager.notification({ text: message, type: 'error', ...options }),
-    success: (message, options) => manager.notification({ text: message, type: 'success', ...options }),
-    warning: (message, options) => manager.notification({ text: message, type: 'warning', ...options })
+    info: (message, options) => manager.notification({ text: message, color: 'info', ...options }),
+    error: (message, options) => manager.notification({ text: message, color: 'error', ...options }),
+    success: (message, options) => manager.notification({ text: message, color: 'success', ...options }),
+    warning: (message, options) => manager.notification({ text: message, color: 'warning', ...options })
   }
 
   manager.component('prompt', Prompt, {

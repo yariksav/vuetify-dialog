@@ -1,5 +1,6 @@
 <template>
   <v-dialog
+    eager
     content-class="vuedl-layout"
     v-model="isActive"
     :fullscreen="fullscreen" ref="vdialog"

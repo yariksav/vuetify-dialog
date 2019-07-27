@@ -1,10 +1,9 @@
 <template>
   <v-alert
     style="margin: 0; min-width: 300px"
-    :value="true"
     @input="$emit('submit')"
     :dismissible="dismissible"
-    :type="type"
+    :type="color"
   >
     {{ text }}
     <DialogActions :actions="actions" />
@@ -20,7 +19,7 @@ export default {
   },
   layout: ['notification', { showClose: false }],
   props: {
-    type: {
+    color: {
       type: String,
       default: () => 'info'
     },

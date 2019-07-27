@@ -17,10 +17,10 @@ export interface DialogAction {
   key: string
   component?: string
   flat? : boolean
-  outline? : boolean
+  outlined? : boolean
   icon? : string
   color? : string
-  round? : boolean
+  rounded? : boolean
   disabled?: boolean
   handle? (action: any): Promise<any>
 }
