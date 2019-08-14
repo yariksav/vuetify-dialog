@@ -21,10 +21,12 @@
 
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import DialogCard from './DialogCard.vue'
+import { VTextField } from 'vuetify/lib'
 
 export default {
   components: {
-    DialogCard
+    DialogCard,
+    VTextField
   },
   layout: 'default',
   mixins: [ Confirmable ],

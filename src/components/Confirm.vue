@@ -23,10 +23,19 @@
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import Colorable from '../mixins/colorable'
 import DialogActions from './DialogActions.vue'
+import { VCard, VCardTitle, VCardText, VCardActions, VToolbar, VToolbarTitle, VIcon, VSpacer } from 'vuetify/lib'
 
 export default {
   components: {
-    DialogActions
+    DialogActions,
+    VCard,
+    VCardTitle,
+    VCardText,
+    VCardActions,
+    VToolbar,
+    VToolbarTitle,
+    VIcon,
+    VSpacer
   },
   layout: ['default', { width: 450 }],
   mixins: [ Confirmable, Colorable ],

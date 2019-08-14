@@ -19,9 +19,16 @@
 
 import DialogActions from './DialogActions.vue'
 
+import { VCard, VCardTitle, VCardText, VCardActions, VSpacer } from 'vuetify/lib'
+
 export default {
   components: {
-    DialogActions
+    DialogActions,
+    VCard,
+    VCardTitle,
+    VCardText,
+    VCardActions,
+    VSpacer
   },
   props: {
     title: String,

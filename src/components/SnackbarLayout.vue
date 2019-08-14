@@ -19,8 +19,12 @@
 
 <script>
 import Colorable from '../mixins/colorable'
+import { VSnackbar } from 'vuetify/lib'
 
 export default {
+  components: {
+    VSnackbar
+  },
   mixins: [ Colorable ],
   props: {
     timeout: Number,

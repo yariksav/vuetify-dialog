@@ -19,7 +19,13 @@
 </template>
 <script>
 
+import { VIcon, VBtn } from 'vuetify/lib'
+
 export default {
+  components: {
+    VIcon,
+    VBtn
+  },
   props: {
     attrs: Object,
     component: {

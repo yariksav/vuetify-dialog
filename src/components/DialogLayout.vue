@@ -19,7 +19,12 @@
 </template>
 
 <script>
+import { VDialog } from 'vuetify/lib'
+
 export default {
+  components: {
+    VDialog
+  },
   props: {
     fullscreen: Boolean,
     scrollable: Boolean,

@@ -16,10 +16,11 @@ const config = {
     exports: 'named',
     globals: {
       vue: 'Vue',
-      vuedl: 'Vuedl'
+      vuedl: 'Vuedl',
+      'vuetify/lib': 'Vuetify'
     }
   },
-  external: [ 'vue', 'vuedl' ],
+  external: [ 'vue', 'vuedl', 'vuetify/lib' ],
   plugins: [
     vue({
       css: false, // Динамически внедряем CSS в тег <style>

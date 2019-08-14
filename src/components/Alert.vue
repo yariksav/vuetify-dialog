@@ -12,10 +12,12 @@
 <script>
 
 import DialogActions from './DialogActions.vue'
+import { VAlert } from 'vuetify/lib'
 
 export default {
   components: {
-    DialogActions
+    DialogActions,
+    VAlert
   },
   layout: ['notification', { showClose: false }],
   props: {
