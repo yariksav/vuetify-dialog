@@ -12,7 +12,9 @@ import NotificationLayout from 'vuedl/src/components/NotificationLayout.vue'
 function install (Vue, options = {}) {
   if (install.installed) return
   install.installed = true
-
+  if (!options.container) {
+    options.container = '[data-app=true]'
+  }
   const property = options.property || '$dialog'
   const actionsFn = options.actions || (() => {
     return {
@@ -52,8 +54,7 @@ function install (Vue, options = {}) {
 
   manager.component('toast', Toast, {
     waitForResult: true,
-    ...options.toast,
-    container: '.v-application'
+    ...options.toast
   })
 
   manager.message = {
@@ -65,8 +66,7 @@ function install (Vue, options = {}) {
 
   manager.component('notification', Alert, {
     waitForResult: true,
-    ...options.notification,
-    container: '.v-application'
+    ...options.notification
   })
 
   manager.notify = {
