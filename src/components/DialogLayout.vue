@@ -60,13 +60,16 @@ export default {
   }
   .vuedl-layout__closeBtn {
     position: absolute;
-    top: 0px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
     font-family: -webkit-pictograph;
     right: 14px;
-    font-size: 29px;
+    font-size: 30px;
     opacity: 0.5;
     z-index: 1000;
     cursor: pointer;
+    line-height: 0.5;
   }
   .vuedl-layout__closeBtn:hover {
     opacity: 1;

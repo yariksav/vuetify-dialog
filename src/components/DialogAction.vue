@@ -1,13 +1,9 @@
 <template>
   <component
     :is="component"
-    v-bind="attrs"
+    v-bind="$attrs"
     :text="flat"
-    :outlined="outlined"
     :icon="!text && Boolean(icon)"
-    :color="color"
-    :rounded="rounded"
-    :loading="loading"
     :disabled="disabled"
     @click="$emit('click', this)"
     v-on="on"
@@ -33,13 +29,9 @@ export default {
       default: () => 'v-btn'
     },
     text: [String, Function],
-    color: String,
     disabled: Boolean,
     flat: Boolean,
     icon: Object,
-    loading: Boolean,
-    outlined: Boolean,
-    rounded: Boolean,
     on: {
       type: Object,
       default: () => {}
