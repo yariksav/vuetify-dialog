@@ -7,7 +7,10 @@
     <v-card-title v-if="!type">
       <h3 class="headline mb-0" v-text="title" />
     </v-card-title>
-    <v-card-text v-html="text" />
+    <v-card-text
+      class="body-1 py-2"
+      v-html="text"
+    />
     <v-card-actions>
       <v-spacer />
       <DialogActions

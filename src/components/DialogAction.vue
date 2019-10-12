@@ -26,7 +26,7 @@ export default {
     attrs: Object,
     component: {
       type: [String, Object],
-      default: () => 'v-btn'
+      default: 'v-btn'
     },
     text: [String, Function],
     disabled: Boolean,
