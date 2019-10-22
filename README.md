@@ -36,14 +36,42 @@ Install the package from npm
 
 > IMPORTANT: After version 0.4.0 css and js was splitted and therefore you have to import css manually
 
+## Vuetify 2
+
+For Vuetify 2 please use latest version of vuetify-dialog@2.X.X
+
 ```npm
 npm install vuetify-dialog
 ```
+
+```javascript
+// need instance of vuetify, for example
+import vuetify from '@/plugins/vuetify'
+
+import VuetifyDialog from 'vuetify-dialog'
+import 'vuetify-dialog/dist/vuetify-dialog.css'
+
+Vue.use(VuetifyDialog, {
+  context: {
+    vuetify
+  }
+})
+```
+
+## Vuetify 1
+
+For Vuetify 1 you need to use vuetify-dialog@0.4.0-beta.2
+
+```npm
+npm install vuetify-dialog@0.4.0-beta.2
+```
+
 ```javascript
 import VuetifyDialog from 'vuetify-dialog'
 import 'vuetify-dialog/dist/vuetify-dialog.css'
 Vue.use(VuetifyDialog)
 ```
+
 
 or use with extra configuration 
 ```javascript
@@ -68,7 +96,6 @@ Vue.use(VuetifyDialog, {
   prompt: {}
 })
 ```
-
 
 + `context` - the context of your application, such as store, axios, router etc.
 + `property` - the property, which will integrate to Vue. Default is `$dialog`
