@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="DialogActions">
     <template v-for="action in actionlist">
       <DialogAction
         :key="action.key"

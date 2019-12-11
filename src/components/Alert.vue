@@ -4,9 +4,15 @@
     @input="$emit('submit')"
     :dismissible="dismissible"
     :type="color"
+    :outlined="outlined"
+    :prominent="prominent"
   >
-    {{ text }}
-    <DialogActions :actions="actions" />
+    <div class="d-flex align-center">
+      <div class="mr-2">
+        {{ text }}
+      </div>
+      <DialogActions :actions="actions" />
+    </div>
   </v-alert>
 </template>
 <script>
@@ -27,6 +33,8 @@ export default {
     },
     actions: [ Array, Object ],
     text: String,
+    outlined: Boolean,
+    prominent: Boolean,
     dismissible: {
       type: Boolean,
       default: true

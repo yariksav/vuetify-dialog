@@ -11,7 +11,7 @@ export default (obj, inject) => {
   const pluginOptions = [<%= serialize(options) %>][0] || {}
   const property = pluginOptions.property || '$dialog'
 
- const keys = Object.keys(obj.app).filter(key =>
+  const keys = Object.keys(obj.app).filter(key =>
     key.startsWith('$') || ['router', 'i18n', 'store', 'vuetify'].indexOf(key) >= 0)
 
   const context = Object.assign({}, ...keys.map(prop => {
