@@ -57,7 +57,7 @@ export interface DialogNotifyOptions extends DialogActionable {
 }
 
 export interface DialogConfirmOptions extends DialogActionable {
-  icon?: string
+  icon?: string | boolean
   persistent?: boolean
   showClose?: boolean
   scrollable?: Boolean,
