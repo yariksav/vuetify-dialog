@@ -82,7 +82,7 @@ describe('manager', () => {
             text: 'cancel'
           },
           color: 'info',
-          round: true,
+          rounded: true,
           text: 'No'
         },
         true: {

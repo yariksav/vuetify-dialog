@@ -22,10 +22,10 @@ module.exports = function nuxtVueWaitModule (moduleOptions) {
 
   if (this.options.build.ssr) {
     this.options.build.transpile.push(/^vuetify-dialog/)
-    this.options.build.transpile.push(/^vuedl/)
   }
   // Register plugin
   this.addPlugin({
+    ssr: false,
     src: resolve(__dirname, 'plugin.template.js'),
     fileName: 'vuetify-dialog.js',
     options: options

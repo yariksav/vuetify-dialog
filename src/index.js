@@ -12,7 +12,9 @@ import NotificationLayout from 'vuedl/src/components/NotificationLayout.vue'
 function install (Vue, options = {}) {
   if (install.installed) return
   install.installed = true
-
+  if (!options.container) {
+    options.container = '[data-app=true]'
+  }
   const property = options.property || '$dialog'
   const actionsFn = options.actions || (() => {
     return {
@@ -56,10 +58,10 @@ function install (Vue, options = {}) {
   })
 
   manager.message = {
-    info: (message, options) => manager.toast({ text: message, type: 'info', ...options }),
-    error: (message, options) => manager.toast({ text: message, type: 'error', ...options }),
-    success: (message, options) => manager.toast({ text: message, type: 'success', ...options }),
-    warning: (message, options) => manager.toast({ text: message, type: 'warning', ...options })
+    info: (message, options) => manager.toast({ text: message, color: 'info', ...options }),
+    error: (message, options) => manager.toast({ text: message, color: 'error', ...options }),
+    success: (message, options) => manager.toast({ text: message, color: 'success', ...options }),
+    warning: (message, options) => manager.toast({ text: message, color: 'warning', ...options })
   }
 
   manager.component('notification', Alert, {
@@ -68,10 +70,10 @@ function install (Vue, options = {}) {
   })
 
   manager.notify = {
-    info: (message, options) => manager.notification({ text: message, type: 'info', ...options }),
-    error: (message, options) => manager.notification({ text: message, type: 'error', ...options }),
-    success: (message, options) => manager.notification({ text: message, type: 'success', ...options }),
-    warning: (message, options) => manager.notification({ text: message, type: 'warning', ...options })
+    info: (message, options) => manager.notification({ text: message, color: 'info', ...options }),
+    error: (message, options) => manager.notification({ text: message, color: 'error', ...options }),
+    success: (message, options) => manager.notification({ text: message, color: 'success', ...options }),
+    warning: (message, options) => manager.notification({ text: message, color: 'warning', ...options })
   }
 
   manager.component('prompt', Prompt, {

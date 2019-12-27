@@ -1,14 +1,14 @@
 <template>
   <v-card>
-    <v-card-title v-if="title">
-      <slot name="title">
-        <span :class="titleClass" v-text="title" />
-      </slot>
-    </v-card-title>
+    <slot name="title">
+      <v-card-title v-if="title">
+        <div :class="titleClass" v-text="title" />
+      </v-card-title>
+    </slot>
     <v-card-text>
       <slot />
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions v-if="actions">
       <v-spacer />
       <DialogActions :actions="actions" flat ref="actions" :handle="handle" />
     </v-card-actions>
@@ -19,9 +19,16 @@
 
 import DialogActions from './DialogActions.vue'
 
+import { VCard, VCardTitle, VCardText, VCardActions, VSpacer } from 'vuetify/lib'
+
 export default {
   components: {
-    DialogActions
+    DialogActions,
+    VCard,
+    VCardTitle,
+    VCardText,
+    VCardActions,
+    VSpacer
   },
   props: {
     title: String,

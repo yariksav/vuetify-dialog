@@ -1,16 +1,17 @@
 <template>
-  <span>
-    <DialogAction
-      v-for="action in actionlist"
-      :key="action.key"
-      v-bind="getActionProps(action)"
-      :action-key="''+action.key"
-      :loading="!passive && isActionInLoading(action)"
-      :class="{'loading': loadingAction === action.key}"
-      :disabled="isActionDisabled(action) || (!passive && Boolean(loadingAction))"
-      @click="onActionClick(action)"
-    />
-  </span>
+  <div class="DialogActions">
+    <template v-for="action in actionlist">
+      <DialogAction
+        :key="action.key"
+        v-bind="getActionProps(action)"
+        :action-key="''+action.key"
+        :loading="!passive && isActionInLoading(action)"
+        :class="{'loading': loadingAction === action.key}"
+        :disabled="isActionDisabled(action) || (!passive && Boolean(loadingAction))"
+        @click="onActionClick(action)"
+      />
+    </template>
+  </div>
 </template>
 <script>
 
@@ -26,13 +27,13 @@ export default {
     component: [String, Object],
     color: String,
     flat: Boolean,
-    round: Boolean,
-    outline: Boolean,
+    rounded: Boolean,
+    outlined: Boolean,
     passive: Boolean
   },
   computed: {
     nestedProps () {
-      return [ 'color', 'flat', 'icon', 'outline', 'round' ]
+      return [ 'color', 'flat', 'icon', 'outlined', 'rounded', 'block' ]
     }
   },
   methods: {

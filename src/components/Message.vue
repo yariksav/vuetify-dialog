@@ -23,7 +23,18 @@ import Actionable from 'vuedl/src/mixins/actionable'
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import ColorsMixin from '../mixins/colorable'
 
+import { VToolbar, VToolbarTitle, VIcon, VCard, VCardTitle, VCardText, VCardActions } from 'vuetify/lib'
+
 export default {
+  components: {
+    VToolbar,
+    VToolbarTitle,
+    VIcon,
+    VCard,
+    VCardTitle,
+    VCardText,
+    VCardActions
+  },
   layout: ['default', { width: 450 }],
   mixins: [
     Actionable,
