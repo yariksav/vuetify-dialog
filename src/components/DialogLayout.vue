@@ -8,6 +8,7 @@
     :persistent="persistent || loading"
     :scrollable="scrollable"
     :transition="transition"
+    :hide-overlay="hideOverlay"
     @keydown.esc="dismiss"
   >
     <div
@@ -28,6 +29,7 @@ export default {
   props: {
     fullscreen: Boolean,
     scrollable: Boolean,
+    hideOverlay: Boolean,
     transition: {
       type: [String, Boolean],
       default: 'dialog-transition'

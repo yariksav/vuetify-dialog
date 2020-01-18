@@ -1,10 +1,11 @@
-import Vuedl from 'vuedl/src/index'
+import Vuedl from 'vuedl'
 import DialogLayout from './components/DialogLayout.vue'
 import Confirm from './components/Confirm.vue'
 import Toast from './components/Toast.vue'
 import Alert from './components/Alert.vue'
 import SnackbarLayout from './components/SnackbarLayout.vue'
 import Prompt from './components/Prompt.vue'
+import Loading from './components/Loading.vue'
 import DialogActions from './components/DialogActions.vue'
 import DialogCard from './components/DialogCard.vue'
 import NotificationLayout from 'vuedl/src/components/NotificationLayout.vue'
@@ -56,6 +57,25 @@ function install (Vue, options = {}) {
     waitForResult: true,
     ...options.toast
   })
+
+  manager.component('loading', Loading, {
+    waitForResult: false,
+    ...options.loading
+  })
+
+  manager.withLoading = function (options, callback) {
+    return manager.loading(options).then(dlg => {
+      callback()
+        .then(res => {
+          dlg.close()
+          return res
+        })
+        .catch(e => {
+          dlg.close()
+          throw e
+        })
+    })
+  }
 
   manager.message = {
     info: (message, options) => manager.toast({ text: message, color: 'info', ...options }),

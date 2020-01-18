@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card v-bind="$attrs">
     <slot name="title">
       <v-card-title v-if="title">
         <div :class="titleClass" v-text="title" />

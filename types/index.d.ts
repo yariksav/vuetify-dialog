@@ -60,12 +60,13 @@ export interface DialogConfirmOptions extends DialogActionable {
   icon?: string | boolean
   persistent?: boolean
   showClose?: boolean
-  scrollable?: Boolean,
+  scrollable?: Boolean
   text?: string
   title?: string
   type?: string
   waitForResult?: boolean
   width?: number
+  value?: any
 }
 
 export interface VuetifyDialog {
