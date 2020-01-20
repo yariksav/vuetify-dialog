@@ -1,4 +1,4 @@
-import Vuedl from 'vuedl'
+import Vuedl from 'vuedl/src/index'
 import DialogLayout from './components/DialogLayout.vue'
 import Confirm from './components/Confirm.vue'
 import Toast from './components/Toast.vue'
