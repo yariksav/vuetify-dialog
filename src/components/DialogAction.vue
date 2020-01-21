@@ -8,9 +8,17 @@
     @click="$emit('click', this)"
     v-on="on"
   >
-    <v-icon v-if="icon && !icon.right" v-bind="icon" v-text="icon.text" />
+    <v-icon
+      v-if="icon && !icon.right"
+      v-bind="icon"
+      v-text="icon.text"
+    />
     {{ actionText }}
-    <v-icon v-if="icon && icon.right" v-bind="icon" v-text="icon.text" />
+    <v-icon
+      v-if="icon && icon.right"
+      v-bind="icon"
+      v-text="icon.text"
+    />
   </component>
 </template>
 <script>

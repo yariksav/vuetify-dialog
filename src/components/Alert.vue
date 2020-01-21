@@ -31,8 +31,14 @@ export default {
       type: String,
       default: () => 'info'
     },
-    actions: [ Array, Object ],
-    text: String,
+    actions: {
+      type: [Array, Object],
+      default: () => {}
+    },
+    text: {
+      type: String,
+      default: ''
+    },
     outlined: Boolean,
     prominent: Boolean,
     dismissible: {

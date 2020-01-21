@@ -1,9 +1,10 @@
 <template>
   <v-dialog
+    ref="vdialog"
     eager
     content-class="vuedl-layout"
     v-model="isActive"
-    :fullscreen="fullscreen" ref="vdialog"
+    :fullscreen="fullscreen"
     :max-width="getWidth"
     :persistent="persistent || loading"
     :scrollable="scrollable"
@@ -14,8 +15,14 @@
     <div
       v-if="showClose && !persistent && !loading"
       class="vuedl-layout__closeBtn"
-      @click.stop="close">×</div>
-    <dialog-child v-bind="$options.propsData" ref="dialog"/>
+      @click.stop="close"
+    >
+      ×
+    </div>
+    <dialog-child
+      ref="dialog"
+      v-bind="$options.propsData"
+    />
   </v-dialog>
 </template>
 

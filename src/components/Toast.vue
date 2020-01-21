@@ -12,7 +12,7 @@ import DialogActions from './DialogActions.vue'
 
 export default {
   layout: 'snackbar',
-  mixins: [ Confirmable ],
+  mixins: [Confirmable],
   components: {
     DialogActions
   }

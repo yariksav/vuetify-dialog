@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     nestedProps () {
-      return [ 'color', 'flat', 'icon', 'outlined', 'rounded', 'block' ]
+      return ['color', 'flat', 'icon', 'outlined', 'rounded', 'block']
     }
   },
   methods: {

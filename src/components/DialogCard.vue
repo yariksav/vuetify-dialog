@@ -2,7 +2,10 @@
   <v-card v-bind="$attrs">
     <slot name="title">
       <v-card-title v-if="title">
-        <div :class="titleClass" v-text="title" />
+        <div
+          :class="titleClass"
+          v-text="title"
+        />
       </v-card-title>
     </slot>
     <v-card-text>
@@ -10,7 +13,12 @@
     </v-card-text>
     <v-card-actions v-if="actions">
       <v-spacer />
-      <DialogActions :actions="actions" flat ref="actions" :handle="handle" />
+      <DialogActions
+        :actions="actions"
+        flat
+        ref="actions"
+        :handle="handle"
+      />
     </v-card-actions>
   </v-card>
 </template>
@@ -36,7 +44,7 @@ export default {
       type: String,
       default: 'headline'
     },
-    actions: [ Array, Object, Function ],
+    actions: [Array, Object, Function],
     handle: Function
   },
   methods: {

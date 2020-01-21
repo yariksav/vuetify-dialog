@@ -4,13 +4,9 @@ import Confirm from '../src/components/Confirm'
 import Returnable from 'vuedl/src/mixins/returnable'
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
-import { wrap } from './utils'
-import { createLocalVue } from '@vue/test-utils'
-
 Vue.use(Vuetify)
 const vuetify = new Vuetify()
 
-const localVue = createLocalVue()
 describe('manager', () => {
   let manager
   test('Create manager instance', () => {
@@ -52,32 +48,30 @@ describe('manager', () => {
     setTimeout(() => {
       dlg.vmd.return(123)
     }, 5)
-    let res = await dlg.wait()
+    const res = await dlg.wait()
     expect(res).toBe(123)
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')
   })
 
   test('Check confirm', async () => {
-    let dlg = await manager.confirm({
+    const dlg = await manager.confirm({
       text: 'test',
       type: 'warning',
       actions: ['ok', 'cancel']
     })
-    const wrapper = wrap(dlg.vm)
     expect(dlg.vm.$el).toMatchSnapshot()
     setTimeout(() => {
       dlg.element.querySelector('[action-key=ok]').click()
     }, 0)
-    let res = await dlg.wait()
+    const res = await dlg.wait()
     expect(res).toBe('ok')
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')
   })
 
-
   test('Check confirm with action icons', async () => {
-    let dlg = await manager.confirm({
+    const dlg = await manager.confirm({
       text: 'test',
       icon: 'warning',
       actions: {
@@ -105,9 +99,9 @@ describe('manager', () => {
   })
 
   test('Check confirm with btns true|false', async () => {
-    let dlg = await manager.confirm({
+    const dlg = await manager.confirm({
       text: 'test',
-      actions: { 'true': 'Yes', false: 'No' }
+      actions: { true: 'Yes', false: 'No' }
     })
     expect(dlg.element).toMatchSnapshot()
     expect(dlg.element.querySelector('[action-key=true]')).toBeTruthy()
@@ -115,14 +109,14 @@ describe('manager', () => {
     setTimeout(() => {
       dlg.element.querySelector('[action-key=true]').click()
     }, 0)
-    let res = await dlg.wait()
+    const res = await dlg.wait()
     expect(res).toBe(true)
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')
   })
 
   test('Check confirm with handle functions', async () => {
-    let dlg = await manager.confirm({
+    const dlg = await manager.confirm({
       text: 'test',
       actions: {
         false: 'No',
@@ -144,7 +138,7 @@ describe('manager', () => {
         expect(dlg.element.querySelector('[action-key=true]').hasAttribute('disabled')).toBe(true)
       })
     }, 0)
-    let res = await dlg.wait()
+    const res = await dlg.wait()
     expect(res).toEqual({ msg: 'foo' })
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')

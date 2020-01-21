@@ -13,15 +13,12 @@ exports[`manager Test confirmation with generic options 2`] = `
     data-app="true"
   >
     <div
-      class="v-overlay v-overlay--active theme--dark"
+      class="v-overlay theme--dark"
       style="z-index: 201;"
     >
       <div
         class="v-overlay__scrim"
-        style="opacity: 0.46; background-color: rgb(33, 33, 33); border-color: #212121;"
-      />
-      <div
-        class="v-overlay__content"
+        style="opacity: 0; background-color: rgb(33, 33, 33); border-color: #212121;"
       />
     </div>
     <div
@@ -36,7 +33,9 @@ exports[`manager Test confirmation with generic options 2`] = `
         <div
           class="vuedl-layout__closeBtn"
         >
-          ×
+          
+    ×
+  
         </div>
          
         <div

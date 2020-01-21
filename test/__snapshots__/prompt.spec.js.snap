@@ -33,7 +33,9 @@ exports[`manager Prompt confirm 2`] = `
         <div
           class="vuedl-layout__closeBtn"
         >
-          ×
+          
+    ×
+  
         </div>
          
         <div>
@@ -153,7 +155,9 @@ exports[`manager Prompt confirm 2`] = `
         <div
           class="vuedl-layout__closeBtn"
         >
-          ×
+          
+    ×
+  
         </div>
          
         <div>
@@ -297,7 +301,9 @@ exports[`manager Test default prompt 2`] = `
         <div
           class="vuedl-layout__closeBtn"
         >
-          ×
+          
+    ×
+  
         </div>
          
         <div>

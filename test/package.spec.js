@@ -8,8 +8,6 @@ const vuetify = new Vuetify()
 describe('manager', () => {
   disableTransitions()
   addElemWithDataAppToBody()
-  let manager
-
   Vue.use(VuetifyDialogPlugin, {
     confirm: {
       actions: ['Foo', 'Bar', 'Baz'],
@@ -19,7 +17,7 @@ describe('manager', () => {
       vuetify
     }
   })
-  manager = Vue.prototype.$dialog
+  const manager = Vue.prototype.$dialog
 
   test('Test confirmation with generic options', async () => {
     const dialog = await manager.confirm({
@@ -27,7 +25,7 @@ describe('manager', () => {
       text: 'Test confirmation with generic options',
       title: 'Title'
     })
-    // await sleep(100)
+    await sleep(100)
     expect(dialog.element).toMatchSnapshot()
     await dialog.close()
     await Vue.nextTick()

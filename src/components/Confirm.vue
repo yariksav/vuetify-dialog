@@ -1,11 +1,25 @@
 <template>
   <v-card tile>
-    <v-toolbar v-if="Boolean(type)" dark :color="getColor" dense flat>
-      <v-icon v-if="Boolean(getIcon)" left>{{ getIcon }}</v-icon>
+    <v-toolbar
+      v-if="Boolean(type)"
+      dark
+      :color="getColor"
+      dense
+      flat
+    >
+      <v-icon
+        v-if="Boolean(getIcon)"
+        left
+      >
+        {{ getIcon }}
+      </v-icon>
       <v-toolbar-title>{{ title }}</v-toolbar-title>
     </v-toolbar>
     <v-card-title v-if="!type">
-      <h3 class="headline mb-0" v-text="title" />
+      <h3
+        class="headline mb-0"
+        v-text="title"
+      />
     </v-card-title>
     <v-card-text
       class="body-1 py-2"
@@ -41,7 +55,7 @@ export default {
     VSpacer
   },
   layout: ['default', { width: 450 }],
-  mixins: [ Confirmable, Colorable ],
+  mixins: [Confirmable, Colorable],
   props: {
     icon: {
       type: [String, Boolean],
@@ -49,7 +63,8 @@ export default {
     },
     text: {
       type: [String, Function],
-      reqiured: true
+      reqiured: true,
+      default: ''
     }
   },
   computed: {

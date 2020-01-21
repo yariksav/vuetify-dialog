@@ -29,7 +29,7 @@ export default {
     VTextField
   },
   layout: 'default',
-  mixins: [ Confirmable ],
+  mixins: [Confirmable],
   props: {
     value: String
   },

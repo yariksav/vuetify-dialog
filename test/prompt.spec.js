@@ -8,11 +8,10 @@ Vue.use(Vuetify)
 const vuetify = new Vuetify()
 
 describe('manager', () => {
-  let manager
   disableTransitions()
   addElemWithDataAppToBody()
 
-  manager = new DialogManager({ context: { vuetify, store: {} } })
+  const manager = new DialogManager({ context: { vuetify, store: {} } })
   manager.layout('default', DialogLayout)
   manager.component('prompt', Prompt, {
     actions: {
@@ -34,7 +33,7 @@ describe('manager', () => {
   })
 
   test('Prompt confirm', async () => {
-    let dlg = await manager.prompt({
+    const dlg = await manager.prompt({
       text: 'Test prompt',
       tytle: 'Title',
       value: 'test'
@@ -44,7 +43,7 @@ describe('manager', () => {
     setTimeout(() => {
       dlg.vmd.$refs.card.trigger(true)
     }, 5)
-    let res = await dlg.wait()
+    const res = await dlg.wait()
     expect(res).toBe('test')
     await sleep(100)
     expect(document.body).toMatchSnapshot()

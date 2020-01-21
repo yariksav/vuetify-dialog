@@ -12,7 +12,10 @@
       :bottom="bottom"
       @click="dismiss"
     >
-      <dialog-child v-bind="$options.propsData" ref="dialog"/>
+      <dialog-child
+        v-bind="$options.propsData"
+        ref="dialog"
+      />
     </v-snackbar>
   </div>
 </template>
@@ -25,7 +28,7 @@ export default {
   components: {
     VSnackbar
   },
-  mixins: [ Colorable ],
+  mixins: [Colorable],
   props: {
     timeout: Number,
     position: String

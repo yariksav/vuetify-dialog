@@ -118,7 +118,7 @@ exports[`manager Test info notification 1`] = `
 
 exports[`manager Test notification component 1`] = `
 <div
-  class="vuedl-notification right vuedl-notification-fade-leave vuedl-notification-fade-leave-active"
+  class="vuedl-notification right vuedl-notification-fade-enter vuedl-notification-fade-enter-active"
   role="alert"
   style="max-width: 500px; z-index: 2000; top: 10px;"
 >
