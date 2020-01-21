@@ -6,7 +6,53 @@ exports[`manager Test error notification with top-left position 1`] = `
   role="alert"
   style="max-width: 500px; z-index: 2000; top: 10px;"
 >
-  <!---->
+  <div
+    class="v-alert v-sheet theme--dark error"
+    role="alert"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <div
+      class="v-alert__wrapper"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon notranslate v-alert__icon mdi mdi-alert theme--dark"
+      />
+      <div
+        class="v-alert__content"
+      >
+        <div
+          class="d-flex align-center"
+        >
+          <div
+            class="mr-2"
+          >
+            
+      Test notification
+    
+          </div>
+           
+          <div
+            class="DialogActions"
+          />
+        </div>
+      </div>
+      <button
+        aria-label="Close"
+        class="v-alert__dismissible v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--small"
+        type="button"
+      >
+        <span
+          class="v-btn__content"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon notranslate mdi mdi-close-circle theme--dark"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
    
   <!---->
 </div>
@@ -18,7 +64,53 @@ exports[`manager Test info notification 1`] = `
   role="alert"
   style="max-width: 500px; z-index: 2000; top: 10px;"
 >
-  <!---->
+  <div
+    class="v-alert v-sheet theme--dark info"
+    role="alert"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <div
+      class="v-alert__wrapper"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon notranslate v-alert__icon mdi mdi-information theme--dark"
+      />
+      <div
+        class="v-alert__content"
+      >
+        <div
+          class="d-flex align-center"
+        >
+          <div
+            class="mr-2"
+          >
+            
+      Test notification
+    
+          </div>
+           
+          <div
+            class="DialogActions"
+          />
+        </div>
+      </div>
+      <button
+        aria-label="Close"
+        class="v-alert__dismissible v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--small"
+        type="button"
+      >
+        <span
+          class="v-btn__content"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon notranslate mdi mdi-close-circle theme--dark"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
    
   <!---->
 </div>
@@ -26,11 +118,57 @@ exports[`manager Test info notification 1`] = `
 
 exports[`manager Test notification component 1`] = `
 <div
-  class="vuedl-notification right vuedl-notification-fade-enter vuedl-notification-fade-enter-active"
+  class="vuedl-notification right vuedl-notification-fade-leave vuedl-notification-fade-leave-active"
   role="alert"
   style="max-width: 500px; z-index: 2000; top: 10px;"
 >
-  <!---->
+  <div
+    class="v-alert v-sheet theme--dark info"
+    role="alert"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <div
+      class="v-alert__wrapper"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon notranslate v-alert__icon mdi mdi-information theme--dark"
+      />
+      <div
+        class="v-alert__content"
+      >
+        <div
+          class="d-flex align-center"
+        >
+          <div
+            class="mr-2"
+          >
+            
+      Test notification
+    
+          </div>
+           
+          <div
+            class="DialogActions"
+          />
+        </div>
+      </div>
+      <button
+        aria-label="Close"
+        class="v-alert__dismissible v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--small"
+        type="button"
+      >
+        <span
+          class="v-btn__content"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon notranslate mdi mdi-close-circle theme--dark"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
    
   <!---->
 </div>
@@ -42,7 +180,53 @@ exports[`manager Test success notification 1`] = `
   role="alert"
   style="max-width: 500px; z-index: 2000; top: 10px;"
 >
-  <!---->
+  <div
+    class="v-alert v-sheet theme--dark success"
+    role="alert"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <div
+      class="v-alert__wrapper"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon notranslate v-alert__icon mdi mdi-check-circle theme--dark"
+      />
+      <div
+        class="v-alert__content"
+      >
+        <div
+          class="d-flex align-center"
+        >
+          <div
+            class="mr-2"
+          >
+            
+      Test notification
+    
+          </div>
+           
+          <div
+            class="DialogActions"
+          />
+        </div>
+      </div>
+      <button
+        aria-label="Close"
+        class="v-alert__dismissible v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--small"
+        type="button"
+      >
+        <span
+          class="v-btn__content"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon notranslate mdi mdi-close-circle theme--dark"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
    
   <!---->
 </div>
@@ -54,7 +238,53 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
   role="alert"
   style="max-width: 500px; z-index: 2000; bottom: 10px;"
 >
-  <!---->
+  <div
+    class="v-alert v-sheet theme--dark warning"
+    role="alert"
+    style="margin: 0px; min-width: 300px;"
+  >
+    <div
+      class="v-alert__wrapper"
+    >
+      <i
+        aria-hidden="true"
+        class="v-icon notranslate v-alert__icon mdi mdi-exclamation theme--dark"
+      />
+      <div
+        class="v-alert__content"
+      >
+        <div
+          class="d-flex align-center"
+        >
+          <div
+            class="mr-2"
+          >
+            
+      Test notification
+    
+          </div>
+           
+          <div
+            class="DialogActions"
+          />
+        </div>
+      </div>
+      <button
+        aria-label="Close"
+        class="v-alert__dismissible v-btn v-btn--flat v-btn--icon v-btn--round theme--dark v-size--small"
+        type="button"
+      >
+        <span
+          class="v-btn__content"
+        >
+          <i
+            aria-hidden="true"
+            class="v-icon notranslate mdi mdi-close-circle theme--dark"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
    
   <!---->
 </div>

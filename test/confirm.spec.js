@@ -3,15 +3,18 @@ import DialogManager from 'vuedl/src/manager'
 import Confirm from '../src/components/Confirm'
 import Returnable from 'vuedl/src/mixins/returnable'
 import Vue from 'vue'
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify/lib'
 import { wrap } from './utils'
-Vue.use(Vuetify)
+import { createLocalVue } from '@vue/test-utils'
 
+Vue.use(Vuetify)
+const vuetify = new Vuetify()
+
+const localVue = createLocalVue()
 describe('manager', () => {
   let manager
-
   test('Create manager instance', () => {
-    manager = new DialogManager({ context: { store: {} } })
+    manager = new DialogManager({ context: { store: {}, vuetify } })
     manager.component('confirm', Confirm)
   })
 
@@ -40,7 +43,7 @@ describe('manager', () => {
 
   test('Returnable', async () => {
     const dlg = new Dialog({
-      mixins: [ Returnable ],
+      mixins: [Returnable],
       template: '<p></p>'
     })
     await dlg.show()
@@ -64,13 +67,14 @@ describe('manager', () => {
     const wrapper = wrap(dlg.vm)
     expect(dlg.vm.$el).toMatchSnapshot()
     setTimeout(() => {
-      wrapper.find('[action-key=ok]').trigger('click')
-    }, 5)
+      dlg.element.querySelector('[action-key=ok]').click()
+    }, 0)
     let res = await dlg.wait()
     expect(res).toBe('ok')
     await Vue.nextTick()
     expect(document.body.innerHTML).toBe('')
   })
+
 
   test('Check confirm with action icons', async () => {
     let dlg = await manager.confirm({
@@ -105,13 +109,12 @@ describe('manager', () => {
       text: 'test',
       actions: { 'true': 'Yes', false: 'No' }
     })
-    const wrapper = wrap(dlg.vm)
     expect(dlg.element).toMatchSnapshot()
-    expect(wrapper.find('[action-key=true]').exists()).toBe(true)
-    expect(wrapper.find('[action-key=false]').exists()).toBe(true)
+    expect(dlg.element.querySelector('[action-key=true]')).toBeTruthy()
+    expect(dlg.element.querySelector('[action-key=false]')).toBeTruthy()
     setTimeout(() => {
-      wrapper.find('[action-key=true]').trigger('click')
-    }, 10)
+      dlg.element.querySelector('[action-key=true]').click()
+    }, 0)
     let res = await dlg.wait()
     expect(res).toBe(true)
     await Vue.nextTick()
@@ -128,20 +131,19 @@ describe('manager', () => {
           class: 'action-true',
           handle: () => {
             return new Promise((resolve) => {
-              setTimeout(() => resolve({ msg: 'foo' }), 10)
+              setTimeout(() => resolve({ msg: 'foo' }), 5)
             })
           }
         }
       }
     })
-    const wrapper = wrap(dlg.vm)
     expect(dlg.element).toMatchSnapshot()
     setTimeout(() => {
-      wrapper.find('[action-key=true]').trigger('click')
+      dlg.element.querySelector('[action-key=true]').click()
       Vue.nextTick(() => {
-        expect(wrapper.find('[action-key=true]').element.hasAttribute('disabled')).toBe(true)
+        expect(dlg.element.querySelector('[action-key=true]').hasAttribute('disabled')).toBe(true)
       })
-    }, 5)
+    }, 0)
     let res = await dlg.wait()
     expect(res).toEqual({ msg: 'foo' })
     await Vue.nextTick()

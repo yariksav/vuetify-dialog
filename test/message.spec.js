@@ -1,8 +1,6 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
 import { sleep } from './utils'
 import VuetifyDialogPlugin from '../src'
-Vue.use(Vuetify)
 
 describe('manager', () => {
   let manager
