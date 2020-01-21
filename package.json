@@ -14,7 +14,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
     "test": "jest --env=jsdom",
-    "coverage": "jest --env=jsdom --coverage --collectCoverageFrom=src/**/*.js --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls"
   },
   "main": "dist/vuetify-dialog.umd.js",
   "module": "dist/vuetify-dialog.esm.js",
@@ -87,7 +87,11 @@
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
-    "transformIgnorePatterns": []
+    "transformIgnorePatterns": [],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,vue}",
+      "!/node_modules/"
+    ]
   },
   "peerDependencies": {
     "vue": "*",

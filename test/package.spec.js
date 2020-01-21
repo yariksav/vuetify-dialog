@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify/lib'
 import VuetifyDialogPlugin from '../src'
 import { sleep, addElemWithDataAppToBody, disableTransitions } from './utils'
 Vue.use(Vuetify)

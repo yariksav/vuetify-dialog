@@ -1,8 +1,8 @@
+import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
 import DialogManager from 'vuedl/src/manager'
 import Prompt from '../src/components/Prompt'
 import DialogLayout from '../src/components/DialogLayout'
-import Vue from 'vue'
-import Vuetify from 'vuetify'
 import { sleep, addElemWithDataAppToBody, disableTransitions } from './utils'
 Vue.use(Vuetify)
 const vuetify = new Vuetify()
