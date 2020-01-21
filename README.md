@@ -13,8 +13,8 @@ This module will help you to work with modal dialogs in your project
   <a href="https://www.npmjs.org/package/vuetify-dialog">
     <img src="https://img.shields.io/npm/v/vuetify-dialog.svg">
   </a>
-  <a href="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.js?compression=gzip&label=gzip%20size:%20JS">
-    <img src="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.cjs.js?compression=gzip&label=gzip%20size:%20JS">
+  <a href="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.min.js?compression=gzip&label=gzip">
+    <img src="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.min.js?compression=gzip&label=gzip">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg">

@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "2.0.0-rc.1",
+  "version": "2.0.0",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
@@ -14,10 +14,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
     "test": "jest --env=jsdom",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
-    "test1": "node_modules/.bin/jest --env=jsdom --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls"
   },
   "main": "dist/vuetify-dialog.umd.js",
   "module": "dist/vuetify-dialog.esm.js",
