@@ -14,7 +14,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build",
     "test": "jest --env=jsdom",
-    "coverage": "jest --env=jsdom --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest --env=jsdom --coverage --collectCoverageFrom=src/**/*.js --coverageReporters=text-lcov | coveralls"
   },
   "main": "dist/vuetify-dialog.umd.js",
   "module": "dist/vuetify-dialog.esm.js",
