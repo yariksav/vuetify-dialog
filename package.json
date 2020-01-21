@@ -60,6 +60,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.1.0",
     "jest": "^24.9.0",
+    "jest-transform-stub": "^2.0.0",
     "lodash": "^4.17.15",
     "rollup": "^1.17.0",
     "rollup-plugin-buble": "^0.19.8",
@@ -87,11 +88,10 @@
     },
     "transform": {
       "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/babel-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
       ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
     },
-    "transformIgnorePatterns": [
-      "/node_modules/(?!vuedl).+\\.js$"
-    ]
+    "transformIgnorePatterns": []
   },
   "peerDependencies": {
     "vue": "*",

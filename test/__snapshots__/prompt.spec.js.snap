@@ -3,13 +3,13 @@
 exports[`manager Prompt confirm 1`] = `
 <div
   class="v-dialog__container"
-  style="display: block;"
+  role="dialog"
 />
 `;
 
 exports[`manager Test default prompt 1`] = `
 <div
   class="v-dialog__container"
-  style="display: block;"
+  role="dialog"
 />
 `;
