@@ -5,11 +5,11 @@ exports[`manager Check confirm 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
-    <nav
-      class="v-toolbar elevation-0 v-toolbar--dense theme--dark warning"
-      style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"
+    <header
+      class="v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-toolbar--flat warning"
+      style="height: 48px;"
     >
       <div
         class="v-toolbar__content"
@@ -17,9 +17,9 @@ exports[`manager Check confirm 1`] = `
       >
         <i
           aria-hidden="true"
-          class="v-icon material-icons theme--dark"
+          class="v-icon notranslate v-icon--left material-icons theme--dark"
         >
-          priority_high
+          warning
         </i>
          
         <div
@@ -28,12 +28,12 @@ exports[`manager Check confirm 1`] = `
           
         </div>
       </div>
-    </nav>
+    </header>
      
     <!---->
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       test
     </div>
@@ -45,13 +45,15 @@ exports[`manager Check confirm 1`] = `
         class="spacer"
       />
        
-      <span>
+      <div
+        class="DialogActions"
+      >
         <button
           action-key="ok"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -59,14 +61,14 @@ exports[`manager Check confirm 1`] = `
   ok
   
             <!---->
-          </div>
+          </span>
         </button>
         <button
           action-key="cancel"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -74,9 +76,9 @@ exports[`manager Check confirm 1`] = `
   cancel
   
             <!---->
-          </div>
+          </span>
         </button>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -87,7 +89,7 @@ exports[`manager Check confirm with action icons 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
     <!---->
      
@@ -100,7 +102,7 @@ exports[`manager Check confirm with action icons 1`] = `
     </div>
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       test
     </div>
@@ -112,18 +114,22 @@ exports[`manager Check confirm with action icons 1`] = `
         class="spacer"
       />
        
-      <span>
+      <div
+        class="DialogActions"
+      >
         <button
           action-key="false"
-          class="v-btn v-btn--flat v-btn--round theme--light info--text"
+          class="v-btn v-btn--flat v-btn--rounded v-btn--text theme--light v-size--default info--text"
+          color="info"
+          rounded="true"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <i
               aria-hidden="true"
-              class="v-icon material-icons theme--light"
+              class="v-icon notranslate material-icons theme--light"
               text="cancel"
             >
               cancel
@@ -132,14 +138,14 @@ exports[`manager Check confirm with action icons 1`] = `
   No
   
             <!---->
-          </div>
+          </span>
         </button>
         <button
           action-key="true"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -148,14 +154,14 @@ exports[`manager Check confirm with action icons 1`] = `
   
             <i
               aria-hidden="true"
-              class="v-icon v-icon--right material-icons theme--light"
+              class="v-icon notranslate v-icon--right material-icons theme--light"
               text="success"
             >
               success
             </i>
-          </div>
+          </span>
         </button>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -166,7 +172,7 @@ exports[`manager Check confirm with btns true|false 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
     <!---->
      
@@ -179,7 +185,7 @@ exports[`manager Check confirm with btns true|false 1`] = `
     </div>
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       test
     </div>
@@ -191,13 +197,15 @@ exports[`manager Check confirm with btns true|false 1`] = `
         class="spacer"
       />
        
-      <span>
+      <div
+        class="DialogActions"
+      >
         <button
           action-key="true"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -205,14 +213,14 @@ exports[`manager Check confirm with btns true|false 1`] = `
   Yes
   
             <!---->
-          </div>
+          </span>
         </button>
         <button
           action-key="false"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -220,9 +228,9 @@ exports[`manager Check confirm with btns true|false 1`] = `
   No
   
             <!---->
-          </div>
+          </span>
         </button>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -233,7 +241,7 @@ exports[`manager Check confirm with handle functions 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
     <!---->
      
@@ -246,7 +254,7 @@ exports[`manager Check confirm with handle functions 1`] = `
     </div>
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       test
     </div>
@@ -258,13 +266,15 @@ exports[`manager Check confirm with handle functions 1`] = `
         class="spacer"
       />
        
-      <span>
+      <div
+        class="DialogActions"
+      >
         <button
           action-key="false"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -272,14 +282,14 @@ exports[`manager Check confirm with handle functions 1`] = `
   No
   
             <!---->
-          </div>
+          </span>
         </button>
         <button
           action-key="true"
-          class="v-btn v-btn--flat theme--light"
+          class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
           type="button"
         >
-          <div
+          <span
             class="v-btn__content"
           >
             <!---->
@@ -287,9 +297,9 @@ exports[`manager Check confirm with handle functions 1`] = `
   Yes
   
             <!---->
-          </div>
+          </span>
         </button>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -308,7 +318,7 @@ exports[`manager Test confirm without icon 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
     <!---->
      
@@ -323,7 +333,7 @@ exports[`manager Test confirm without icon 1`] = `
     </div>
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       Test confirmation withot icon
     </div>
@@ -335,7 +345,9 @@ exports[`manager Test confirm without icon 1`] = `
         class="spacer"
       />
        
-      <span />
+      <div
+        class="DialogActions"
+      />
     </div>
   </div>
 </div>
@@ -346,7 +358,7 @@ exports[`manager Test default confirm 1`] = `
   class="dialog-layout"
 >
   <div
-    class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+    class="v-card v-sheet v-sheet--tile theme--light"
   >
     <!---->
      
@@ -361,7 +373,7 @@ exports[`manager Test default confirm 1`] = `
     </div>
      
     <div
-      class="v-card__text"
+      class="v-card__text body-1 py-2"
     >
       Test confirmation
     </div>
@@ -373,7 +385,9 @@ exports[`manager Test default confirm 1`] = `
         class="spacer"
       />
        
-      <span />
+      <div
+        class="DialogActions"
+      />
     </div>
   </div>
 </div>

@@ -3,12 +3,13 @@
 exports[`manager Test confirmation with generic options 1`] = `
 <div
   class="v-dialog__container"
-  style="display: block;"
+  role="dialog"
 >
   <div
     class="v-dialog__content v-dialog__content--active"
+    role="document"
     style="z-index: 202; z-index: 202;"
-    tabindex="-1"
+    tabindex="0"
   >
     <div
       class="v-dialog vuedl-layout v-dialog--active dialog-transition-enter dialog-transition-enter-active"
@@ -21,7 +22,7 @@ exports[`manager Test confirmation with generic options 1`] = `
       </div>
        
       <div
-        class="v-card v-sheet v-sheet--tile theme--light elevation-2"
+        class="v-card v-sheet v-sheet--tile theme--light"
       >
         <!---->
          
@@ -36,7 +37,7 @@ exports[`manager Test confirmation with generic options 1`] = `
         </div>
          
         <div
-          class="v-card__text"
+          class="v-card__text body-1 py-2"
         >
           Test confirmation with generic options
         </div>
@@ -48,13 +49,15 @@ exports[`manager Test confirmation with generic options 1`] = `
             class="spacer"
           />
            
-          <span>
+          <div
+            class="DialogActions"
+          >
             <button
               action-key="Foo"
-              class="v-btn v-btn--flat theme--light"
+              class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
               type="button"
             >
-              <div
+              <span
                 class="v-btn__content"
               >
                 <!---->
@@ -62,14 +65,14 @@ exports[`manager Test confirmation with generic options 1`] = `
   Foo
   
                 <!---->
-              </div>
+              </span>
             </button>
             <button
               action-key="Bar"
-              class="v-btn v-btn--flat theme--light"
+              class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
               type="button"
             >
-              <div
+              <span
                 class="v-btn__content"
               >
                 <!---->
@@ -77,14 +80,14 @@ exports[`manager Test confirmation with generic options 1`] = `
   Bar
   
                 <!---->
-              </div>
+              </span>
             </button>
             <button
               action-key="Baz"
-              class="v-btn v-btn--flat theme--light"
+              class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
               type="button"
             >
-              <div
+              <span
                 class="v-btn__content"
               >
                 <!---->
@@ -92,9 +95,9 @@ exports[`manager Test confirmation with generic options 1`] = `
   Baz
   
                 <!---->
-              </div>
+              </span>
             </button>
-          </span>
+          </div>
         </div>
       </div>
     </div>
