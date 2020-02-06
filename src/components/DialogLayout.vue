@@ -12,17 +12,19 @@
     :hide-overlay="hideOverlay"
     @keydown.esc="dismiss"
   >
-    <div
-      v-if="showClose && !persistent && !loading"
-      class="vuedl-layout__closeBtn"
-      @click.stop="close"
-    >
-      ×
+    <div class="v-dialog-wrapper">
+      <div
+        v-if="showClose && !persistent && !loading"
+        class="vuedl-layout__closeBtn"
+        @click.stop="close"
+      >
+        ×
+      </div>
+      <dialog-child
+        ref="dialog"
+        v-bind="$options.propsData"
+      />
     </div>
-    <dialog-child
-      ref="dialog"
-      v-bind="$options.propsData"
-    />
   </v-dialog>
 </template>
 

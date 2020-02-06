@@ -26,10 +26,6 @@ This module will help you to work with modal dialogs in your project
 ## Vuedl module documentation
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
-## Demo
-[Demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
-[Source of demo](https://codesandbox.io/s/ppx57r3nnj)
-
 ## Setup
 
 Install the package from npm
@@ -39,6 +35,10 @@ Install the package from npm
 ## Vuetify 2
 
 For Vuetify 2 please use latest version of vuetify-dialog@2.X.X
+
+### Demo with Vuetify 2
+[Demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
+[Source of the demo](https://codesandbox.io/s/ppx57r3nnj)
 
 ```npm
 npm install vuetify-dialog
@@ -61,6 +61,10 @@ Vue.use(VuetifyDialog, {
 ## Vuetify 1
 
 For Vuetify 1 you need to use vuetify-dialog@0.4.0-beta.2
+
+### Demo with Vuetify 1
+[Demo in Vuetify 1 CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
+[Source of the demo](https://codesandbox.io/s/ppx57r3nnj)
 
 ```npm
 npm install vuetify-dialog@0.4.0-beta.2
