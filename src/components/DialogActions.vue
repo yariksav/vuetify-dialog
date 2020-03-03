@@ -11,6 +11,7 @@
         @click="onActionClick(action)"
       />
     </template>
+    <slot />
   </div>
 </template>
 <script>
@@ -33,7 +34,18 @@ export default {
   },
   computed: {
     nestedProps () {
-      return ['color', 'flat', 'icon', 'outlined', 'rounded', 'block']
+      return [
+        'color',
+        'flat',
+        'icon',
+        'outlined',
+        'rounded',
+        'block',
+        'small',
+        'large',
+        'x-small',
+        'x-large'
+      ]
     }
   },
   methods: {
