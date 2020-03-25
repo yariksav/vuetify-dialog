@@ -1,5 +1,8 @@
 <template>
-  <v-card v-bind="$attrs">
+  <v-card
+    :flat="flat"
+    :class="{'v-inner-scroll': innerScroll }"
+  >
     <slot name="title">
       <v-card-title v-if="title">
         <div
@@ -30,6 +33,7 @@ import DialogActions from './DialogActions.vue'
 import { VCard, VCardTitle, VCardText, VCardActions, VSpacer } from 'vuetify/lib'
 
 export default {
+  inheritAttrs: false,
   components: {
     DialogActions,
     VCard,
@@ -40,10 +44,9 @@ export default {
   },
   props: {
     title: String,
-    titleClass: {
-      type: String,
-      default: 'headline'
-    },
+    flat: Boolean,
+    innerScroll: Boolean,
+    titleClass: String,
     actions: [Array, Object, Function],
     handle: Function
   },
@@ -54,9 +57,37 @@ export default {
   }
 }
 </script>
-<style>
-  .vuedl-layout.v-dialog--scrollable > .v-card > .v-card__text {
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
+<style lang="scss">
+  .v-dialog:not(.v-dialog--fullscreen) {
+    .v-card.v-inner-scroll {
+      .v-card__text {
+        max-height: 70vh;
+      }
+    }
+  }
+  .v-card.v-inner-scroll {
+    .v-card__text {
+      overflow: auto;
+      background:
+        linear-gradient(white 30%, hsla(0,0%,100%, 0)),
+        linear-gradient(hsla(0,0%,100%,0) 10px, white 70%) bottom,
+        radial-gradient(at top, rgba(0,0,0,0.2), transparent 70%),
+        radial-gradient(at bottom, rgba(0,0,0,0.2), transparent 70%) bottom;
+      background-repeat:no-repeat;
+      background-size: 100% 30px, 100% 30px, 100% 10px, 100% 10px;
+      background-attachment:local, local, scroll, scroll;
+    }
+  }
+  .theme--dark.v-inner-scroll {
+    .v-card__text {
+      background:
+        linear-gradient(#1d1d1d 30%, rgba(255, 255, 255, 0)),
+        linear-gradient(hsla(0,0%,100%,0) 10px, #1d1d1d 70%) bottom,
+        radial-gradient(at top, rgba(255, 255, 255, 0.2), transparent 70%),
+        radial-gradient(at bottom, rgba(255, 253, 253, 0.2), transparent 70%) bottom;
+      background-repeat:no-repeat;
+      background-size: 100% 30px, 100% 30px, 100% 10px, 100% 10px;
+      background-attachment:local, local, scroll, scroll;
+    }
   }
 </style>
