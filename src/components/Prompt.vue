@@ -45,9 +45,9 @@ export default {
       default: () => ({
         singleLine:Boolean,
         rounded:Boolean,
-        solo:Boolean
-        filled:Boolean
-        outlined:Boolean
+        solo:Boolean,
+        filled:Boolean,
+        outlined:Boolean,
         autofocus:Boolean
       })
     }
