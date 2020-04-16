@@ -4,16 +4,14 @@
     :class="{'v-inner-scroll': innerScroll }"
   >
     <slot name="title">
-      <v-card-title v-if="title">
-        <div
-          :class="titleClass"
-          v-text="title"
-        />
+      <v-card-title v-if="title" class="mb-2" :class="titleClass">
+        <div v-text="title" />
       </v-card-title>
     </slot>
     <v-card-text>
       <slot />
     </v-card-text>
+    <v-divider />
     <v-card-actions v-if="actions">
       <v-spacer />
       <DialogActions
@@ -48,7 +46,8 @@ export default {
     innerScroll: Boolean,
     titleClass: String,
     actions: [Array, Object, Function],
-    handle: Function
+    handle: Function,
+    titleClass: String
   },
   methods: {
     trigger (name) {
