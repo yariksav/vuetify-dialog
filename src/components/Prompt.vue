@@ -4,6 +4,7 @@
       :title="title"
       :actions="actions"
       :handle="handleClick"
+      :titleClass="titleClass"
       ref="card"
     >
       <v-text-field
@@ -12,6 +13,11 @@
         v-model="editedValue"
         :label="text"
         @keypress.enter="$emit('submit', editedValue)"
+        :singleLine="textField.singleLine"
+        :rounded="textField.rounded"
+        :solo="textField.solo"
+        :filled="textField.filled"
+        :outlined="textField.outlined"
       />
     </DialogCard>
   </div>
@@ -32,6 +38,18 @@ export default {
   mixins: [Confirmable],
   props: {
     value: String
+    titleClass: String,
+    textField: {
+      type: Object,
+      default: () => ({
+        singleLine: false,
+        rounded: false,
+        solo: false,
+        filled: false,
+        outlined: false,
+        autofocus: true
+      })
+    }
   },
   data () {
     return {
@@ -40,7 +58,7 @@ export default {
   },
   mounted () {
     setTimeout(() => {
-      this.$refs.input.focus()
+      if(this.textField.autofocus) this.$refs.input.focus()
     }, 100)
   },
   methods: {
