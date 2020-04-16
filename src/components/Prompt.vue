@@ -37,7 +37,7 @@ export default {
   layout: 'default',
   mixins: [Confirmable],
   props: {
-    value: String
+    value: String,
     titleClass: String,
     textField: {
       type: Object,
