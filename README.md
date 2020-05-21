@@ -37,8 +37,8 @@ Install the package from npm
 For Vuetify 2 please use latest version of vuetify-dialog@2.X.X
 
 ### Demo with Vuetify 2
-[Demo in CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
-[Source of the demo](https://codesandbox.io/s/ppx57r3nnj)
+[Demo in CodeSandbox](https://iwdcf.csb.app/),  
+[Demo source](https://codesandbox.io/s/vuetify-2-dialog-example-iwdcf)
 
 ```npm
 npm install vuetify-dialog
@@ -63,8 +63,8 @@ Vue.use(VuetifyDialog, {
 For Vuetify 1 you need to use vuetify-dialog@0.4.0-beta.2
 
 ### Demo with Vuetify 1
-[Demo in Vuetify 1 CodeSandbox](https://ppx57r3nnj.codesandbox.io/),
-[Source of the demo](https://codesandbox.io/s/ppx57r3nnj)
+[Demo with Vuetify 1 CodeSandbox](https://ppx57r3nnj.codesandbox.io/),  
+[Demo source](https://codesandbox.io/s/ppx57r3nnj)
 
 ```npm
 npm install vuetify-dialog@0.4.0-beta.2

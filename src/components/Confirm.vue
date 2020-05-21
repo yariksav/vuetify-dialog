@@ -1,8 +1,8 @@
 <template>
   <v-card tile>
     <v-toolbar
-      v-if="Boolean(type)"
-      dark
+      v-if="title"
+      :dark="Boolean(getColor)"
       :color="getColor"
       dense
       flat
@@ -13,16 +13,13 @@
       >
         {{ getIcon }}
       </v-icon>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-toolbar-title class="">
+        {{ title }}
+      </v-toolbar-title>
     </v-toolbar>
-    <v-card-title v-if="!type">
-      <h3
-        class="headline mb-0"
-        v-text="title"
-      />
-    </v-card-title>
     <v-card-text
       class="body-1 py-2"
+      :class="{ 'pt-4': !title }"
       v-html="text"
     />
     <v-card-actions>
@@ -40,13 +37,12 @@
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import Colorable from '../mixins/colorable'
 import DialogActions from './DialogActions.vue'
-import { VCard, VCardTitle, VCardText, VCardActions, VToolbar, VToolbarTitle, VIcon, VSpacer } from 'vuetify/lib'
+import { VCard, VCardText, VCardActions, VToolbar, VToolbarTitle, VIcon, VSpacer } from 'vuetify/lib'
 
 export default {
   components: {
     DialogActions,
     VCard,
-    VCardTitle,
     VCardText,
     VCardActions,
     VToolbar,
@@ -63,7 +59,7 @@ export default {
     },
     text: {
       type: [String, Function],
-      reqiured: true,
+      required: true,
       default: ''
     }
   },
