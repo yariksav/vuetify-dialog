@@ -6,6 +6,7 @@
       v-model="isActive"
       class="application"
       v-bind="$options.propsData"
+      :text="false"
       :top="top"
       :left="left"
       :right="right"
