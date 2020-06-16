@@ -5,7 +5,6 @@ exports[`manager Test error notification with top-left position 1`] = `
   <div
     class="v-snack application v-snack--active v-snack--left v-snack--top"
     position="top-left"
-    text="Test message"
   >
     <div
       class="v-snack__wrapper error"
@@ -20,7 +19,9 @@ exports[`manager Test error notification with top-left position 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +33,6 @@ exports[`manager Test info notification 1`] = `
 <div>
   <div
     class="v-snack application v-snack--active v-snack--bottom"
-    text="Test message"
   >
     <div
       class="v-snack__wrapper info"
@@ -47,7 +47,9 @@ exports[`manager Test info notification 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
     </div>
@@ -59,7 +61,6 @@ exports[`manager Test success notification 1`] = `
 <div>
   <div
     class="v-snack application v-snack--active v-snack--bottom"
-    text="Test message"
   >
     <div
       class="v-snack__wrapper success"
@@ -74,7 +75,9 @@ exports[`manager Test success notification 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
     </div>
@@ -87,7 +90,6 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
   <div
     class="v-snack application v-snack--active v-snack--bottom v-snack--right"
     position="bottom-right"
-    text="Test message"
   >
     <div
       class="v-snack__wrapper warning"
@@ -102,7 +104,9 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
     </div>

@@ -34,7 +34,9 @@ exports[`manager Test error notification with top-left position 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
       <button
@@ -92,7 +94,9 @@ exports[`manager Test info notification 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
       <button
@@ -150,7 +154,9 @@ exports[`manager Test notification component 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
       <button
@@ -208,7 +214,9 @@ exports[`manager Test success notification 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
       <button
@@ -266,7 +274,9 @@ exports[`manager Test warning notification with bottom-right position 1`] = `
            
           <div
             class="DialogActions"
-          />
+          >
+             
+          </div>
         </div>
       </div>
       <button

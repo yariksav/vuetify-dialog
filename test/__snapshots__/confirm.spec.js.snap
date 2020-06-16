@@ -7,33 +7,10 @@ exports[`manager Check confirm 1`] = `
   <div
     class="v-card v-sheet v-sheet--tile theme--light"
   >
-    <header
-      class="v-sheet v-sheet--tile theme--dark v-toolbar v-toolbar--dense v-toolbar--flat warning"
-      style="height: 48px;"
-    >
-      <div
-        class="v-toolbar__content"
-        style="height: 48px;"
-      >
-        <i
-          aria-hidden="true"
-          class="v-icon notranslate v-icon--left material-icons theme--dark"
-        >
-          warning
-        </i>
-         
-        <div
-          class="v-toolbar__title"
-        >
-          
-        </div>
-      </div>
-    </header>
-     
     <!---->
      
     <div
-      class="v-card__text body-1 py-2"
+      class="v-card__text body-1 py-2 pt-4"
     >
       test
     </div>
@@ -78,6 +55,7 @@ exports[`manager Check confirm 1`] = `
             <!---->
           </span>
         </button>
+         
       </div>
     </div>
   </div>
@@ -94,15 +72,7 @@ exports[`manager Check confirm with action icons 1`] = `
     <!---->
      
     <div
-      class="v-card__title"
-    >
-      <h3
-        class="headline mb-0"
-      />
-    </div>
-     
-    <div
-      class="v-card__text body-1 py-2"
+      class="v-card__text body-1 py-2 pt-4"
     >
       test
     </div>
@@ -161,6 +131,7 @@ exports[`manager Check confirm with action icons 1`] = `
             </i>
           </span>
         </button>
+         
       </div>
     </div>
   </div>
@@ -177,15 +148,7 @@ exports[`manager Check confirm with btns true|false 1`] = `
     <!---->
      
     <div
-      class="v-card__title"
-    >
-      <h3
-        class="headline mb-0"
-      />
-    </div>
-     
-    <div
-      class="v-card__text body-1 py-2"
+      class="v-card__text body-1 py-2 pt-4"
     >
       test
     </div>
@@ -230,6 +193,7 @@ exports[`manager Check confirm with btns true|false 1`] = `
             <!---->
           </span>
         </button>
+         
       </div>
     </div>
   </div>
@@ -246,15 +210,7 @@ exports[`manager Check confirm with handle functions 1`] = `
     <!---->
      
     <div
-      class="v-card__title"
-    >
-      <h3
-        class="headline mb-0"
-      />
-    </div>
-     
-    <div
-      class="v-card__text body-1 py-2"
+      class="v-card__text body-1 py-2 pt-4"
     >
       test
     </div>
@@ -299,6 +255,7 @@ exports[`manager Check confirm with handle functions 1`] = `
             <!---->
           </span>
         </button>
+         
       </div>
     </div>
   </div>
@@ -320,17 +277,25 @@ exports[`manager Test confirm without icon 1`] = `
   <div
     class="v-card v-sheet v-sheet--tile theme--light"
   >
-    <!---->
-     
-    <div
-      class="v-card__title"
+    <header
+      class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--dense v-toolbar--flat"
+      style="height: 48px;"
     >
-      <h3
-        class="headline mb-0"
+      <div
+        class="v-toolbar__content"
+        style="height: 48px;"
       >
-        Title
-      </h3>
-    </div>
+        <!---->
+         
+        <div
+          class="v-toolbar__title"
+        >
+          
+      Title
+    
+        </div>
+      </div>
+    </header>
      
     <div
       class="v-card__text body-1 py-2"
@@ -347,7 +312,9 @@ exports[`manager Test confirm without icon 1`] = `
        
       <div
         class="DialogActions"
-      />
+      >
+         
+      </div>
     </div>
   </div>
 </div>
@@ -360,17 +327,25 @@ exports[`manager Test default confirm 1`] = `
   <div
     class="v-card v-sheet v-sheet--tile theme--light"
   >
-    <!---->
-     
-    <div
-      class="v-card__title"
+    <header
+      class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--dense v-toolbar--flat"
+      style="height: 48px;"
     >
-      <h3
-        class="headline mb-0"
+      <div
+        class="v-toolbar__content"
+        style="height: 48px;"
       >
-        Title
-      </h3>
-    </div>
+        <!---->
+         
+        <div
+          class="v-toolbar__title"
+        >
+          
+      Title
+    
+        </div>
+      </div>
+    </header>
      
     <div
       class="v-card__text body-1 py-2"
@@ -387,7 +362,9 @@ exports[`manager Test default confirm 1`] = `
        
       <div
         class="DialogActions"
-      />
+      >
+         
+      </div>
     </div>
   </div>
 </div>
