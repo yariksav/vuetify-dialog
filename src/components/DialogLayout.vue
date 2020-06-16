@@ -10,6 +10,7 @@
     :scrollable="scrollable"
     :transition="transition"
     :hide-overlay="hideOverlay"
+    :retain-focus="false"
     @keydown.esc="dismiss"
   >
     <div class="v-dialog-wrapper">
