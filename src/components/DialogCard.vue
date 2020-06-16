@@ -4,11 +4,11 @@
     :class="{'v-inner-scroll': innerScroll }"
   >
     <slot name="title">
-      <v-card-title v-if="title">
-        <div
-          :class="titleClass"
-          v-text="title"
-        />
+      <v-card-title
+        v-if="title"
+        :class="titleClass"
+      >
+        {{ title }}
       </v-card-title>
     </slot>
     <v-card-text>
