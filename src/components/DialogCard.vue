@@ -46,7 +46,7 @@ export default {
     title: String,
     flat: Boolean,
     innerScroll: Boolean,
-    titleClass: String,
+    titleClass: [String, Object],
     actions: [Array, Object, Function],
     handle: Function
   },

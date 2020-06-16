@@ -4,18 +4,17 @@
       :title="title"
       :actions="actions"
       :handle="handleClick"
+      :title-class="titleClass"
       ref="card"
     >
-      <v-form ref="form">
-        <v-text-field
-          ref="input"
-          v-model="editedValue"
-          :rules="rules"
-          :label="text"
-          v-bind="textField"
-          @keypress.enter="$emit('submit', editedValue)"
-        />
-      </v-form>
+      <v-text-field
+        ref="input"
+        v-model="editedValue"
+        :rules="rules"
+        :label="text"
+        v-bind="textField"
+        @keyup.enter.stop="onEnter"
+      />
     </DialogCard>
   </div>
 </template>
@@ -24,13 +23,12 @@
 
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import DialogCard from './DialogCard.vue'
-import { VTextField, VForm } from 'vuetify/lib'
+import { VTextField } from 'vuetify/lib'
 
 export default {
   components: {
     DialogCard,
-    VTextField,
-    VForm
+    VTextField
   },
   layout: 'default',
   mixins: [Confirmable],
@@ -38,6 +36,7 @@ export default {
     value: String,
     rules: Array,
     textField: Object,
+    titleClass: [String, Object],
     autofocus: {
       type: Boolean,
       default: true
@@ -56,11 +55,14 @@ export default {
     }
   },
   methods: {
+    onEnter () {
+      this.$refs.card.$refs.actions.trigger(true)
+    },
     handleClick (res, action) {
       if (!action.key) {
         this.$emit('submit', action.key)
       }
-      const valid = this.rules ? this.$refs.form.validate() : true
+      const valid = this.rules ? this.$refs.input.validate() : true
       if (!valid) {
         this.$refs.input.focus()
         return false
