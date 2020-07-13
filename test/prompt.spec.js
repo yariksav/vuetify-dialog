@@ -5,7 +5,7 @@ import Prompt from '../src/components/Prompt'
 import DialogLayout from '../src/components/DialogLayout'
 import { sleep, addElemWithDataAppToBody, disableTransitions } from './utils'
 Vue.use(Vuetify)
-const vuetify = new Vuetify()
+const vuetify = new Vuetify({})
 
 describe('manager', () => {
   disableTransitions()

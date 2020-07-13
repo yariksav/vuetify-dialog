@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-flex">
     <span v-html="text" />
     <DialogActions :actions="actions" />
   </div>

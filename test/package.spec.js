@@ -3,7 +3,7 @@ import Vuetify from 'vuetify/lib'
 import VuetifyDialogPlugin from '../src'
 import { sleep, addElemWithDataAppToBody, disableTransitions } from './utils'
 Vue.use(Vuetify)
-const vuetify = new Vuetify()
+const vuetify = new Vuetify({})
 
 describe('manager', () => {
   disableTransitions()

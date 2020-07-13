@@ -14,15 +14,13 @@
     <v-card-text>
       <slot />
     </v-card-text>
-    <v-card-actions v-if="actions">
-      <v-spacer />
-      <DialogActions
-        :actions="actions"
-        flat
-        ref="actions"
-        :handle="handle"
-      />
-    </v-card-actions>
+    <DialogActions
+      v-if="actions"
+      ref="actions"
+      :actions="actions"
+      v-bind="actionOptions"
+      :handle="handle"
+    />
   </v-card>
 </template>
 
@@ -30,7 +28,7 @@
 
 import DialogActions from './DialogActions.vue'
 
-import { VCard, VCardTitle, VCardText, VCardActions, VSpacer } from 'vuetify/lib'
+import { VCard, VCardTitle, VCardText } from 'vuetify/lib'
 
 export default {
   inheritAttrs: false,
@@ -38,9 +36,7 @@ export default {
     DialogActions,
     VCard,
     VCardTitle,
-    VCardText,
-    VCardActions,
-    VSpacer
+    VCardText
   },
   props: {
     title: String,
@@ -48,6 +44,12 @@ export default {
     innerScroll: Boolean,
     titleClass: [String, Object],
     actions: [Array, Object, Function],
+    actionOptions: {
+      type: Object,
+      default: () => ({
+        flat: true
+      })
+    },
     handle: Function
   },
   methods: {

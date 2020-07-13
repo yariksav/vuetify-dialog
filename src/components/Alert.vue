@@ -29,11 +29,11 @@ export default {
   props: {
     color: {
       type: String,
-      default: () => 'info'
+      default: 'info'
     },
     actions: {
       type: [Array, Object],
-      default: () => {}
+      default: () => ({})
     },
     text: {
       type: String,

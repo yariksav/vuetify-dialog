@@ -3,7 +3,7 @@ import Vuetify from 'vuetify/lib'
 import { sleep } from './utils'
 import VuetifyDialogPlugin from '../src'
 Vue.use(Vuetify)
-const vuetify = new Vuetify()
+const vuetify = new Vuetify({})
 
 describe('manager', () => {
   let manager

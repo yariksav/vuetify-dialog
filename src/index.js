@@ -26,6 +26,10 @@ function install (Vue, options = {}) {
       }
     }
   })
+  const actionOptions = options.actionOptions || {
+    flat: true
+  }
+
   Vue.use(Vuedl, options)
   const manager = Vue.prototype[property]
   manager.layout('default', DialogLayout)
@@ -36,6 +40,7 @@ function install (Vue, options = {}) {
   manager.component('confirm', Confirm, {
     waitForResult: true,
     actions: actionsFn,
+    actionOptions: actionOptions,
     ...options.confirm
   })
 
@@ -43,6 +48,7 @@ function install (Vue, options = {}) {
     type: 'warning',
     waitForResult: true,
     actions: actionsFn,
+    actionOptions: actionOptions,
     ...options.warning
   })
 
@@ -50,11 +56,13 @@ function install (Vue, options = {}) {
     type: 'error',
     waitForResult: true,
     actions: ['Close'],
+    actionOptions: actionOptions,
     ...options.error
   })
 
   manager.component('toast', Toast, {
     waitForResult: true,
+    actionOptions: actionOptions,
     ...options.toast
   })
 

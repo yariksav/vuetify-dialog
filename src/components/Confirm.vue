@@ -22,13 +22,10 @@
       :class="{ 'pt-4': !title }"
       v-html="text"
     />
-    <v-card-actions>
-      <v-spacer />
-      <DialogActions
-        :actions="actions"
-        flat
-      />
-    </v-card-actions>
+    <DialogActions
+      :actions="actions"
+      v-bind="actionOptions"
+    />
   </v-card>
 </template>
 
@@ -37,22 +34,21 @@
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import Colorable from '../mixins/colorable'
 import DialogActions from './DialogActions.vue'
-import { VCard, VCardText, VCardActions, VToolbar, VToolbarTitle, VIcon, VSpacer } from 'vuetify/lib'
+import { VCard, VCardText, VToolbar, VToolbarTitle, VIcon } from 'vuetify/lib'
 
 export default {
   components: {
     DialogActions,
     VCard,
     VCardText,
-    VCardActions,
     VToolbar,
     VToolbarTitle,
-    VIcon,
-    VSpacer
+    VIcon
   },
   layout: ['default', { width: 450 }],
   mixins: [Confirmable, Colorable],
   props: {
+    actionOptions: Object,
     icon: {
       type: [String, Boolean],
       default: undefined

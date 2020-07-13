@@ -28,7 +28,7 @@ exports[`manager Test confirmation with generic options 2`] = `
     >
       <div
         class="v-dialog vuedl-layout dialog-transition-leave dialog-transition-leave-active"
-        style="max-width: 450px;"
+        style="transform-origin: center center; max-width: 450px;"
       >
         <div
           class="v-dialog-wrapper"
@@ -42,10 +42,10 @@ exports[`manager Test confirmation with generic options 2`] = `
           </div>
            
           <div
-            class="v-card v-sheet v-sheet--tile theme--light"
+            class="v-card v-sheet theme--light rounded-0"
           >
             <header
-              class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--dense v-toolbar--flat"
+              class="v-sheet theme--light v-toolbar v-toolbar--dense v-toolbar--flat"
               style="height: 48px;"
             >
               <div
@@ -77,56 +77,51 @@ exports[`manager Test confirmation with generic options 2`] = `
                 class="spacer"
               />
                
-              <div
-                class="DialogActions"
+              <button
+                action-key="Foo"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
               >
-                <button
-                  action-key="Foo"
-                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                  type="button"
+                <span
+                  class="v-btn__content"
                 >
-                  <span
-                    class="v-btn__content"
-                  >
-                    <!---->
-                    
+                  <!---->
+                  
   Foo
   
-                    <!---->
-                  </span>
-                </button>
-                <button
-                  action-key="Bar"
-                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                  type="button"
+                  <!---->
+                </span>
+              </button>
+              <button
+                action-key="Bar"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
+              >
+                <span
+                  class="v-btn__content"
                 >
-                  <span
-                    class="v-btn__content"
-                  >
-                    <!---->
-                    
+                  <!---->
+                  
   Bar
   
-                    <!---->
-                  </span>
-                </button>
-                <button
-                  action-key="Baz"
-                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                  type="button"
+                  <!---->
+                </span>
+              </button>
+              <button
+                action-key="Baz"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
+              >
+                <span
+                  class="v-btn__content"
                 >
-                  <span
-                    class="v-btn__content"
-                  >
-                    <!---->
-                    
+                  <!---->
+                  
   Baz
   
-                    <!---->
-                  </span>
-                </button>
-                 
-              </div>
+                  <!---->
+                </span>
+              </button>
             </div>
           </div>
         </div>

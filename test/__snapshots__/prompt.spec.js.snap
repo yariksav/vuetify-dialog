@@ -22,128 +22,6 @@ exports[`manager Prompt confirm 2`] = `
       />
     </div>
     <div
-      class="v-dialog__content"
-      role="document"
-      style="z-index: 202; z-index: 202;"
-    >
-      <div
-        class="v-dialog vuedl-layout"
-        style="max-width: 450px; display: none;"
-      >
-        <div
-          class="v-dialog-wrapper"
-        >
-          <div
-            class="vuedl-layout__closeBtn"
-          >
-            
-      ×
-    
-          </div>
-           
-          <div>
-            <div
-              class="v-card v-sheet theme--light"
-            >
-              <!---->
-               
-              <div
-                class="v-card__text"
-              >
-                <form
-                  class="v-form"
-                  novalidate="novalidate"
-                >
-                  <div
-                    class="v-input v-input--is-label-active v-input--is-dirty v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
-                  >
-                    <div
-                      class="v-input__control"
-                    >
-                      <div
-                        class="v-input__slot"
-                      >
-                        <div
-                          class="v-text-field__slot"
-                        >
-                          <label
-                            class="v-label v-label--active theme--light primary--text"
-                            for="input-28"
-                            style="left: 0px; position: absolute;"
-                          >
-                            Test prompt
-                          </label>
-                          <input
-                            id="input-28"
-                            type="text"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="v-text-field__details"
-                      >
-                        <div
-                          class="v-messages theme--light primary--text"
-                        >
-                          <div
-                            class="v-messages__wrapper"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-               
-              <div
-                class="v-card__actions"
-              >
-                <div
-                  class="spacer"
-                />
-                 
-                <div
-                  class="DialogActions"
-                >
-                  <button
-                    action-key="false"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
-                  >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
-  Cancel
-  
-                      <!---->
-                    </span>
-                  </button>
-                  <button
-                    action-key="true"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
-                  >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
-  OK
-  
-                      <!---->
-                    </span>
-                  </button>
-                   
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
       class="v-overlay theme--dark"
       style="z-index: 201;"
     >
@@ -159,7 +37,7 @@ exports[`manager Prompt confirm 2`] = `
     >
       <div
         class="v-dialog vuedl-layout"
-        style="max-width: 450px; display: none;"
+        style="transform-origin: center center; max-width: 450px; display: none;"
       >
         <div
           class="v-dialog-wrapper"
@@ -181,49 +59,44 @@ exports[`manager Prompt confirm 2`] = `
               <div
                 class="v-card__text"
               >
-                <form
-                  class="v-form"
-                  novalidate="novalidate"
+                <div
+                  class="v-input theme--light v-text-field v-text-field--is-booted"
                 >
                   <div
-                    class="v-input theme--light v-text-field v-text-field--is-booted"
+                    class="v-input__control"
                   >
                     <div
-                      class="v-input__control"
+                      class="v-input__slot"
                     >
                       <div
-                        class="v-input__slot"
+                        class="v-text-field__slot"
                       >
-                        <div
-                          class="v-text-field__slot"
+                        <label
+                          class="v-label theme--light"
+                          for="input-9"
+                          style="left: 0px; position: absolute;"
                         >
-                          <label
-                            class="v-label theme--light"
-                            for="input-10"
-                            style="left: 0px; position: absolute;"
-                          >
-                            Test prompt
-                          </label>
-                          <input
-                            id="input-10"
-                            type="text"
-                          />
-                        </div>
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-9"
+                          type="text"
+                        />
                       </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
                       <div
-                        class="v-text-field__details"
+                        class="v-messages theme--light"
                       >
                         <div
-                          class="v-messages theme--light"
-                        >
-                          <div
-                            class="v-messages__wrapper"
-                          />
-                        </div>
+                          class="v-messages__wrapper"
+                        />
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
                
               <div
@@ -233,41 +106,148 @@ exports[`manager Prompt confirm 2`] = `
                   class="spacer"
                 />
                  
-                <div
-                  class="DialogActions"
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
                 >
-                  <button
-                    action-key="false"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
+                  <span
+                    class="v-btn__content"
                   >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
+                    <!---->
+                    
   Cancel
   
-                      <!---->
-                    </span>
-                  </button>
-                  <button
-                    action-key="true"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
                   >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
+                    <!---->
+                    
   OK
   
-                      <!---->
-                    </span>
-                  </button>
-                   
+                    <!---->
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="v-dialog__content"
+      role="document"
+      style="z-index: 202; z-index: 202;"
+    >
+      <div
+        class="v-dialog vuedl-layout"
+        style="transform-origin: center center; max-width: 450px; display: none;"
+      >
+        <div
+          class="v-dialog-wrapper"
+        >
+          <div
+            class="vuedl-layout__closeBtn"
+          >
+            
+      ×
+    
+          </div>
+           
+          <div>
+            <div
+              class="v-card v-sheet theme--light"
+            >
+              <!---->
+               
+              <div
+                class="v-card__text"
+              >
+                <div
+                  class="v-input v-input--is-label-active v-input--is-dirty v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
+                >
+                  <div
+                    class="v-input__control"
+                  >
+                    <div
+                      class="v-input__slot"
+                    >
+                      <div
+                        class="v-text-field__slot"
+                      >
+                        <label
+                          class="v-label v-label--active theme--light primary--text"
+                          for="input-26"
+                          style="left: 0px; position: absolute;"
+                        >
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-26"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
+                      <div
+                        class="v-messages theme--light primary--text"
+                      >
+                        <div
+                          class="v-messages__wrapper"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+               
+              <div
+                class="v-card__actions"
+              >
+                <div
+                  class="spacer"
+                />
+                 
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  Cancel
+  
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  OK
+  
+                    <!---->
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -314,7 +294,7 @@ exports[`manager Test default prompt 2`] = `
     >
       <div
         class="v-dialog vuedl-layout"
-        style="max-width: 450px; display: none;"
+        style="transform-origin: center center; max-width: 450px; display: none;"
       >
         <div
           class="v-dialog-wrapper"
@@ -336,49 +316,44 @@ exports[`manager Test default prompt 2`] = `
               <div
                 class="v-card__text"
               >
-                <form
-                  class="v-form"
-                  novalidate="novalidate"
+                <div
+                  class="v-input v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
                 >
                   <div
-                    class="v-input v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
+                    class="v-input__control"
                   >
                     <div
-                      class="v-input__control"
+                      class="v-input__slot"
                     >
                       <div
-                        class="v-input__slot"
+                        class="v-text-field__slot"
                       >
-                        <div
-                          class="v-text-field__slot"
+                        <label
+                          class="v-label v-label--active theme--light primary--text"
+                          for="input-9"
+                          style="left: 0px; position: absolute;"
                         >
-                          <label
-                            class="v-label v-label--active theme--light primary--text"
-                            for="input-10"
-                            style="left: 0px; position: absolute;"
-                          >
-                            Test prompt
-                          </label>
-                          <input
-                            id="input-10"
-                            type="text"
-                          />
-                        </div>
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-9"
+                          type="text"
+                        />
                       </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
                       <div
-                        class="v-text-field__details"
+                        class="v-messages theme--light primary--text"
                       >
                         <div
-                          class="v-messages theme--light primary--text"
-                        >
-                          <div
-                            class="v-messages__wrapper"
-                          />
-                        </div>
+                          class="v-messages__wrapper"
+                        />
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
                
               <div
@@ -388,41 +363,36 @@ exports[`manager Test default prompt 2`] = `
                   class="spacer"
                 />
                  
-                <div
-                  class="DialogActions"
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
                 >
-                  <button
-                    action-key="false"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
+                  <span
+                    class="v-btn__content"
                   >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
+                    <!---->
+                    
   Cancel
   
-                      <!---->
-                    </span>
-                  </button>
-                  <button
-                    action-key="true"
-                    class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
-                    type="button"
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
                   >
-                    <span
-                      class="v-btn__content"
-                    >
-                      <!---->
-                      
+                    <!---->
+                    
   OK
   
-                      <!---->
-                    </span>
-                  </button>
-                   
-                </div>
+                    <!---->
+                  </span>
+                </button>
               </div>
             </div>
           </div>

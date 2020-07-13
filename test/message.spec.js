@@ -1,12 +1,15 @@
 import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
 import { sleep } from './utils'
 import VuetifyDialogPlugin from '../src'
+Vue.use(Vuetify)
+const vuetify = new Vuetify({})
 
 describe('manager', () => {
   let manager
 
   beforeAll(() => {
-    Vue.use(VuetifyDialogPlugin)
+    Vue.use(VuetifyDialogPlugin, { context: { vuetify } })
     manager = Vue.prototype.$dialog
   })
 

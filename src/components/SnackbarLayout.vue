@@ -5,12 +5,14 @@
       :color="getColor"
       v-model="isActive"
       class="application"
-      v-bind="$options.propsData"
       :text="false"
       :top="top"
       :left="left"
       :right="right"
       :bottom="bottom"
+      :multi-line="multiLine"
+      :vertical="vertical"
+      :elevation="elevation"
       @click="dismiss"
     >
       <dialog-child
@@ -32,7 +34,10 @@ export default {
   mixins: [Colorable],
   props: {
     timeout: Number,
-    position: String
+    position: String,
+    multiLine: Boolean,
+    vertical: Boolean,
+    elevation: Number
   },
   data () {
     const position = this.position || this.$options.propsData.position || ''
