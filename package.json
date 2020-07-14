@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",

@@ -1,5 +1,5 @@
 <template>
-  <v-card-actions v-if="actions && Object.keys(actions).length">
+  <v-card-actions v-if="actionlist && Object.keys(actionlist).length">
     <v-spacer
       v-if="!actions.spacer"
     />
