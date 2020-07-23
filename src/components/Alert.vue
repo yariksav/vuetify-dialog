@@ -6,6 +6,8 @@
     :type="color"
     :outlined="outlined"
     :prominent="prominent"
+    :text="text"
+    :border="border"
   >
     <div class="d-flex align-center">
       <div class="mr-2">
@@ -44,7 +46,15 @@ export default {
     dismissible: {
       type: Boolean,
       default: true
-    }
+    },
+    text: {
+      type: Boolean,
+      default: false
+    },
+    border: {
+      type: String,
+      default: undefined
+    },    
   }
 }
 </script>
