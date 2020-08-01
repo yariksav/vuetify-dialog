@@ -6,6 +6,10 @@
     :type="color"
     :outlined="outlined"
     :prominent="prominent"
+    :text="flat"
+    :border="border"
+    :tile="tile"
+    :dense="dense"
   >
     <div class="d-flex align-center">
       <div class="mr-2">
@@ -44,7 +48,23 @@ export default {
     dismissible: {
       type: Boolean,
       default: true
-    }
+    },
+    flat: {
+      type: Boolean,
+      default: false
+    },
+    border: {
+      type: String,
+      default: undefined
+    },    
+    tile: {
+      type: Boolean,
+      default: false
+    },
+    dense: {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>
