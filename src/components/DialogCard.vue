@@ -19,8 +19,9 @@
       ref="actions"
       :actions="actions"
       v-bind="actionOptions"
-      :handle="handle"
+      :handler="handler || handle"
     />
+    <slot name="footer" />
   </v-card>
 </template>
 
@@ -50,7 +51,13 @@ export default {
         flat: true
       })
     },
-    handle: Function
+    handle: Function, // todo: remove this parameter in next version
+    handler: Function
+  },
+  created () {
+    if (this.handle) {
+      console.warn('DEPRECATED: "handle" prop will be deprecated, please use "handler" instead')
+    }
   },
   methods: {
     trigger (name) {

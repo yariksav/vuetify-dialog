@@ -1,6 +1,6 @@
 {
   "name": "vuetify-dialog",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Dialog helper for vuetify.js",
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
@@ -69,7 +69,7 @@
     "vue-asyncable": "^0.2.0",
     "vue-jest": "^3.0.4",
     "vue-template-compiler": "^2.5.22",
-    "vuedl": "^0.3.9",
+    "vuedl": "^0.3.10",
     "vuetify": "^2.3.4"
   },
   "jest": {

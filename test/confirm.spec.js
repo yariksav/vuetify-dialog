@@ -115,7 +115,7 @@ describe('manager', () => {
     expect(document.body.innerHTML).toBe('')
   })
 
-  test('Check confirm with handle functions', async () => {
+  test('Check confirm with handler functions', async () => {
     const dlg = await manager.confirm({
       text: 'test',
       actions: {
@@ -123,7 +123,7 @@ describe('manager', () => {
         true: {
           text: 'Yes',
           class: 'action-true',
-          handle: () => {
+          handler: () => {
             return new Promise((resolve) => {
               setTimeout(() => resolve({ msg: 'foo' }), 5)
             })

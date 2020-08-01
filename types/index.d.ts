@@ -23,11 +23,13 @@ export interface DialogAction {
   rounded? : boolean
   disabled?: boolean
   handle? (action: any): Promise<any>
+  handler? (action: any): Promise<any>
 }
 
 interface DialogActionable {
   actions?: object | Array<string|DialogAction> | Array<DialogAction>
   handle? (action: any): Promise<any>
+  handler? (action: any): Promise<any>
 }
 
 export interface DialogObject {
@@ -43,6 +45,14 @@ export interface DialogMessageOptions extends DialogActionable {
   position?: string
   timeout?: number
   type?: string
+  outlined?: boolean
+  prominent?: boolean
+  dismissible?: boolean
+  flat?: boolean
+  centered?: boolean
+  border?: string
+  tile?: boolean
+  dense?: boolean
 }
 
 export interface DialogNotifyOptions extends DialogActionable {
@@ -54,6 +64,10 @@ export interface DialogNotifyOptions extends DialogActionable {
   verticalOffset?: number
   width?: number
   zIndex?: number
+  flat?: boolean
+  rounded?: boolean
+  outlined?: boolean
+  shaped?: boolean
 }
 
 export interface DialogConfirmOptions extends DialogActionable {

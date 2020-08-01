@@ -26,8 +26,9 @@ This module will help you to work with modal dialogs in your project
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog?ref=badge_large)
 
-## Documentation
-=======
+## Vuedl module documentation
+
+This module uses vuedl for automatically work with dialogs and DOM
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
 ## Setup
@@ -260,8 +261,8 @@ Props:
 {
   ...
   actions: {
-    'false': 'No',
-    'true': 'Yes'
+    false: 'No',
+    true: 'Yes'
   }
 }
 // result will be true, false, or undefigned

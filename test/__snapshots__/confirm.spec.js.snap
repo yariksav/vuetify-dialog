@@ -185,7 +185,7 @@ exports[`manager Check confirm with btns true|false 1`] = `
 </div>
 `;
 
-exports[`manager Check confirm with handle functions 1`] = `
+exports[`manager Check confirm with handler functions 1`] = `
 <div
   class="dialog-layout"
 >

@@ -5,7 +5,6 @@
       :color="getColor"
       v-model="isActive"
       class="application"
-      :text="false"
       :top="top"
       :left="left"
       :right="right"
@@ -13,6 +12,11 @@
       :multi-line="multiLine"
       :vertical="vertical"
       :elevation="elevation"
+      :text="flat"
+      :centered="centered"
+      :rounded="rounded"
+      :outlined="outlined"
+      :shaped="shaped"
       @click="dismiss"
     >
       <dialog-child
@@ -37,7 +41,12 @@ export default {
     position: String,
     multiLine: Boolean,
     vertical: Boolean,
-    elevation: Number
+    elevation: [Number, String],
+    flat: Boolean,
+    centered: Boolean,
+    rounded: [Boolean, String],
+    outlined: Boolean,
+    shaped: Boolean
   },
   data () {
     const position = this.position || this.$options.propsData.position || ''

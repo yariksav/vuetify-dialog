@@ -49,22 +49,10 @@ export default {
       type: Boolean,
       default: true
     },
-    flat: {
-      type: Boolean,
-      default: false
-    },
-    border: {
-      type: String,
-      default: undefined
-    },    
-    tile: {
-      type: Boolean,
-      default: false
-    },
-    dense: {
-      type: Boolean,
-      default: false
-    },
+    flat: Boolean,
+    border: String,
+    tile: Boolean,
+    dense: Boolean
   }
 }
 </script>

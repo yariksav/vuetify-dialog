@@ -137,6 +137,7 @@ exports[`manager Prompt confirm 2`] = `
                   </span>
                 </button>
               </div>
+               
             </div>
           </div>
         </div>
@@ -249,6 +250,7 @@ exports[`manager Prompt confirm 2`] = `
                   </span>
                 </button>
               </div>
+               
             </div>
           </div>
         </div>
@@ -394,6 +396,7 @@ exports[`manager Test default prompt 2`] = `
                   </span>
                 </button>
               </div>
+               
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@
     <DialogCard
       :title="title"
       :actions="actions"
-      :handle="handleClick"
+      :handler="handlerClick"
       :title-class="titleClass"
       ref="card"
     >
@@ -58,7 +58,7 @@ export default {
     onEnter () {
       this.$refs.card.$refs.actions.trigger(true)
     },
-    handleClick (res, action) {
+    handlerClick (res, action) {
       if (!action.key) {
         this.$emit('submit', action.key)
       }
