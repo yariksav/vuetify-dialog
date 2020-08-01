@@ -13,6 +13,7 @@ This module will help you to work with modal dialogs in your project
   <a href="https://www.npmjs.org/package/vuetify-dialog">
     <img src="https://img.shields.io/npm/v/vuetify-dialog.svg">
   </a>
+  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog.svg?type=shield"/></a>
   <a href="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.min.js?compression=gzip&label=gzip">
     <img src="http://img.badgesize.io/https://unpkg.com/vuetify-dialog/dist/vuetify-dialog.min.js?compression=gzip&label=gzip">
   </a>
@@ -23,7 +24,10 @@ This module will help you to work with modal dialogs in your project
   <a href='https://travis-ci.org/yariksav/vuetify-dialog'><img src='https://travis-ci.org/yariksav/vuetify-dialog.svg?branch=master' /></a>
 </p>
 
-## Vuedl module documentation
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fyariksav%2Fvuetify-dialog?ref=badge_large)
+
+## Documentation
+=======
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
 ## Setup
