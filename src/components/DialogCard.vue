@@ -1,20 +1,26 @@
 <template>
-  <v-card>
-    <v-card-title v-if="title">
-      <slot name=title>
-        <span :class="titleClass" v-text="title"/>
-      </slot>
-      <!-- <div v-if="$parent && typeof $parent.close === 'function'"
-        class="vuedl-notification__closeBtn"
-        @click.stop="$parent.close">×</div> -->
-    </v-card-title>
+  <v-card
+    :flat="flat"
+    :class="{'v-inner-scroll': innerScroll }"
+  >
+    <slot name="title">
+      <v-card-title
+        v-if="title"
+        :class="titleClass"
+      >
+        {{ title }}
+      </v-card-title>
+    </slot>
     <v-card-text>
-      <slot/>
+      <slot />
     </v-card-text>
-    <v-card-actions>
-      <v-spacer/>
-      <DialogActions :actions="actions" ref="actions" outline color="blue-grey" :handle="handle"/>
-    </v-card-actions>
+    <DialogActions
+      v-if="actions"
+      ref="actions"
+      :actions="actions"
+      v-bind="actionOptions"
+      :handle="handle"
+    />
   </v-card>
 </template>
 
@@ -22,17 +28,28 @@
 
 import DialogActions from './DialogActions.vue'
 
+import { VCard, VCardTitle, VCardText } from 'vuetify/lib'
+
 export default {
+  inheritAttrs: false,
   components: {
-    DialogActions
+    DialogActions,
+    VCard,
+    VCardTitle,
+    VCardText
   },
   props: {
     title: String,
-    titleClass: {
-      type: String,
-      default: 'headline'
+    flat: Boolean,
+    innerScroll: Boolean,
+    titleClass: [String, Object],
+    actions: [Array, Object, Function],
+    actionOptions: {
+      type: Object,
+      default: () => ({
+        flat: true
+      })
     },
-    actions: [Array, Object],
     handle: Function
   },
   methods: {
@@ -42,3 +59,37 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .v-dialog:not(.v-dialog--fullscreen) {
+    .v-card.v-inner-scroll {
+      .v-card__text {
+        max-height: 70vh;
+      }
+    }
+  }
+  .v-card.v-inner-scroll {
+    .v-card__text {
+      overflow: auto;
+      background:
+        linear-gradient(white 30%, hsla(0,0%,100%, 0)),
+        linear-gradient(hsla(0,0%,100%,0) 10px, white 70%) bottom,
+        radial-gradient(at top, rgba(0,0,0,0.2), transparent 70%),
+        radial-gradient(at bottom, rgba(0,0,0,0.2), transparent 70%) bottom;
+      background-repeat:no-repeat;
+      background-size: 100% 30px, 100% 30px, 100% 10px, 100% 10px;
+      background-attachment:local, local, scroll, scroll;
+    }
+  }
+  .theme--dark.v-inner-scroll {
+    .v-card__text {
+      background:
+        linear-gradient(#1d1d1d 30%, rgba(255, 255, 255, 0)),
+        linear-gradient(hsla(0,0%,100%,0) 10px, #1d1d1d 70%) bottom,
+        radial-gradient(at top, rgba(255, 255, 255, 0.2), transparent 70%),
+        radial-gradient(at bottom, rgba(255, 253, 253, 0.2), transparent 70%) bottom;
+      background-repeat:no-repeat;
+      background-size: 100% 30px, 100% 30px, 100% 10px, 100% 10px;
+      background-attachment:local, local, scroll, scroll;
+    }
+  }
+</style>

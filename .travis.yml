@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+- node
+sudo: false
+install:
+- npm install
+after_script:
+- npm run coverage

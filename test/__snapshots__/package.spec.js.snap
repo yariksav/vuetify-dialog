@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manager Test confirmation with generic options 1`] = `
+<div
+  class="v-dialog__container"
+  role="dialog"
+/>
+`;
+
+exports[`manager Test confirmation with generic options 2`] = `
+<body>
+  <div
+    data-app="true"
+  >
+    <div
+      class="v-overlay theme--dark"
+      style="z-index: 201;"
+    >
+      <div
+        class="v-overlay__scrim"
+        style="opacity: 0; background-color: rgb(33, 33, 33); border-color: #212121;"
+      />
+    </div>
+    <div
+      class="v-dialog__content"
+      role="document"
+      style="z-index: 202; z-index: 202;"
+    >
+      <div
+        class="v-dialog vuedl-layout dialog-transition-leave dialog-transition-leave-active"
+        style="transform-origin: center center; max-width: 450px;"
+      >
+        <div
+          class="v-dialog-wrapper"
+        >
+          <div
+            class="vuedl-layout__closeBtn"
+          >
+            
+      ×
+    
+          </div>
+           
+          <div
+            class="v-card v-sheet theme--light rounded-0"
+          >
+            <header
+              class="v-sheet theme--light v-toolbar v-toolbar--dense v-toolbar--flat"
+              style="height: 48px;"
+            >
+              <div
+                class="v-toolbar__content"
+                style="height: 48px;"
+              >
+                <!---->
+                 
+                <div
+                  class="v-toolbar__title"
+                >
+                  
+      Title
+    
+                </div>
+              </div>
+            </header>
+             
+            <div
+              class="v-card__text body-1 py-2"
+            >
+              Test confirmation with generic options
+            </div>
+             
+            <div
+              class="v-card__actions"
+            >
+              <div
+                class="spacer"
+              />
+               
+              <button
+                action-key="Foo"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
+              >
+                <span
+                  class="v-btn__content"
+                >
+                  <!---->
+                  
+  Foo
+  
+                  <!---->
+                </span>
+              </button>
+              <button
+                action-key="Bar"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
+              >
+                <span
+                  class="v-btn__content"
+                >
+                  <!---->
+                  
+  Bar
+  
+                  <!---->
+                </span>
+              </button>
+              <button
+                action-key="Baz"
+                class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                type="button"
+              >
+                <span
+                  class="v-btn__content"
+                >
+                  <!---->
+                  
+  Baz
+  
+                  <!---->
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="v-dialog__container"
+      role="dialog"
+    />
+  </div>
+</body>
+`;

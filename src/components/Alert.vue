@@ -1,35 +1,70 @@
 <template>
   <v-alert
     style="margin: 0; min-width: 300px"
-    :value="true"
     @input="$emit('submit')"
     :dismissible="dismissible"
-    :type="type"
+    :type="color"
+    :outlined="outlined"
+    :prominent="prominent"
+    :text="flat"
+    :border="border"
+    :tile="tile"
+    :dense="dense"
   >
-    {{ text }}
-    <DialogActions :actions="actions"/>
+    <div class="d-flex align-center">
+      <div class="mr-2">
+        {{ text }}
+      </div>
+      <DialogActions :actions="actions" />
+    </div>
   </v-alert>
 </template>
 <script>
 
 import DialogActions from './DialogActions.vue'
+import { VAlert } from 'vuetify/lib'
 
 export default {
   components: {
-    DialogActions
+    DialogActions,
+    VAlert
   },
   layout: ['notification', { showClose: false }],
   props: {
-    type: {
+    color: {
       type: String,
-      default: () => 'info'
+      default: 'info'
     },
-    actions: [ Array, Object ],
-    text: String,
+    actions: {
+      type: [Array, Object],
+      default: () => ({})
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    outlined: Boolean,
+    prominent: Boolean,
     dismissible: {
       type: Boolean,
       default: true
-    }
+    },
+    flat: {
+      type: Boolean,
+      default: false
+    },
+    border: {
+      type: String,
+      default: undefined
+    },    
+    tile: {
+      type: Boolean,
+      default: false
+    },
+    dense: {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>

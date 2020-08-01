@@ -1,13 +1,20 @@
 <template>
   <div>
-    <DialogCard :title="title" :actions="actions" :handle="handleClick">
+    <DialogCard
+      :title="title"
+      :actions="actions"
+      :handle="handleClick"
+      :title-class="titleClass"
+      ref="card"
+    >
       <v-text-field
-          autofocus
-          @keypress.enter="$emit('submit', editedValue)"
-          v-model="editedValue"
-          :label="text"
-          required
-        />
+        ref="input"
+        v-model="editedValue"
+        :rules="rules"
+        :label="text"
+        v-bind="textField"
+        @keyup.enter.stop="onEnter"
+      />
     </DialogCard>
   </div>
 </template>
@@ -16,30 +23,51 @@
 
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import DialogCard from './DialogCard.vue'
+import { VTextField } from 'vuetify/lib'
 
 export default {
   components: {
-    DialogCard
+    DialogCard,
+    VTextField
   },
   layout: 'default',
-  mixins: [ Confirmable ],
+  mixins: [Confirmable],
   props: {
-    value: String
+    value: String,
+    rules: Array,
+    textField: Object,
+    titleClass: [String, Object],
+    autofocus: {
+      type: Boolean,
+      default: true
+    }
   },
   data () {
     return {
       editedValue: this.value
     }
   },
-  computed: {
-    getIcon () {
-      return this.icon || this.type
+  mounted () {
+    if (this.autofocus) {
+      setTimeout(() => {
+        this.$refs.input.focus()
+      }, 100)
     }
   },
   methods: {
-    handleClick (res) {
-      this.$emit('submit', this.editedValue)
-      return false
+    onEnter () {
+      this.$refs.card.$refs.actions.trigger(true)
+    },
+    handleClick (res, action) {
+      if (!action.key) {
+        this.$emit('submit', action.key)
+      }
+      const valid = this.rules ? this.$refs.input.validate() : true
+      if (!valid) {
+        this.$refs.input.focus()
+        return false
+      }
+      this.$emit('submit', action.key ? this.editedValue : action.key)
     }
   }
 }

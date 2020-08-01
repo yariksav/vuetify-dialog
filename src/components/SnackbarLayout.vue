@@ -5,25 +5,39 @@
       :color="getColor"
       v-model="isActive"
       class="application"
-      v-bind="$options.propsData"
+      :text="false"
       :top="top"
       :left="left"
       :right="right"
       :bottom="bottom"
-      @click="dismiss">
-      <slot/>
+      :multi-line="multiLine"
+      :vertical="vertical"
+      :elevation="elevation"
+      @click="dismiss"
+    >
+      <dialog-child
+        v-bind="$options.propsData"
+        ref="dialog"
+      />
     </v-snackbar>
   </div>
 </template>
 
 <script>
 import Colorable from '../mixins/colorable'
+import { VSnackbar } from 'vuetify/lib'
 
 export default {
-  mixins: [ Colorable ],
+  components: {
+    VSnackbar
+  },
+  mixins: [Colorable],
   props: {
     timeout: Number,
-    position: String
+    position: String,
+    multiLine: Boolean,
+    vertical: Boolean,
+    elevation: Number
   },
   data () {
     const position = this.position || this.$options.propsData.position || ''
@@ -38,7 +52,7 @@ export default {
     _destroy () {
       setTimeout(() => {
         this.$destroy()
-      }, 300)
+      }, 500)
     }
   }
 }

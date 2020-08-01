@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manager Test error notification with top-left position 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--has-background v-snack--left v-snack--top"
+    style="padding-bottom: 0px; padding-top: 0px;"
+  >
+    <div
+      class="v-snack__wrapper v-sheet theme--dark error"
+      style=""
+    >
+      <div
+        aria-live="polite"
+        class="v-snack__content"
+        role="status"
+      >
+        <div
+          class="d-flex"
+        >
+          <span>
+            Test message
+          </span>
+           
+          <!---->
+        </div>
+      </div>
+      <div
+        class="v-snack__action "
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Test info notification 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom v-snack--has-background"
+    style="padding-bottom: 0px; padding-top: 0px;"
+  >
+    <div
+      class="v-snack__wrapper v-sheet theme--dark info"
+      style=""
+    >
+      <div
+        aria-live="polite"
+        class="v-snack__content"
+        role="status"
+      >
+        <div
+          class="d-flex"
+        >
+          <span>
+            Test message
+          </span>
+           
+          <!---->
+        </div>
+      </div>
+      <div
+        class="v-snack__action "
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Test success notification 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom v-snack--has-background"
+    style="padding-bottom: 0px; padding-top: 0px;"
+  >
+    <div
+      class="v-snack__wrapper v-sheet theme--dark success"
+      style=""
+    >
+      <div
+        aria-live="polite"
+        class="v-snack__content"
+        role="status"
+      >
+        <div
+          class="d-flex"
+        >
+          <span>
+            Test message
+          </span>
+           
+          <!---->
+        </div>
+      </div>
+      <div
+        class="v-snack__action "
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`manager Test warning notification with bottom-right position 1`] = `
+<div>
+  <div
+    class="v-snack application v-snack--active v-snack--bottom v-snack--has-background v-snack--right"
+    style="padding-bottom: 0px; padding-top: 0px;"
+  >
+    <div
+      class="v-snack__wrapper v-sheet theme--dark warning"
+      style=""
+    >
+      <div
+        aria-live="polite"
+        class="v-snack__content"
+        role="status"
+      >
+        <div
+          class="d-flex"
+        >
+          <span>
+            Test message
+          </span>
+           
+          <!---->
+        </div>
+      </div>
+      <div
+        class="v-snack__action "
+      />
+    </div>
+  </div>
+</div>
+`;

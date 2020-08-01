@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="d-flex">
     <span v-html="text" />
-    <DialogActions :actions="actions"/>
+    <DialogActions :actions="actions" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import DialogActions from './DialogActions.vue'
 
 export default {
   layout: 'snackbar',
-  mixins: [ Confirmable ],
+  mixins: [Confirmable],
   components: {
     DialogActions
   }

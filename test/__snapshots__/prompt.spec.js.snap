@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`manager Prompt confirm 1`] = `
+<div
+  class="v-dialog__container"
+  role="dialog"
+/>
+`;
+
+exports[`manager Prompt confirm 2`] = `
+<body>
+  <div
+    data-app="true"
+  >
+    <div
+      class="v-overlay theme--dark"
+      style="z-index: 201;"
+    >
+      <div
+        class="v-overlay__scrim"
+        style="opacity: 0; background-color: rgb(33, 33, 33); border-color: #212121;"
+      />
+    </div>
+    <div
+      class="v-overlay theme--dark"
+      style="z-index: 201;"
+    >
+      <div
+        class="v-overlay__scrim"
+        style="opacity: 0; background-color: rgb(33, 33, 33); border-color: #212121;"
+      />
+    </div>
+    <div
+      class="v-dialog__content"
+      role="document"
+      style="z-index: 202; z-index: 202;"
+    >
+      <div
+        class="v-dialog vuedl-layout"
+        style="transform-origin: center center; max-width: 450px; display: none;"
+      >
+        <div
+          class="v-dialog-wrapper"
+        >
+          <div
+            class="vuedl-layout__closeBtn"
+          >
+            
+      ×
+    
+          </div>
+           
+          <div>
+            <div
+              class="v-card v-sheet theme--light"
+            >
+              <!---->
+               
+              <div
+                class="v-card__text"
+              >
+                <div
+                  class="v-input theme--light v-text-field v-text-field--is-booted"
+                >
+                  <div
+                    class="v-input__control"
+                  >
+                    <div
+                      class="v-input__slot"
+                    >
+                      <div
+                        class="v-text-field__slot"
+                      >
+                        <label
+                          class="v-label theme--light"
+                          for="input-9"
+                          style="left: 0px; position: absolute;"
+                        >
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-9"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
+                      <div
+                        class="v-messages theme--light"
+                      >
+                        <div
+                          class="v-messages__wrapper"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+              <div
+                class="v-card__actions"
+              >
+                <div
+                  class="spacer"
+                />
+                 
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  Cancel
+  
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  OK
+  
+                    <!---->
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="v-dialog__content"
+      role="document"
+      style="z-index: 202; z-index: 202;"
+    >
+      <div
+        class="v-dialog vuedl-layout"
+        style="transform-origin: center center; max-width: 450px; display: none;"
+      >
+        <div
+          class="v-dialog-wrapper"
+        >
+          <div
+            class="vuedl-layout__closeBtn"
+          >
+            
+      ×
+    
+          </div>
+           
+          <div>
+            <div
+              class="v-card v-sheet theme--light"
+            >
+              <!---->
+               
+              <div
+                class="v-card__text"
+              >
+                <div
+                  class="v-input v-input--is-label-active v-input--is-dirty v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
+                >
+                  <div
+                    class="v-input__control"
+                  >
+                    <div
+                      class="v-input__slot"
+                    >
+                      <div
+                        class="v-text-field__slot"
+                      >
+                        <label
+                          class="v-label v-label--active theme--light primary--text"
+                          for="input-26"
+                          style="left: 0px; position: absolute;"
+                        >
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-26"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
+                      <div
+                        class="v-messages theme--light primary--text"
+                      >
+                        <div
+                          class="v-messages__wrapper"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+              <div
+                class="v-card__actions"
+              >
+                <div
+                  class="spacer"
+                />
+                 
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  Cancel
+  
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  OK
+  
+                    <!---->
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="v-dialog__container"
+    role="dialog"
+  />
+  <div
+    class="v-dialog__container"
+    role="dialog"
+  />
+</body>
+`;
+
+exports[`manager Test default prompt 1`] = `
+<div
+  class="v-dialog__container"
+  role="dialog"
+/>
+`;
+
+exports[`manager Test default prompt 2`] = `
+<body>
+  <div
+    data-app="true"
+  >
+    <div
+      class="v-overlay theme--dark"
+      style="z-index: 201;"
+    >
+      <div
+        class="v-overlay__scrim"
+        style="opacity: 0; background-color: rgb(33, 33, 33); border-color: #212121;"
+      />
+    </div>
+    <div
+      class="v-dialog__content"
+      role="document"
+      style="z-index: 202; z-index: 202;"
+    >
+      <div
+        class="v-dialog vuedl-layout"
+        style="transform-origin: center center; max-width: 450px; display: none;"
+      >
+        <div
+          class="v-dialog-wrapper"
+        >
+          <div
+            class="vuedl-layout__closeBtn"
+          >
+            
+      ×
+    
+          </div>
+           
+          <div>
+            <div
+              class="v-card v-sheet theme--light"
+            >
+              <!---->
+               
+              <div
+                class="v-card__text"
+              >
+                <div
+                  class="v-input v-input--is-focused theme--light v-text-field v-text-field--is-booted primary--text"
+                >
+                  <div
+                    class="v-input__control"
+                  >
+                    <div
+                      class="v-input__slot"
+                    >
+                      <div
+                        class="v-text-field__slot"
+                      >
+                        <label
+                          class="v-label v-label--active theme--light primary--text"
+                          for="input-9"
+                          style="left: 0px; position: absolute;"
+                        >
+                          Test prompt
+                        </label>
+                        <input
+                          id="input-9"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="v-text-field__details"
+                    >
+                      <div
+                        class="v-messages theme--light primary--text"
+                      >
+                        <div
+                          class="v-messages__wrapper"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+              <div
+                class="v-card__actions"
+              >
+                <div
+                  class="spacer"
+                />
+                 
+                <button
+                  action-key="false"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  Cancel
+  
+                    <!---->
+                  </span>
+                </button>
+                <button
+                  action-key="true"
+                  class="v-btn v-btn--flat v-btn--text theme--light v-size--default"
+                  type="button"
+                >
+                  <span
+                    class="v-btn__content"
+                  >
+                    <!---->
+                    
+  OK
+  
+                    <!---->
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="v-dialog__container"
+    role="dialog"
+  />
+</body>
+`;

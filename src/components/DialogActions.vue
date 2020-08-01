@@ -1,36 +1,79 @@
 <template>
-  <span>
-    <component :is="tag" v-for="action in actionlist" :key="action.key" v-bind="action.attrs"
-      v-if="isActionVisible(action)"
-      :flat="action.flat !== undefined ? action.flat : flat"
-      :outline="action.outline !== undefined ? action.outline : outline"
-      :icon="!action.text && !!action.icon"
-      :color="action.color || color"
-      :round="round"
-      :loading="isActionInLoading(action)"
-      :disabled="isActionDisabled(action) || !!loadingAction"
-      @click="onActionClick(action)">
-      <v-icon v-if="action.icon && !action.icon.right" v-bind="action.icon" v-text="action.icon.text"/>
-      {{ action.text }}
-      <v-icon v-if="action.icon && action.icon.right" v-bind="action.icon" v-text="action.icon.text"/>
-    </component>
-  </span>
+  <v-card-actions v-if="actionlist && Object.keys(actionlist).length">
+    <v-spacer
+      v-if="!actions.spacer"
+    />
+    <template v-for="action in actionlist">
+      <v-spacer
+        v-if="action.key === 'spacer'"
+        :key="action.key"
+      />
+      <DialogAction
+        v-else
+        :key="action.key"
+        v-bind="getActionProps(action)"
+        :action-key="''+action.key"
+        :loading="!passive && isActionInLoading(action)"
+        :class="{'loading': loadingAction === action.key}"
+        :disabled="isActionDisabled(action) || (!passive && Boolean(loadingAction))"
+        @click="onActionClick(action)"
+      />
+    </template>
+  </v-card-actions>
 </template>
-<script>
 
+<script>
 import Actionable from 'vuedl/src/mixins/actionable'
+import DialogAction from './DialogAction.vue'
+import { VSpacer, VCardActions } from 'vuetify/lib'
 
 export default {
-  mixins: [ Actionable ],
+  components: {
+    DialogAction,
+    VSpacer,
+    VCardActions
+  },
+  mixins: [Actionable],
   props: {
-    tag: {
-      type: String,
-      default: () => 'v-btn'
-    },
+    component: [String, Object],
     color: String,
     flat: Boolean,
-    round: Boolean,
-    outline: Boolean
+    rounded: Boolean,
+    outlined: Boolean,
+    passive: Boolean,
+    block: Boolean,
+    large: Boolean,
+    small: Boolean
+  },
+  computed: {
+    nestedProps () {
+      return [
+        'color',
+        'flat',
+        'rounded',
+        'outlined',
+        'icon',
+        'block',
+        'small',
+        'large',
+        'x-small',
+        'x-large'
+      ]
+    }
+  },
+  methods: {
+    getActionProps (action) {
+      const res = {
+        component: action.component || this.component,
+        text: action.text
+      }
+      this.nestedProps.forEach(key => {
+        if (action[key] || this[key]) {
+          res[key] = action[key] === undefined ? this[key] : action[key]
+        }
+      })
+      return res
+    }
   }
 }
 </script>
