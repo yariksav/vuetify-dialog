@@ -73,13 +73,13 @@ exports[`manager Prompt confirm 2`] = `
                       >
                         <label
                           class="v-label theme--light"
-                          for="input-9"
+                          for="input-8"
                           style="left: 0px; position: absolute;"
                         >
                           Test prompt
                         </label>
                         <input
-                          id="input-9"
+                          id="input-8"
                           type="text"
                         />
                       </div>
@@ -186,13 +186,13 @@ exports[`manager Prompt confirm 2`] = `
                       >
                         <label
                           class="v-label v-label--active theme--light primary--text"
-                          for="input-26"
+                          for="input-24"
                           style="left: 0px; position: absolute;"
                         >
                           Test prompt
                         </label>
                         <input
-                          id="input-26"
+                          id="input-24"
                           type="text"
                         />
                       </div>
@@ -332,13 +332,13 @@ exports[`manager Test default prompt 2`] = `
                       >
                         <label
                           class="v-label v-label--active theme--light primary--text"
-                          for="input-9"
+                          for="input-8"
                           style="left: 0px; position: absolute;"
                         >
                           Test prompt
                         </label>
                         <input
-                          id="input-9"
+                          id="input-8"
                           type="text"
                         />
                       </div>
