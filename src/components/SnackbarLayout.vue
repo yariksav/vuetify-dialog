@@ -1,43 +1,51 @@
 <template>
-  <div>
-    <v-snackbar
-      :timeout="timeout || 5000"
-      :color="getColor"
-      v-model="isActive"
-      class="application"
-      :top="top"
-      :left="left"
-      :right="right"
-      :bottom="bottom"
-      :multi-line="multiLine"
-      :vertical="vertical"
-      :elevation="elevation"
-      :text="flat"
-      :centered="centered"
-      :rounded="rounded"
-      :outlined="outlined"
-      :shaped="shaped"
-      @click="dismiss"
-    >
-      <dialog-child
-        v-bind="$options.propsData"
-        ref="dialog"
-      />
-    </v-snackbar>
-  </div>
+  <v-snackbar
+    :timeout="timeout"
+    :color="getColor"
+    v-model="isActive"
+    class="application"
+    :top="top"
+    :left="left"
+    :right="right"
+    :bottom="bottom"
+    :multi-line="multiLine"
+    :vertical="vertical"
+    :elevation="elevation"
+    :text="flat"
+    :centered="centered"
+    :rounded="rounded"
+    :outlined="outlined"
+    :shaped="shaped"
+    @click="dismiss"
+  >
+    <dialog-child
+      v-bind="$options.propsData"
+      ref="dialog"
+    />
+    <DialogActions
+      slot="action"
+      :actions="actions"
+    />
+  </v-snackbar>
 </template>
 
 <script>
 import Colorable from '../mixins/colorable'
 import { VSnackbar } from 'vuetify/lib'
+import Confirmable from 'vuedl/src/mixins/confirmable'
+import DialogActions from './DialogActions.vue'
 
 export default {
   components: {
-    VSnackbar
+    VSnackbar,
+    DialogActions
   },
-  mixins: [Colorable],
+  mixins: [Colorable, Confirmable],
   props: {
-    timeout: Number,
+    timeout: {
+      type: Number,
+      default: 5000
+    },
     position: String,
     multiLine: Boolean,
     vertical: Boolean,
