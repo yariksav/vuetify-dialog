@@ -32,12 +32,16 @@ interface DialogActionable {
   handler? (action: any): Promise<any>
 }
 
-export interface DialogObject {
-  show (): DialogObject | undefined
-  wait (): Promise<any>
+export interface DialogObject<ReturnType = any> {
+  show (): Promise<DialogObject> | undefined
+  wait (): Promise<ReturnType>
+  remove (): void
   close (): void
-  vm: object
-  vmd: object
+  showed: boolean
+  element: Vue['$el']
+  hasAsyncPreload: boolean
+  vm: VueConstructor<Vue>
+  vmd: Vue.Component
 }
 
 export interface DialogMessageOptions extends DialogActionable {
@@ -83,9 +87,22 @@ export interface DialogConfirmOptions extends DialogActionable {
   value?: any
 }
 
+interface DialogOptionsWait {
+    waitForResult: true
+    [P: string]: any
+}
+interface DialogOptionsNoWait {
+    waitForResult?: false
+    [P: string]: any
+}
+
+/** This is manager from vuedl/src/manager */
 export interface VuetifyDialog {
   component (name: string, options: object | VueConstructor): void
-  show (component: object | VueConstructor, options?: object): DialogObject
+  create<T = any>(component: object | VueConstructor): DialogObject<T>
+  show<T = any>(component: object | VueConstructor, params?: DialogOptionsWait): Promise<T>
+  show<T = any>(component: object | VueConstructor, params?: DialogOptionsNoWait): Promise<DialogObject<T>>
+  showAndWait<T = any>(component: object | VueConstructor, props?: Record<string, any>): Promise<T>
   // implemented dialogs
   confirm (options: DialogConfirmOptions): Promise<any>
   prompt (options: DialogConfirmOptions): Promise<any>
@@ -103,6 +120,10 @@ export interface VuetifyDialog {
     info (text: string, options?: DialogMessageOptions): Promise<any>
     success (text: string, options?: DialogMessageOptions): Promise<any>
   }
+
+  on(evt: string, callback: (...args: any[]) => any): void
+  off(evt: string, callback: (...args: any[]) => any): void
+  once(evt: string, callback: (...args: any[]) => any): void
 }
 
 declare module 'vue/types/vue' {
