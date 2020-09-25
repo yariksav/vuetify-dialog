@@ -33,7 +33,7 @@ interface DialogActionable {
 }
 
 export interface DialogObject<ReturnType = any> {
-  show (): Promise<DialogObject> | undefined
+  show (): Promise<DialogObject> | DialogObject | undefined
   wait (): Promise<ReturnType>
   remove (): void
   close (): void
@@ -69,6 +69,7 @@ export interface DialogNotifyOptions extends DialogActionable {
   width?: number
   zIndex?: number
   flat?: boolean
+  icon?: string
   rounded?: boolean
   outlined?: boolean
   shaped?: boolean

@@ -4,6 +4,7 @@
     @input="$emit('submit')"
     :dismissible="dismissible"
     :type="color"
+    :icon="icon"
     :outlined="outlined"
     :prominent="prominent"
     :text="flat"
@@ -43,6 +44,7 @@ export default {
       type: String,
       default: ''
     },
+    icon: String,
     outlined: Boolean,
     prominent: Boolean,
     dismissible: {
