@@ -179,7 +179,20 @@ this.$dialog.error({
 ```js
 let res = await this.$dialog.prompt({
   text: 'Your name',
-  title: 'Please input your name'
+  title: 'Please input your name',
+})
+```
+
+### Prompt dialog with password
+```js
+let res = await this.$dialog.prompt({
+  title: 'Password balidation',
+  text: 'Enter your password',
+  rules: [(v) => v.length >= 6 || 'Password must be at least 6 characters long'], // vuetify's v-text-field rules prop
+  textField: {
+    // Any addtional props/attrs that will be binded to v-text-field component
+    type: 'password',
+  }
 })
 ```
 
