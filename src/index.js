@@ -60,6 +60,14 @@ function install (Vue, options = {}) {
     ...options.error
   })
 
+  manager.component('info', Confirm, {
+    type: 'info',
+    waitForResult: true,
+    actions: ['Ok'],
+    actionOptions: actionOptions,
+    ...options.info
+  })
+
   manager.component('toast', Toast, {
     waitForResult: true,
     actionOptions: actionOptions,

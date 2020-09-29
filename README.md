@@ -151,6 +151,14 @@ const res = await this.$dialog.confirm({
 })
 ```
 
+### Info dialog
+```js
+const res = await this.$dialog.info({
+  text: 'File copied successfully',
+  title: 'Info'
+})
+```
+
 ### Warning dialog
 ```js
 const res = await this.$dialog.warning({

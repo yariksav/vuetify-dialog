@@ -4,7 +4,7 @@
     @input="$emit('submit')"
     :dismissible="dismissible"
     :type="color"
-    :icon="icon"
+    :icon="getIcon"
     :outlined="outlined"
     :prominent="prominent"
     :text="flat"
@@ -23,6 +23,7 @@
 <script>
 
 import DialogActions from './DialogActions.vue'
+import Iconable from '../mixins/iconable'
 import { VAlert } from 'vuetify/lib'
 
 export default {
@@ -30,6 +31,7 @@ export default {
     DialogActions,
     VAlert
   },
+  mixins: [Iconable],
   layout: ['notification', { showClose: false }],
   props: {
     color: {
@@ -44,7 +46,6 @@ export default {
       type: String,
       default: ''
     },
-    icon: String,
     outlined: Boolean,
     prominent: Boolean,
     dismissible: {

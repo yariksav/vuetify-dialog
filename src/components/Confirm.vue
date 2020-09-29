@@ -30,9 +30,9 @@
 </template>
 
 <script>
-
 import Confirmable from 'vuedl/src/mixins/confirmable'
 import Colorable from '../mixins/colorable'
+import Iconable from '../mixins/iconable'
 import DialogActions from './DialogActions.vue'
 import { VCard, VCardText, VToolbar, VToolbarTitle, VIcon } from 'vuetify/lib'
 
@@ -46,13 +46,9 @@ export default {
     VIcon
   },
   layout: ['default', { width: 450 }],
-  mixins: [Confirmable, Colorable],
+  mixins: [Iconable, Confirmable, Colorable],
   props: {
     actionOptions: Object,
-    icon: {
-      type: [String, Boolean],
-      default: undefined
-    },
     text: {
       type: [String, Function],
       required: true,
@@ -60,12 +56,6 @@ export default {
     }
   },
   computed: {
-    getIcon () {
-      if (this.icon === false) {
-        return
-      }
-      return this.icon || (this.$vuetify && this.$vuetify.icons && this.$vuetify.icons[this.type]) || this.type
-    },
     getText () {
       return typeof this.text === 'function' ? this.text() : this.text
     }
