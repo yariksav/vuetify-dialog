@@ -1,6 +1,6 @@
 # vuetify-dialog
 
-### This module will help you work with `vuetify` dialogs without annoyed templates
+### This module will help you work with `vuetify` dialogs without annoying templates
 
 Implementation of [vuedl](https://github.com/yariksav/vuedl) dialog helper with Vuetify.js framework
 
@@ -28,18 +28,18 @@ This module will help you to work with modal dialogs in your project
 
 ## Vuedl module documentation
 
-This module uses vuedl for automatically work with dialogs and DOM
+This module uses vuedl to automatically work with dialogs and DOM
 [See docs here](https://github.com/yariksav/vuedl#readme)
 
 ## Setup
 
 Install the package from npm
 
-> IMPORTANT: After version 0.4.0 css and js was splitted and therefore you have to import css manually
+> IMPORTANT: After version 0.4.0 css and js were split and therefore you have to import css manually
 
 ## Vuetify 2
 
-For Vuetify 2 please use latest version of vuetify-dialog@2.X.X
+For Vuetify 2 please use the latest version of vuetify-dialog@2.X.X
 
 ### Demo with Vuetify 2
 [Demo in CodeSandbox](https://iwdcf.csb.app/),  
@@ -206,7 +206,7 @@ Actually waitForResult = true make two steps
 1) dialogInstance = $dialog.show(component) // Show dialog
 2) return dialogInstance.wait() // Return promise
 
-Therefore to perfom programmatically close dialog you have to set waitForResult to false and work with dialogInstance directly
+Therefore to perform programmatically close dialog you have to set waitForResult to false and work with dialogInstance directly
 
 ```js
   const dialogInstance = await this.$dialog.warning({
@@ -239,7 +239,7 @@ Props:
   - type: Object
   - properties:
     - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
-    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically
+    - timeout: timer to hide message. Default 5000. If set to 0 - message will not closes automatically
     - actions
 ```js
 this.$dialog.notify.info('Test notification', {
@@ -260,7 +260,7 @@ Props:
   - type: Object
   - properties:
     - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
-    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
+    - timeout: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
     - actions: - see below
 ``` javascript
 this.$dialog.message.info('Test', {
@@ -276,7 +276,7 @@ Props:
   - type: Object
   - properties:
     - position: one of _top-left_, _top-right_, _bottom-left_, _bootom-right_
-    - timeoot: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
+    - timeout: timer to hide message. Default 5000. If set to 0 - message will not closes automatically 
     - actions: - see below
 ```js
 {
@@ -286,7 +286,7 @@ Props:
     true: 'Yes'
   }
 }
-// result will be true, false, or undefigned
+// result will be true, false, or undefined
 {
   ...
   actions: ['No', 'Yes']
