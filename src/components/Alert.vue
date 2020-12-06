@@ -13,9 +13,7 @@
     :dense="dense"
   >
     <div class="d-flex align-center">
-      <div class="mr-2">
-        {{ text }}
-      </div>
+      <div class="mr-2" v-html="text"></div>
       <DialogActions :actions="actions" />
     </div>
   </v-alert>
