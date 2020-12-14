@@ -22,7 +22,6 @@ export interface DialogAction {
   color? : string
   rounded? : boolean
   disabled?: boolean
-  handle? (action: any): Promise<any>
   handler? (action: any): Promise<any>
 }
 
@@ -109,6 +108,7 @@ export interface VuetifyDialog {
   prompt (options: DialogConfirmOptions): Promise<any>
   warning (options: DialogConfirmOptions): Promise<any>
   error (options: DialogConfirmOptions): Promise<any>
+  info (options: DialogConfirmOptions): Promise<any>
   notify: {
     error (text: string, options?: DialogNotifyOptions): Promise<any>
     warning (text: string, options?: DialogNotifyOptions): Promise<any>
