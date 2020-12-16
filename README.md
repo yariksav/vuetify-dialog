@@ -220,7 +220,7 @@ Therefore to perform programmatically close dialog you have to set waitForResult
 
   // then you can wait for user reaction
   const userChoice = await dialogInstance.wait()
-  // after idle 3000 sec - userChoice will be undefigned
+  // after idle 3000 sec - userChoice will be undefined
   this.$dialog.notify.info(userChoice)
 ```
 
@@ -291,7 +291,7 @@ Props:
   ...
   actions: ['No', 'Yes']
 }
-// result will be 'No', 'Yes', or undefigned
+// result will be 'No', 'Yes', or undefined
 
 ```
 You can also send full button options
