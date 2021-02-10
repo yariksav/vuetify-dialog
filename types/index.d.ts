@@ -125,6 +125,7 @@ export interface VuetifyDialog {
   on(evt: string, callback: (...args: any[]) => any): void
   off(evt: string, callback: (...args: any[]) => any): void
   once(evt: string, callback: (...args: any[]) => any): void
+  context: Record<string, any>
 }
 
 declare module 'vue/types/vue' {
@@ -133,9 +134,16 @@ declare module 'vue/types/vue' {
   }
 }
 
-declare module 'vue/types/options' {
-  interface ComponentOptions<V extends Vue> {
-    asyncData? (context: object): Promise<any>
-    primaryKey?: string
+declare module '@nuxt/types' {
+  // interface Configuration {
+  //   dialog?: VuetifyDialog;
+  // }
+  interface Context {
+    $dialog: VuetifyDialog;
   }
 }
+// declare module 'vue/types/options' {
+//   interface ComponentOptions<V extends Vue> {
+//     asyncData? (context: object): Promise<any>
+//   }
+// }
