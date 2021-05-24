@@ -55,7 +55,7 @@ export default {
     border: String,
     tile: Boolean,
     dense: Boolean,
-    colored-border: Boolean
+    'colored-border': Boolean
   }
 }
 </script>
