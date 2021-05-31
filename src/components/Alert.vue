@@ -11,7 +11,7 @@
     :border="border"
     :tile="tile"
     :dense="dense"
-    :colored-border="colored-border"
+    :colored-border="coloredBorder"
   >
     <div class="d-flex align-center">
       <div class="mr-2" v-html="text"></div>
@@ -55,7 +55,7 @@ export default {
     border: String,
     tile: Boolean,
     dense: Boolean,
-    'colored-border': Boolean
+    coloredBorder: Boolean
   }
 }
 </script>
