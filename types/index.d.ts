@@ -25,9 +25,10 @@ export interface DialogAction {
   handler? (action: any): Promise<any>
 }
 
+export type DialogActions = Record<string, DialogAction>
+
 interface DialogActionable {
-  actions?: object | Array<string|DialogAction> | Array<DialogAction>
-  handle? (action: any): Promise<any>
+  actions?: Array<string|DialogAction> | Array<DialogAction> | DialogActions
   handler? (action: any): Promise<any>
 }
 
