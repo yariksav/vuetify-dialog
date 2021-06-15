@@ -14,7 +14,7 @@ export interface VuetifyDialogPlugin {
 
 export interface DialogAction {
   text: string
-  key: string
+  key?: string | boolean
   component?: string
   flat? : boolean
   outlined? : boolean
@@ -22,14 +22,14 @@ export interface DialogAction {
   color? : string
   rounded? : boolean
   disabled?: boolean
-  handler? (action: any): Promise<any>
+  handler? (action: any): void | any | Promise<any>
 }
 
 export type DialogActions = Record<string, DialogAction>
 
 interface DialogActionable {
-  actions?: Array<string|DialogAction> | Array<DialogAction> | DialogActions
-  handler? (action: any): Promise<any>
+  actions?: Array<string|DialogAction> | Array<DialogAction> | DialogActions | Record<string, string> 
+  handler? (action: any): void | any
 }
 
 export interface DialogObject<ReturnType = any> {
