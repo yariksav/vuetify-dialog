@@ -28,7 +28,7 @@ export interface DialogAction {
 export type DialogActions = Record<string, DialogAction>
 
 interface DialogActionable {
-  actions?: Array<string|DialogAction> | Array<DialogAction> | DialogActions | Record<string, string> 
+  actions?: Array<string|DialogAction> | Array<DialogAction> | DialogActions | Record<string, string>
   handler? (action: any): void | any
 }
 
@@ -141,6 +141,10 @@ declare module '@nuxt/types' {
   // }
   interface Context {
     $dialog: VuetifyDialog;
+  }
+  
+  interface NuxtAppOptions {
+    $dialog: VuetifyDialog
   }
 }
 // declare module 'vue/types/options' {
