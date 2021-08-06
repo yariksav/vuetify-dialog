@@ -142,6 +142,18 @@ Module automatically add to dialog nuxt context data, such as router, route, i18
 }
 ```
 
+### If you using Typescript + Nuxt.js
+Add `vuetify-dialog/types` to the `compilerOptions.types` section of your project's `tsconfig.json` file:
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "vuetify-dialog/types"
+    ]
+  }
+}
+```
+
 
 ### Simple confirm dialog
 ```js
